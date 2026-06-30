@@ -32,10 +32,10 @@ import brandimg13 from '../assets/brand_img13.png';
 // import icecream from '../assets/icecream.jpg';
 // import DHf from '../assets/DH-F.jpeg';
 import docota from '../assets/docota 4.jpg';
-import tabletop1 from '../assets/TableTopFoodMixer.jpeg';
+import p6 from '../assets/Products/p6.jpeg';
 import tabletop2 from '../assets/TableTopFoodMixer2.jpeg';
 import  p5 from '../assets/Products/p5.jpg'
-import p11 from '../assets/Products/p11.jpg'
+import p3 from '../assets/Products/p3.jpeg'
 import p17 from '../assets/Products/p17.jpg'
 
 
@@ -153,15 +153,15 @@ export default function Home() {
   const latestProducts = [
     {
       id: "icecream-freezer",
-      name: "COBOLT IC-500 Continuous Freezer",
+      name: "TABLE TOP FOOD MIXER",
       category: "Confectionery Rig",
-      image: p11,
+      image: p3,
       specs: "500 L/Hr | Touchscreen PLC | Auto Overrun",
       description: "Industrial continuous ice cream freezer designed for consistent overrun calibration and rapid heat extraction."
     },
     {
       id: "dhf-homogenizer",
-      name: "COBOLT DH-F High-Shear Homogenizer",
+      name: "2 SPLIT OPEN FRYER-OFG321-322-323",
       category: "Fluid Machinery",
       image: p5,
       specs: "2000 L/Hr | 400 Bar Max Pressure | Dual Stage",
@@ -169,7 +169,7 @@ export default function Home() {
     },
     {
       id: "docota-filler",
-      name: "COBOLT DOCOTA-4 Rotary Packaging Line",
+      name: "DACOTA 4 BURNER 24 ",
       category: "Packaging Machinery",
       image: docota,
       specs: "4 Head Filling | 3600 Cups/Hr | Foil Heat Sealing",
@@ -177,15 +177,15 @@ export default function Home() {
     },
     {
       id: "tabletop-mixer-1",
-      name: "COBOLT TableTop-1 Pro Food Mixer",
+      name: "BT MIXER",
       category: "Food Processing",
-      image: tabletop1,
+      image: p6,
       specs: "10L Bowl | 3-Speed Planetary Gear | Safety Guard",
       description: "Industrial-grade commercial stand mixer with stainless steel components for bakeries and test kitchens."
     },
     {
       id: "tabletop-mixer-2",
-      name: "COBOLT TableTop-2 High-Output Mixer",
+      name: "TABLE TOP FOOD MIXER",
       category: "Food Processing",
       image: tabletop2,
       specs: "20L Bowl | Digital Timer | Reinforced Motor",
@@ -193,7 +193,7 @@ export default function Home() {
     },
     {
       id: "tabletop-mixer-2",
-      name: "COBOLT TableTop-2 High-Output Mixer",
+      name: "PRESSURE FRYER ELECTRIC-(BOAST MACHINE) PFE-800",
       category: "Food Processing",
       image: p17,
       specs: "20L Bowl | Digital Timer | Reinforced Motor",

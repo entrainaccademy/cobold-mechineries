@@ -925,22 +925,22 @@ export default function Products() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Category Filters */}
-          <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-8 md:mb-12">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setSelectedCategory(cat)}
-                className={`px-4 py-2 md:px-6 md:py-2.5 text-xs md:text-sm font-medium rounded-full transition-all duration-300 active:scale-95 ${selectedCategory === cat
-                    ? 'bg-[#DE1D3A] text-white shadow-md shadow-[#DE1D3A]/25 ring-1 ring-[#DE1D3A]'
-                    : 'bg-[#FFFFFF] text-[#6B7280] border border-[#E5E7EB] hover:border-[#DE1D3A] hover:bg-[#F8FAFC] hover:text-[#111827]'
-                  }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-
-
+<div className="flex flex-wrap justify-center gap-1 mb-10">
+  {categories.map((cat) => (
+    <button
+      key={cat}
+      onClick={() => setSelectedCategory(cat)}
+      className={`px-2 py-1.5 text-[9px] rounded-full border transition-all duration-200
+        ${
+          selectedCategory === cat
+            ? "border-[#DE1D3A] text-[#DE1D3A]  bg-[#DE1D3A]/5"
+            : "border-gray-300 text-gray-500 hover:border-[#DE1D3A]"
+        }`}
+    >
+      {cat}
+    </button>
+  ))}
+</div>
 
           {/* Product Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2   lg:grid-cols-3 gap-8">
