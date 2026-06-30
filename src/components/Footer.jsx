@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Send, Facebook, Twitter, Linkedin, Youtube, CheckCircle2 } from 'lucide-react';
-import logo from '../assets/logo.png';
+
+import logo from '../assets/blacklogotr.png'
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -85,7 +86,7 @@ export default function Footer() {
           <div className="space-y-6">
             <Link to="/" className="flex items-center gap-3">
               <img
-                className="h-9 w-auto object-contain"
+                className="h-12 w-auto object-contain"
                 src={logo}
                 alt="Cobolt Machineries Logo"
                 onError={(e) => {
@@ -184,13 +185,13 @@ export default function Footer() {
             <div className="flex items-start gap-3">
               <MapPin className="w-4.5 h-4.5 text-[#DE1D3A] mt-0.5 flex-shrink-0" />
               <span className="text-text-light text-sm leading-relaxed">
-                Plot 104, GIDC Industrial Estate, Sector 26, Gandhinagar, Gujarat 382028, India
+                 veemboor, menjery, kerala -679582
               </span>
             </div>
             <div className="flex items-center gap-3">
               <Phone className="w-4.5 h-4.5 text-[#DE1D3A] flex-shrink-0" />
               <a href="tel:7592084226" className="text-text-light hover:text-accent text-sm transition-colors duration-200">
-                +91 75920 84226
+                +91 9061 782023
               </a>
             </div>
             <div className="flex items-center gap-3">
@@ -201,7 +202,9 @@ export default function Footer() {
             </div>
             <div className="pt-2">
               <span className="inline-flex items-center px-3 py-1 rounded bg-green-50 text-green-700 text-xs font-semibold border border-green-200">
-                Support Hours: 24/7 Hotline
+               
+Mon – Sat: 9 am – 8 pm,
+Sunday: CLOSED
               </span>
             </div>
           </div>

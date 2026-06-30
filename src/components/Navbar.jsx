@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Menu, X, ArrowRight, Phone, MapPin, Youtube, Facebook, Instagram, Mail } from 'lucide-react';
-import logonew from '../assets/cobolt logo.png';
-import logo from '../assets/logo.png';
+
+import blacklogo from '../assets/blacklogotr.png'
+
+// import logo from '../assets/logonew.png';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -125,8 +127,8 @@ export default function Navbar() {
             <div className="flex-shrink-0 flex items-center">
               <Link to="/" className="flex items-center group gap-2">
                 <img
-                  className="h-8 md:h-10  w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-                  src={logo}
+                  className="h-8 md:h-15 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                  src={blacklogo}
                   alt="Cobolt Machineries Logo"
                   onError={(e) => {
                     e.target.src = 'https://placehold.co/120x40/0F172A/FFFFFF?text=Cobolt';
@@ -185,13 +187,13 @@ export default function Navbar() {
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 type="button"
-                className="inline-flex items-center  justify-center p-2.5 rounded-full text-slate-700 hover:text-accent hover:bg-slate-100/80 focus:outline-none transition-all duration-200"
+                className="inline-flex items-center  justify-center p-2.5 rounded-full text-slate-700 hover:text-[#DE1D3A] hover:bg-slate-100/80 focus:outline-none transition-all duration-200"
                 aria-label="Toggle navigation menu"
               >
                 {isMobileMenuOpen ? (
-                  <X className="block h-5.5 w-5.5" />
+                  <X className="block text-[#DE1D3A] h-5.5 w-5.5" />
                 ) : (
-                  <Menu className="block h-5.5 w-5.5" />
+                  <Menu className="block text-[#DE1D3A] h-5.5 w-5.5" />
                 )}
               </button>
             </div>
@@ -222,7 +224,7 @@ export default function Navbar() {
         </button>
 
         {/* Large Links List */}
-        <div className="space-y-2 text-left relative z-10 flex-grow mt-6">
+        <div className="space-y-2 text-left relative  z-10 flex-grow mt-6">
           {navLinks.map((link, idx) => (
             <div
               key={link.name}
@@ -234,8 +236,8 @@ export default function Navbar() {
                 to={link.path}
                 className={({ isActive }) =>
                   `block py-3.5 px-4 text-xs font-poppins font-bold uppercase tracking-widest rounded-xl transition-all duration-300 ${isActive
-                    ? 'text-accent bg-accent/5 border-l-4 border-accent pl-5'
-                    : 'text-slate-700 hover:text-accent hover:bg-slate-50'
+                    ? 'text-[#DE1D3A] bg-[#DE1D3A]/10 border-l-4 border-[#DE1D3A] pl-5'
+                    : 'text-slate-700 hover:text-[#DE1D3A] hover:bg-slate-50'
                   }`
                 }
               >
@@ -250,17 +252,17 @@ export default function Navbar() {
           className={`space-y-6 border-t border-slate-100 pt-6 text-left relative z-10 transform transition-all duration-500 delay-200 ${isMobileMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
             }`}
         >
-          <div className="space-y-4">
+          <div className="space-y-4 ">
             <div>
               <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-1">
                 24/7 Hotline Support
               </span>
-              <a
-                href="tel:7592084226"
-                className="block text-sm font-sora font-semibold tracking-wider text-slate-800 hover:text-accent transition-colors duration-200"
-              >
-                +91 75920 84226
-              </a>
+               <a
+                 href="tel:9061782023"
+                 className="block text-sm font-sora font-semibold tracking-wider text-slate-800 hover:text-[#DE1D3A] transition-colors duration-200"
+               >
+                 +91 9061782023
+               </a>
             </div>
 
             <div className="space-y-2 border-t border-slate-100 pt-4">
@@ -268,32 +270,40 @@ export default function Navbar() {
                 Branch Facilities
               </span>
               <div className="flex flex-col gap-2 text-xs text-slate-600">
-                <Link to="/contact?loc=gujarat" className="hover:text-accent transition-colors flex items-center gap-1.5">
-                  <span className="w-1 h-1 rounded-full bg-accent flex-shrink-0" />
-                  <span>Gujarat Headquarters (Gandhinagar)</span>
-                </Link>
-                <Link to="/contact?loc=veepoor" className="hover:text-accent transition-colors flex items-center gap-1.5">
-                  <span className="w-1 h-1 rounded-full bg-accent flex-shrink-0" />
-                  <span>Veepoor Foundry Center (Kerala)</span>
-                </Link>
-                <Link to="/contact?loc=manjeri" className="hover:text-accent transition-colors flex items-center gap-1.5">
-                  <span className="w-1 h-1 rounded-full bg-accent flex-shrink-0" />
+
+
+                <Link to="/contact?loc=manjeri" className="hover:text-[#DE1D3A] transition-colors flex items-center gap-1.5">
+                  <span className="w-1 h-1 rounded-full bg-[#DE1D3A] flex-shrink-0" />
                   <span>Manjeri Outlet Center (Kerala)</span>
+                </Link>
+                <Link to="/contact?loc=veepoor" className="hover:text-[#DE1D3A] transition-colors flex items-center gap-1.5">
+                  <span className="w-1 h-1 rounded-full bg-[#DE1D3A] flex-shrink-0" />
+                  <span>Veepoor Foundry Center (Kerala)</span>
                 </Link>
               </div>
             </div>
           </div>
 
-          <div className="flex flex-col gap-4">
-            <Link
-              to="/contact"
-              className="w-full flex items-center justify-center px-6 py-3.5 bg-gradient-to-r from-accent to-amber-500 hover:from-accent-hover hover:to-orange-600 text-white text-xs font-bold uppercase tracking-widest rounded-xl transition-all duration-300 shadow-md shadow-accent/20 text-center"
-            >
-              Get in Touch
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
-
-            {/* Social Icons for Mobile */}
+           <div className="flex flex-col gap-4">
+<Link
+  to="/contact"
+  className="
+    w-full flex items-center justify-center
+    px-6 py-3.5
+    bg-gradient-to-r from-[#DE1D3A] to-[#F04A63]
+    hover:from-[#C91834] hover:to-[#DE1D3A]
+    text-white text-xs font-bold uppercase tracking-widest
+    rounded-xl
+    transition-all duration-300
+    shadow-lg shadow-[#DE1D3A]/30
+    hover:shadow-xl hover:shadow-[#DE1D3A]/40
+    hover:scale-[1.02]
+    text-center
+  "
+>
+  Get in Touch
+  <ArrowRight className="w-4 h-4 ml-2" />
+</Link>     {/* Social Icons for Mobile */}
             <div className="flex justify-center gap-6 pt-2 border-t border-slate-100 mt-2">
               <a
                 href="https://www.youtube.com/@coboltmachineries"

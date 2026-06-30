@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Mail, Phone, MapPin, Send, MessageSquare, Clock, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, MessageSquare, Clock, ShieldCheck, CheckCircle2, User, Building, Landmark } from 'lucide-react';
 import PageWrapper from '../components/PageWrapper';
 
 export default function Contact() {
@@ -116,12 +116,12 @@ export default function Contact() {
   };
 
   const contactCards = [
-    {
+    { 
       icon: Phone,
       title: "Call Our Hotline",
-      details: "+91 79 8765 4321",
-      sub: "Mon - Sat: 9:00 AM - 6:00 PM IST",
-      action: "tel:+917987654321",
+      details: "+91 90 6178 2023",
+      sub: "Mon - Sat: 9:00 AM - 8:00 PM IST",
+      action: "tel:+919061782023",
       actionText: "Call Now"
     },
     {
@@ -135,9 +135,9 @@ export default function Contact() {
     {
       icon: MessageSquare,
       title: "Chat on WhatsApp",
-      details: "+91 79 8765 4321",
+      details: "+91 90 6178 2023",
       sub: "Instant technical support routing",
-      action: "https://wa.me/917987654321",
+      action: "https://wa.me/919061782023",
       actionText: "Start Chat"
     }
   ];
@@ -145,14 +145,16 @@ export default function Contact() {
   return (
     <PageWrapper>
       {/* Header */}
-      <section className="relative pt-32 pb-16 bg-[#F8FAFC] border-b border-[#E5E7EB]/60 overflow-hidden">
+      <section className="relative pt-32 pb-20 bg-gradient-to-br from-[#F8FAFC] via-[#FFFFFF] to-[#FCE8EC]/50 border-b border-[#E5E7EB]/60 overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000003_1px,transparent_1px),linear-gradient(to_bottom,#00000003_1px,transparent_1px)] bg-[size:3rem_3rem]" />
+        <div className="absolute top-1/2 right-0 w-96 h-96 bg-[#DE1D3A]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left relative z-10">
           <div className="space-y-4 max-w-3xl">
-            <span className="text-[#DE1D3A] font-bold text-xs uppercase tracking-widest">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-transparent border border-[#DE1D3A]/30 text-[#DE1D3A] text-xs font-semibold uppercase tracking-widest rounded-full mb-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#DE1D3A]" />
               Get In Touch
             </span>
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-[#111827] font-display leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#111827] font-display leading-tight tracking-tight">
               Connect with Cobolt
             </h1>
             <p className="text-[#6B7280] text-base md:text-lg max-w-2xl leading-relaxed">
@@ -181,9 +183,9 @@ export default function Contact() {
               {/* Quick Contact Cards */}
               <div className="space-y-4">
                 {contactCards.map((card, idx) => (
-                  <div key={idx} className="flex items-center justify-between p-5 border border-[#E5E7EB] rounded-xl bg-[#F8FAFC] hover:bg-[#FFFFFF] hover:border-[#DE1D3A]/20 transition-all duration-300">
+                  <div key={idx} className="flex items-center justify-between p-5 border border-[#E5E7EB] rounded-2xl bg-[#F8FAFC] hover:bg-[#FFFFFF] hover:border-[#DE1D3A]/20 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-slate-100/50 transition-all duration-300 group">
                     <div className="flex items-center gap-4">
-                      <div className="w-11 h-11 rounded-lg bg-[#FFFFFF] border border-[#E5E7EB] text-[#DE1D3A] flex items-center justify-center shadow-sm">
+                      <div className="w-11 h-11 rounded-xl bg-[#FFFFFF] border border-[#E5E7EB] text-[#DE1D3A] group-hover:scale-105 group-hover:border-[#DE1D3A]/30 transition-all duration-300 flex items-center justify-center shadow-sm">
                         <card.icon className="w-5 h-5" />
                       </div>
                       <div>
@@ -196,7 +198,7 @@ export default function Contact() {
                       href={card.action}
                       target={card.action.startsWith('http') ? '_blank' : '_self'}
                       rel="noreferrer"
-                      className="px-4 py-2 border border-[#E5E7EB] hover:bg-[#DE1D3A] hover:text-white hover:border-[#DE1D3A] text-xs font-semibold rounded-lg transition-all duration-200"
+                      className="px-4 py-2 border border-[#E5E7EB] hover:bg-[#DE1D3A] hover:text-white hover:border-[#DE1D3A] hover:shadow-md hover:shadow-[#DE1D3A]/10 text-xs font-semibold rounded-xl transition-all duration-200"
                     >
                       {card.actionText}
                     </a>
@@ -205,44 +207,24 @@ export default function Contact() {
               </div>
 
               {/* Branch Locations Cards */}
-              <div className="space-y-4 pt-4 border-t border-[#E5E7EB]/60">
+              <div className="space-y-4 pt-6 border-t border-[#E5E7EB]/60">
                 <h4 className="font-display font-bold text-base text-[#111827] mb-3">Our Facilities & Branches</h4>
                 
-                {/* Gujarat HQ */}
-                <div
-                  id="loc-gujarat"
-                  className={`p-5 border rounded-xl bg-[#F8FAFC] space-y-3 transition-all duration-505 ${
-                    highlightedLoc === 'gujarat'
-                      ? 'border-[#DE1D3A] ring-2 ring-[#DE1D3A]/30 bg-[#FCE8EC]'
-                      : 'border-[#E5E7EB] hover:border-[#DE1D3A]/20'
-                  }`}
-                >
-                  <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-[#DE1D3A] flex-shrink-0 mt-0.5" />
-                    <div>
-                      <h5 className="font-display font-bold text-sm text-[#111827]">Corporate Headquarters (Gujarat)</h5>
-                      <p className="text-[#6B7280] text-xs leading-relaxed mt-1">
-                        Plot 104, GIDC Industrial Estate, Sector 26, Gandhinagar, Gujarat 382028, India
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4 pl-8 text-[10px] text-[#6B7280]">
-                    <Clock className="w-3.5 h-3.5 text-[#6B7280]" />
-                    <span>Visits: Mon - Fri (10:00 AM - 5:00 PM)</span>
-                  </div>
-                </div>
+              
 
                 {/* Veepoor Kerala */}
                 <div
                   id="loc-veepoor"
-                  className={`p-5 border rounded-xl bg-[#F8FAFC] space-y-3 transition-all duration-505 ${
+                  className={`p-6 border rounded-2xl bg-[#FFFFFF] space-y-4 transition-all duration-300 shadow-sm hover:shadow-md ${
                     highlightedLoc === 'veepoor'
-                      ? 'border-[#DE1D3A] ring-2 ring-[#DE1D3A]/30 bg-[#FCE8EC]'
+                      ? 'border-l-4 border-l-[#DE1D3A] border-y-[#E5E7EB] border-r-[#E5E7EB] bg-gradient-to-r from-[#FCE8EC]/40 to-[#FFFFFF] ring-1 ring-[#DE1D3A]/20'
                       : 'border-[#E5E7EB] hover:border-[#DE1D3A]/20'
                   }`}
                 >
-                  <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-[#DE1D3A] flex-shrink-0 mt-0.5" />
+                  <div className="flex items-start gap-4">
+                    <div className="p-2.5 rounded-xl bg-[#F8FAFC] text-[#DE1D3A] border border-[#E5E7EB] flex-shrink-0">
+                      <MapPin className="w-5 h-5" />
+                    </div>
                     <div>
                       <h5 className="font-display font-bold text-sm text-[#111827]">Kerala Regional Foundry (Veepoor)</h5>
                       <p className="text-[#6B7280] text-xs leading-relaxed mt-1">
@@ -250,42 +232,21 @@ export default function Contact() {
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-4 pl-8 text-[10px] text-[#6B7280]">
-                    <Clock className="w-3.5 h-3.5 text-[#6B7280]" />
+                  <div className="flex items-center gap-2 pl-14 text-[10px] text-[#6B7280]">
+                    <Clock className="w-3.5 h-3.5 text-[#6B7280]/80" />
                     <span>Foundry visits by technical appointment</span>
                   </div>
                 </div>
 
-                {/* Manjeri Kerala */}
-                <div
-                  id="loc-manjeri"
-                  className={`p-5 border rounded-xl bg-[#F8FAFC] space-y-3 transition-all duration-505 ${
-                    highlightedLoc === 'manjeri'
-                      ? 'border-[#DE1D3A] ring-2 ring-[#DE1D3A]/30 bg-[#FCE8EC]'
-                      : 'border-[#E5E7EB] hover:border-[#DE1D3A]/20'
-                  }`}
-                >
-                  <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-[#DE1D3A] flex-shrink-0 mt-0.5" />
-                    <div>
-                      <h5 className="font-display font-bold text-sm text-[#111827]">Kerala Machinery Outlet (Manjeri)</h5>
-                      <p className="text-[#6B7280] text-xs leading-relaxed mt-1">
-                        Nilambur Road, Near Industrial Estate, Manjeri, Malappuram, Kerala 676121, India
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4 pl-8 text-[10px] text-[#6B7280]">
-                    <Clock className="w-3.5 h-3.5 text-[#6B7280]" />
-                    <span>Showroom: Mon - Sat (9:00 AM - 6:00 PM)</span>
-                  </div>
-                </div>
+               
               </div>
             </div>
 
             {/* Right: Contact Form */}
-            <div className="lg:col-span-7 bg-[#F8FAFC] border border-[#E5E7EB] rounded-2xl p-6 md:p-10 shadow-sm text-left">
-              <h3 className="font-display font-bold text-xl text-[#111827] mb-6">
+            <div className="lg:col-span-7 bg-[#FFFFFF] border border-[#E5E7EB] rounded-3xl p-8 md:p-12 shadow-xl shadow-slate-100/50 text-left">
+              <h3 className="font-display font-bold text-2xl text-[#111827] mb-8 flex items-center gap-2">
                 Request Specifications Callback
+                <span className="w-2 h-2 rounded-full bg-[#DE1D3A] animate-pulse" />
               </h3>
 
               {isSubmitted ? (
@@ -303,142 +264,166 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {/* Name */}
-                  <div>
-                    <label htmlFor="name" className="block text-xs font-bold uppercase tracking-wider text-[#111827] mb-2">
+                  <div className="group relative">
+                    <label htmlFor="name" className="block text-xs font-bold uppercase tracking-wider text-[#6B7280] mb-2">
                       Full Name *
                     </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      className={`w-full px-4 py-3 bg-[#FFFFFF] text-sm text-[#111827] rounded-lg border ${
-                        formErrors.name ? 'border-[#DE1D3A] focus:ring-[#DE1D3A]/20' : 'border-[#E5E7EB] focus:ring-[#DE1D3A]/50'
-                      } focus:outline-none focus:ring-2 focus:border-[#DE1D3A] transition-all duration-200`}
-                      placeholder="e.g. Vikram Singhania"
-                    />
+                    <div className="relative">
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        className={`w-full pl-10 pr-4 py-3 bg-[#FFFFFF] text-sm text-[#111827] rounded-xl border ${
+                          formErrors.name ? 'border-[#DE1D3A] focus:ring-[#DE1D3A]/20' : 'border-[#E5E7EB] focus:ring-[#DE1D3A]/10'
+                        } focus:outline-none focus:ring-4 focus:border-[#DE1D3A] transition-all duration-300`}
+                        placeholder="e.g. Vikram Singhania"
+                      />
+                      <User className="w-4 h-4 text-[#6B7280]/65 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none group-focus-within:text-[#DE1D3A] transition-colors duration-300" />
+                    </div>
                     {formErrors.name && (
-                      <p className="text-[#DE1D3A] text-[10px] font-semibold mt-1">{formErrors.name}</p>
+                      <p className="text-[#DE1D3A] text-[10px] font-semibold mt-1.5">{formErrors.name}</p>
                     )}
                   </div>
 
                   {/* Company */}
-                  <div>
-                    <label htmlFor="company" className="block text-xs font-bold uppercase tracking-wider text-[#111827] mb-2">
+                  <div className="group relative">
+                    <label htmlFor="company" className="block text-xs font-bold uppercase tracking-wider text-[#6B7280] mb-2">
                       Corporate/Entity Name
                     </label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-[#FFFFFF] text-sm text-[#111827] rounded-lg border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#DE1D3A]/50 focus:border-[#DE1D3A] transition-all duration-200"
-                      placeholder="e.g. AeroSteel Inc"
-                    />
+                    <div className="relative">
+                      <input
+                        type="text"
+                        id="company"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleInputChange}
+                        className="w-full pl-10 pr-4 py-3 bg-[#FFFFFF] text-sm text-[#111827] rounded-xl border border-[#E5E7EB] focus:outline-none focus:ring-4 focus:ring-[#DE1D3A]/10 focus:border-[#DE1D3A] transition-all duration-300"
+                        placeholder="e.g. AeroSteel Inc"
+                      />
+                      <Building className="w-4 h-4 text-[#6B7280]/65 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none group-focus-within:text-[#DE1D3A] transition-colors duration-300" />
+                    </div>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {/* Email */}
-                  <div>
-                    <label htmlFor="email" className="block text-xs font-bold uppercase tracking-wider text-[#111827] mb-2">
+                  <div className="group relative">
+                    <label htmlFor="email" className="block text-xs font-bold uppercase tracking-wider text-[#6B7280] mb-2">
                       Corporate Email *
                     </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      className={`w-full px-4 py-3 bg-[#FFFFFF] text-sm text-[#111827] rounded-lg border ${
-                        formErrors.email ? 'border-[#DE1D3A] focus:ring-[#DE1D3A]/20' : 'border-[#E5E7EB] focus:ring-[#DE1D3A]/50'
-                      } focus:outline-none focus:ring-2 focus:border-[#DE1D3A] transition-all duration-200`}
-                      placeholder="e.g. vsinghania@aerosteel.com"
-                    />
+                    <div className="relative">
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        className={`w-full pl-10 pr-4 py-3 bg-[#FFFFFF] text-sm text-[#111827] rounded-xl border ${
+                          formErrors.email ? 'border-[#DE1D3A] focus:ring-[#DE1D3A]/20' : 'border-[#E5E7EB] focus:ring-[#DE1D3A]/10'
+                        } focus:outline-none focus:ring-4 focus:border-[#DE1D3A] transition-all duration-300`}
+                        placeholder="e.g. vsinghania@aerosteel.com"
+                      />
+                      <Mail className="w-4 h-4 text-[#6B7280]/65 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none group-focus-within:text-[#DE1D3A] transition-colors duration-300" />
+                    </div>
                     {formErrors.email && (
-                      <p className="text-[#DE1D3A] text-[10px] font-semibold mt-1">{formErrors.email}</p>
+                      <p className="text-[#DE1D3A] text-[10px] font-semibold mt-1.5">{formErrors.email}</p>
                     )}
                   </div>
 
                   {/* Phone */}
-                  <div>
-                    <label htmlFor="phone" className="block text-xs font-bold uppercase tracking-wider text-[#111827] mb-2">
+                  <div className="group relative">
+                    <label htmlFor="phone" className="block text-xs font-bold uppercase tracking-wider text-[#6B7280] mb-2">
                       Contact Number *
                     </label>
-                    <input
-                      type="text"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className={`w-full px-4 py-3 bg-[#FFFFFF] text-sm text-[#111827] rounded-lg border ${
-                        formErrors.phone ? 'border-[#DE1D3A] focus:ring-[#DE1D3A]/20' : 'border-[#E5E7EB] focus:ring-[#DE1D3A]/50'
-                      } focus:outline-none focus:ring-2 focus:border-[#DE1D3A] transition-all duration-200`}
-                      placeholder="e.g. +91 98765 43210"
-                    />
+                    <div className="relative">
+                      <input
+                        type="text"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        className={`w-full pl-10 pr-4 py-3 bg-[#FFFFFF] text-sm text-[#111827] rounded-xl border ${
+                          formErrors.phone ? 'border-[#DE1D3A] focus:ring-[#DE1D3A]/20' : 'border-[#E5E7EB] focus:ring-[#DE1D3A]/10'
+                        } focus:outline-none focus:ring-4 focus:border-[#DE1D3A] transition-all duration-300`}
+                        placeholder="e.g. +91 90617 82023"
+                      />
+                      <Phone className="w-4 h-4 text-[#6B7280]/65 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none group-focus-within:text-[#DE1D3A] transition-colors duration-300" />
+                    </div>
                     {formErrors.phone && (
-                      <p className="text-[#DE1D3A] text-[10px] font-semibold mt-1">{formErrors.phone}</p>
+                      <p className="text-[#DE1D3A] text-[10px] font-semibold mt-1.5">{formErrors.phone}</p>
                     )}
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {/* Service Type Dropdown */}
-                  <div>
-                    <label htmlFor="serviceType" className="block text-xs font-bold uppercase tracking-wider text-[#111827] mb-2">
+                  <div className="group relative">
+                    <label htmlFor="serviceType" className="block text-xs font-bold uppercase tracking-wider text-[#6B7280] mb-2">
                       Inquiry Category
                     </label>
-                    <select
-                      id="serviceType"
-                      name="serviceType"
-                      value={formData.serviceType}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-[#FFFFFF] text-sm text-[#111827] rounded-lg border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#DE1D3A]/50 focus:border-[#DE1D3A] transition-all duration-200"
-                    >
-                      <option value="Machinery Purchase">Machinery Purchase</option>
-                      <option value="Engineering Service">Engineering Service</option>
-                      <option value="AMC Pricing Request">AMC Pricing Request</option>
-                      <option value="Custom Fabrication Consulting">Custom Fabrication Consulting</option>
-                    </select>
+                    <div className="relative">
+                      <select
+                        id="serviceType"
+                        name="serviceType"
+                        value={formData.serviceType}
+                        onChange={handleInputChange}
+                        className="w-full pl-10 pr-10 py-3 bg-[#FFFFFF] text-sm text-[#111827] rounded-xl border border-[#E5E7EB] focus:outline-none focus:ring-4 focus:ring-[#DE1D3A]/10 focus:border-[#DE1D3A] transition-all duration-300 appearance-none"
+                      >
+                        <option value="Machinery Purchase">Machinery Purchase</option>
+                        <option value="Engineering Service">Engineering Service</option>
+                        <option value="AMC Pricing Request">AMC Pricing Request</option>
+                        <option value="Custom Fabrication Consulting">Custom Fabrication Consulting</option>
+                      </select>
+                      <Landmark className="w-4 h-4 text-[#6B7280]/65 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none group-focus-within:text-[#DE1D3A] transition-colors duration-300" />
+                      <div className="absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      </div>
+                    </div>
                   </div>
 
                   {/* Subject */}
-                  <div>
-                    <label htmlFor="subject" className="block text-xs font-bold uppercase tracking-wider text-[#111827] mb-2">
+                  <div className="group relative">
+                    <label htmlFor="subject" className="block text-xs font-bold uppercase tracking-wider text-[#6B7280] mb-2">
                       Subject Title
                     </label>
-                    <input
-                      type="text"
-                      id="subject"
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-[#FFFFFF] text-sm text-[#111827] rounded-lg border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#DE1D3A]/50 focus:border-[#DE1D3A] transition-all duration-200"
-                      placeholder="e.g. COBOLT-X5 CNC specifications query"
-                    />
+                    <div className="relative">
+                      <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        value={formData.subject}
+                        onChange={handleInputChange}
+                        className="w-full pl-10 pr-4 py-3 bg-[#FFFFFF] text-sm text-[#111827] rounded-xl border border-[#E5E7EB] focus:outline-none focus:ring-4 focus:ring-[#DE1D3A]/10 focus:border-[#DE1D3A] transition-all duration-300"
+                        placeholder="e.g. COBOLT-X5 CNC specifications query"
+                      />
+                      <MessageSquare className="w-4 h-4 text-[#6B7280]/65 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none group-focus-within:text-[#DE1D3A] transition-colors duration-300" />
+                    </div>
                   </div>
                 </div>
 
                 {/* Message */}
-                <div>
-                  <label htmlFor="message" className="block text-xs font-bold uppercase tracking-wider text-[#111827] mb-2">
+                <div className="group relative">
+                  <label htmlFor="message" className="block text-xs font-bold uppercase tracking-wider text-[#6B7280] mb-2">
                     Inquiry Message Details *
                   </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="5"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    className={`w-full px-4 py-3 bg-[#FFFFFF] text-sm text-[#111827] rounded-lg border ${
-                      formErrors.message ? 'border-[#DE1D3A] focus:ring-[#DE1D3A]/20' : 'border-[#E5E7EB] focus:ring-[#DE1D3A]/50'
-                    } focus:outline-none focus:ring-2 focus:border-[#DE1D3A] transition-all duration-200`}
-                    placeholder="Provide details about structural thickness parameters, axis speeds requirements, or materials characteristics."
-                  />
+                  <div className="relative">
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="5"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      className={`w-full pl-10 pr-4 py-3 bg-[#FFFFFF] text-sm text-[#111827] rounded-xl border ${
+                        formErrors.message ? 'border-[#DE1D3A] focus:ring-[#DE1D3A]/20' : 'border-[#E5E7EB] focus:ring-[#DE1D3A]/10'
+                      } focus:outline-none focus:ring-4 focus:border-[#DE1D3A] transition-all duration-300`}
+                      placeholder="Provide details about structural thickness parameters, axis speeds requirements, or materials characteristics."
+                    />
+                    <MessageSquare className="w-4 h-4 text-[#6B7280]/65 absolute left-3.5 top-5 pointer-events-none group-focus-within:text-[#DE1D3A] transition-colors duration-300" />
+                  </div>
                   {formErrors.message && (
-                    <p className="text-[#DE1D3A] text-[10px] font-semibold mt-1">{formErrors.message}</p>
+                    <p className="text-[#DE1D3A] text-[10px] font-semibold mt-1.5">{formErrors.message}</p>
                   )}
                 </div>
 
@@ -447,14 +432,20 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full px-6 py-4 bg-[#DE1D3A] hover:bg-[#B7152D] text-white text-xs font-bold uppercase tracking-widest rounded-lg transition-colors duration-300 flex items-center justify-center gap-2 shadow"
+                    className="w-full px-6 py-4 bg-gradient-to-r from-[#DE1D3A] to-[#B7152D] hover:from-[#B7152D] hover:to-[#DE1D3A] text-white text-xs font-bold uppercase tracking-widest rounded-xl transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-[#DE1D3A]/25 hover:shadow-xl hover:shadow-[#DE1D3A]/30 hover:scale-[1.01] active:scale-95 disabled:opacity-85"
                   >
                     {isSubmitting ? (
-                      <span>TRANSMITTING DETAILS...</span>
+                      <span className="flex items-center gap-2">
+                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        TRANSMITTING DETAILS...
+                      </span>
                     ) : (
                       <>
                         <span>TRANSMIT SPECIFICATIONS INQUIRY</span>
-                        <Send className="w-4.5 h-4.5" />
+                        <Send className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                       </>
                     )}
                   </button>
@@ -472,13 +463,13 @@ export default function Contact() {
           <div className="space-y-4 mb-10 text-center max-w-2xl mx-auto">
             <h3 className="font-display font-bold text-2xl text-[#111827]">Plant Infrastructure Layout</h3>
             <p className="text-[#6B7280] text-sm">
-              We welcome custom design visits by appointment. Located in the heart of GIDC Sector 26, Gandhinagar.
+              We welcome custom design visits by appointment. Located in Veemboor, Manjeri, Kerala.
             </p>
           </div>
           <div className="w-full h-[450px] rounded-2xl overflow-hidden shadow-md border border-[#E5E7EB] bg-[#F8FAFC]">
             <iframe
-              title="Cobolt Gandhinagar Facility Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.653429307044!2d72.6394541760447!3d23.237482808269784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395c2b2938a1cfd5%3A0xe54d92cd029e0839!2sGIDC%20Sector%2026%2C%20Gandhinagar%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1703248364821!5m2!1sen!2sin"
+              title="Cobolt Kerala Facility Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.920452722002!2d76.0720596!3d11.1193023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba649a596a82c39%3A0xf1730fa4deb5511d!2sCobolt%20Machineries%20%7C%20Commercial%20Kitchen%20Equipment%20Supplier!5e0!3m2!1sen!2sin!4v1782797879353!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}

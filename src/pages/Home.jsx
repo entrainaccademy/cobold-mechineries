@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Settings, ShieldCheck, Cpu, Clock, Award, Users, ChevronLeft, ChevronRight, Quote, Landmark, Zap, Layers, Phone, Truck } from 'lucide-react';
+import { ArrowRight, Settings, ShieldCheck, Cpu, Clock, Award, Users, ChevronLeft, ChevronRight, Quote, Landmark, Zap, Layers, Truck } from 'lucide-react';
 import PageWrapper from '../components/PageWrapper';
 
 // Asset imports
@@ -307,14 +307,34 @@ export default function Home() {
                   Contact Us
                 </Link>
 
-                {/* Mobile/Tablet Call Button (Fixed Floating on Bottom Right, Hidden on Laptop/Desktop) */}
-                <a
-                  href="tel:7592084226"
-                  className="lg:hidden fixed bottom-6 right-6 z-50 w-14 h-14 bg-gradient-to-r from-[#DE1D3A] to-[#F59E0B] hover:from-[#B7152D] hover:to-[#F59E0B] text-white rounded-full shadow-2xl shadow-[#DE1D3A]/40 transition-all duration-300 flex items-center justify-center animate-pulse-glow hover:scale-105 active:scale-95"
-                  aria-label="Call Now"
-                >
-                  <Phone className="w-6 h-6 text-white" />
-                </a>
+                {/* Floating WhatsApp Action Button (Fixed Floating on Bottom Right, Visible on All Screens) */}
+             <a
+  href="https://wa.me/919061782023"
+  target="_blank"
+  rel="noreferrer"
+className="
+  fixed bottom-6 right-6 z-50
+  w-14 h-14  bg-gradient-to-r from-[#DE1D3A] to-[#FF6B81]
+shadow-2xl shadow-[#DE1D3A]/25
+  hover:from-[#DE1D3A] hover:to-[#F04A63]
+  text-white
+  rounded-full
+  shadow-2xl shadow-[#F04A63]/30
+  transition-all duration-300
+  flex items-center justify-center
+  animate-pulse-glow
+  hover:scale-105 active:scale-95
+"
+  aria-label="Chat on WhatsApp"
+>
+  <svg
+    className="w-7 h-7 text-white fill-current"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M12.004 0C5.378 0 0 5.378 0 12.004c0 2.115.549 4.18 1.597 6.009L.057 24l6.163-1.619c1.77.962 3.766 1.468 5.78 1.468 6.626 0 12.004-5.378 12.004-12.004C24.004 5.378 18.626 0 12.004 0zm0 22.015c-1.804 0-3.578-.485-5.127-1.402l-.367-.218-3.805 1.002.998-3.662-.24-.383a9.96 9.96 0 01-1.528-5.348c0-5.518 4.49-10.008 10.008-10.008 5.518 0 10.008 4.49 10.008 10.008-.002 5.522-4.492 10.012-10.008 10.012zm5.496-7.502c-.302-.152-1.785-.881-2.062-.981-.277-.101-.48-.152-.68.152-.201.303-.781.982-.957 1.183-.176.201-.353.227-.655.076-1.205-.603-2.072-1.054-2.898-2.47-.197-.339.197-.315.565-1.05.06-.121.03-.227-.015-.328-.045-.101-.48-1.153-.658-1.58-.173-.418-.348-.362-.48-.369-.124-.007-.267-.008-.41-.008s-.376.054-.572.27c-.197.216-.75.733-.75 1.79s.767 2.08.874 2.222c.106.142 1.51 2.305 3.657 3.232.51.22.909.352 1.22.45.514.163.982.14 1.352.085.412-.061 1.785-.73 2.037-1.436.252-.705.252-1.312.176-1.437-.076-.126-.277-.202-.579-.354z" />
+  </svg>
+</a>
               </motion.div>
             </div>
           </div>
@@ -891,38 +911,51 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Contact CTA Banner */}
-      <section className="py-20 bg-[#DE1D3A] text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#1F2937] via-[#DE1D3A] to-[#DE1D3A] opacity-60" />
+      </section>      {/* Contact CTA Banner */}
+      <section className="py-28 bg-gradient-to-br from-[#121824] via-[#0B0F19] to-[#121824] text-white relative overflow-hidden">
+        {/* Blurry gradient auras */}
+        <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#DE1D3A]/10 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-[#DE1D3A]/10 rounded-full blur-[100px] pointer-events-none" />
 
         {/* Fine grid overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:4rem_4rem]" />
 
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-8">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white font-display">
-            Ready to Optimize Your Production Output?
-          </h2>
-          <p className="text-slate-300 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
-            Discuss your machinery specifications, structural tolerances, or maintenance schedules with our lead system designers today.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              to="/contact"
-              className="px-8 py-4 bg-[#DE1D3A]/70 hover:bg-[#B7152D] text-white text-sm font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center group"
-            >
-              Consult an Engineer
-              <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-            </Link>
-            <a
-              href="https://wa.me/917987654321"
-              target="_blank"
-              rel="noreferrer"
-              className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white text-sm font-semibold rounded-lg border border-white/20 hover:border-white/40 transition-all duration-300"
-            >
-              Chat on WhatsApp
-            </a>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="bg-white/[0.02] backdrop-blur-md border border-white/5 rounded-3xl p-6 sm:p-10 md:p-16 text-center shadow-2xl relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-[#DE1D3A]/5 to-transparent pointer-events-none" />
+            
+            <div className="relative z-10 space-y-6 max-w-3xl mx-auto">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#DE1D3A]/10 border border-[#DE1D3A]/20 text-[#DE1D3A] text-xs font-bold uppercase tracking-widest rounded-full">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#DE1D3A] animate-pulse" />
+                Operational Support
+              </span>
+              <h2 className="text-4xl sm:text-5xl font-extrabold text-white font-display tracking-tight leading-tight">
+                Ready to Optimize Your Production Output?
+              </h2>
+              <p className="text-slate-300 text-base md:text-lg leading-relaxed">
+                Discuss your machinery specifications, structural tolerances, or maintenance schedules with our lead system designers today.
+              </p>
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
+                <Link
+                  to="/contact"
+                  className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-[#DE1D3A] to-[#B7152D] hover:from-[#B7152D] hover:to-[#DE1D3A] text-white text-sm font-semibold rounded-xl shadow-lg shadow-[#DE1D3A]/20 hover:shadow-xl hover:shadow-[#DE1D3A]/30 hover:scale-[1.02] active:scale-95 transition-all duration-300 flex items-center justify-center group"
+                >
+                  Consult an Engineer
+                  <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
+                <a
+                  href="https://wa.me/919061782023"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 text-white text-sm font-semibold rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-95"
+                >
+                  <svg className="w-5 h-5 text-white fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.004 0C5.378 0 0 5.378 0 12.004c0 2.115.549 4.18 1.597 6.009L.057 24l6.163-1.619c1.77.962 3.766 1.468 5.78 1.468 6.626 0 12.004-5.378 12.004-12.004C24.004 5.378 18.626 0 12.004 0zm0 22.015c-1.804 0-3.578-.485-5.127-1.402l-.367-.218-3.805 1.002.998-3.662-.24-.383a9.96 9.96 0 01-1.528-5.348c0-5.518 4.49-10.008 10.008-10.008 5.518 0 10.008 4.49 10.008 10.008-.002 5.522-4.492 10.012-10.008 10.012zm5.496-7.502c-.302-.152-1.785-.881-2.062-.981-.277-.101-.48-.152-.68.152-.201.303-.781.982-.957 1.183-.176.201-.353.227-.655.076-1.205-.603-2.072-1.054-2.898-2.47-.197-.339.197-.315.565-1.05.06-.121.03-.227-.015-.328-.045-.101-.48-1.153-.658-1.58-.173-.418-.348-.362-.48-.369-.124-.007-.267-.008-.41-.008s-.376.054-.572.27c-.197.216-.75.733-.75 1.79s.767 2.08.874 2.222c.106.142 1.51 2.305 3.657 3.232.51.22.909.352 1.22.45.514.163.982.14 1.352.085.412-.061 1.785-.73 2.037-1.436.252-.705.252-1.312.176-1.437-.076-.126-.277-.202-.579-.354z"/>
+                  </svg>
+                  <span>Chat on WhatsApp</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -137,7 +137,7 @@ export default function About() {
                 <Factory className="w-8 h-8 text-[#DE1D3A] flex-shrink-0" />
                 <div className="text-left">
                   <h5 className="font-bold text-sm text-[#111827]">Industrial Hub</h5>
-                  <p className="text-[#6B7280] text-xs">Gandhinagar, Gujarat</p>
+                  <p className="text-[#6B7280] text-xs">veemboor, Menjery</p>
                 </div>
               </div>
             </div>
