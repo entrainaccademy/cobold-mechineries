@@ -29,11 +29,14 @@ import brandimg12 from '../assets/brand_img12.png';
 import brandimg13 from '../assets/brand_img13.png';
 
 
-import icecream from '../assets/icecream.jpg';
-import DHf from '../assets/DH-F.jpeg';
+// import icecream from '../assets/icecream.jpg';
+// import DHf from '../assets/DH-F.jpeg';
 import docota from '../assets/docota 4.jpg';
 import tabletop1 from '../assets/TableTopFoodMixer.jpeg';
 import tabletop2 from '../assets/TableTopFoodMixer2.jpeg';
+import  p5 from '../assets/Products/p5.jpg'
+import p11 from '../assets/Products/p11.jpg'
+import p17 from '../assets/Products/p17.jpg'
 
 
 
@@ -152,7 +155,7 @@ export default function Home() {
       id: "icecream-freezer",
       name: "COBOLT IC-500 Continuous Freezer",
       category: "Confectionery Rig",
-      image: icecream,
+      image: p11,
       specs: "500 L/Hr | Touchscreen PLC | Auto Overrun",
       description: "Industrial continuous ice cream freezer designed for consistent overrun calibration and rapid heat extraction."
     },
@@ -160,7 +163,7 @@ export default function Home() {
       id: "dhf-homogenizer",
       name: "COBOLT DH-F High-Shear Homogenizer",
       category: "Fluid Machinery",
-      image: DHf,
+      image: p5,
       specs: "2000 L/Hr | 400 Bar Max Pressure | Dual Stage",
       description: "Premium micron-level liquid particle disperser, optimized for emulsifying sauces, dairy mixtures, and cosmetic gels."
     },
@@ -192,7 +195,7 @@ export default function Home() {
       id: "tabletop-mixer-2",
       name: "COBOLT TableTop-2 High-Output Mixer",
       category: "Food Processing",
-      image: tabletop2,
+      image: p17,
       specs: "20L Bowl | Digital Timer | Reinforced Motor",
       description: "High-capacity planetary mixer with speed control and automatic bowl lifting mechanism for thick batters."
     }
@@ -644,8 +647,8 @@ shadow-2xl shadow-[#DE1D3A]/25
   </div>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
-            {latestProducts.slice(0, 3).map((product) => (
+          <div className="grid grid-cols-1   md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
+            {latestProducts.slice(0, 6).map((product) => (
               <motion.div
                 variants={cardVariants}
                 key={product.id}
@@ -664,23 +667,22 @@ shadow-2xl shadow-[#DE1D3A]/25
       "
               >
                 {/* Top Accent */}
-                <div className="absolute top-0 left-0 w-full h-1 bg-[#DE1D3A]" />
+                <div className="absolute top-0  left-0 w-full h-1 bg-[#DE1D3A]" />
 
                 {/* Image */}
-                <div className="relative aspect-[4/3] overflow-hidden bg-[#F8FAFC]">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+        <div className="relative  aspect-[4/3] overflow-hidden bg-white">
+  <img
+    src={product.image}
+    alt={product.name}
+    className="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105"
+  />
 
-                  <span className="absolute top-4 left-4 bg-[#FFFFFF] text-[#DE1D3A] border border-[#DE1D3A]/20 px-3 py-1 rounded-full text-[10px] font-semibold uppercase shadow-sm">
-                    {product.category}
-                  </span>
-                </div>
-
+  <span className="absolute top-4 left-4 bg-[#F8FAFC] text-[#DE1D3A] border border-[#DE1D3A]/20 px-3 py-1 rounded-full text-[10px] font-semibold uppercase shadow-sm">
+    {product.category}
+  </span>
+</div>
                 {/* Content */}
-                <div className="p-6 flex flex-col flex-grow">
+                <div className="p-6 flex bg-[#F8FAFC] flex-col flex-grow">
                   <h3 className="font-display font-bold text-xl text-[#111827] mb-3 group-hover:text-[#DE1D3A] transition-colors">
                     {product.name}
                   </h3>
@@ -720,79 +722,8 @@ shadow-2xl shadow-[#DE1D3A]/25
 
 
           {/* Second Row: 2 cards centered */}
-            <div className="grid grid-cols-1 mt-8 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
-            {latestProducts.slice(0, 3).map((product) => (
-              <motion.div
-                variants={cardVariants}
-                key={product.id}
-                className="
-        group relative
-        bg-[#FFFFFF]
-        border border-[#E5E7EB]
-        rounded-2xl
-        overflow-hidden
-        shadow-sm
-        hover:shadow-xl
-        hover:border-[#DE1D3A]/20
-        transition-all duration-500
-        hover:-translate-y-1
-        flex flex-col h-full
-      "
-              >
-                {/* Top Accent */}
-                <div className="absolute top-0 left-0 w-full h-1 bg-[#DE1D3A]" />
+        
 
-                {/* Image */}
-                <div className="relative aspect-[4/3] overflow-hidden bg-[#F8FAFC]">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-
-                  <span className="absolute top-4 left-4 bg-[#FFFFFF] text-[#DE1D3A] border border-[#DE1D3A]/20 px-3 py-1 rounded-full text-[10px] font-semibold uppercase shadow-sm">
-                    {product.category}
-                  </span>
-                </div>
-
-                {/* Content */}
-                <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="font-display font-bold text-xl text-[#111827] mb-3 group-hover:text-[#DE1D3A] transition-colors">
-                    {product.name}
-                  </h3>
-
-                  <div className="inline-flex w-fit text-[11px] font-medium text-[#DE1D3A] bg-[#FCE8EC] px-3 py-1 rounded-full mb-4">
-                    {product.specs}
-                  </div>
-
-                  <p className="text-[#6B7280] text-sm leading-relaxed flex-grow mb-6">
-                    {product.description}
-                  </p>
-
-                  <Link
-                    to="/contact"
-                    className="
-            w-full
-            py-3
-            border border-[#DE1D3A]
-            text-[#DE1D3A]
-            hover:bg-[#B7152D]
-            hover:border-[#B7152D]
-            hover:text-white
-            rounded-xl
-            text-sm
-            font-semibold
-            transition-all duration-300
-            flex items-center justify-center gap-2
-          "
-                  >
-                    Get Product Details
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
-          </div>
           {/* Premium Bottom Conversion CTA Section */}
           <motion.div
             variants={cardVariants}
