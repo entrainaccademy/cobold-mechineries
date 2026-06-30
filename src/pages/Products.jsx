@@ -903,17 +903,17 @@ export default function Products() {
   return (
     <PageWrapper>
       {/* Header */}
-      <section className="relative pt-32 pb-16 bg-bg-section border-b border-slate-200/60 overflow-hidden">
+      <section className="relative pt-32 pb-16 bg-[#F8FAFC] border-b border-[#E5E7EB]/60 overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000003_1px,transparent_1px),linear-gradient(to_bottom,#00000003_1px,transparent_1px)] bg-[size:3rem_3rem]" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left relative z-10">
           <div className="space-y-4 max-w-3xl">
             <span className="text-[#DE1D3A] font-bold text-xs uppercase tracking-widest">
               Industrial Catalog
             </span>
-            <h1 className=" text-2xl md:text-4xl sm:text-5xl font-extrabold text-primary font-display leading-tight">
+            <h1 className=" text-2xl md:text-4xl sm:text-5xl font-extrabold text-[#111827] font-display leading-tight">
               Our Machineries & Toolings
             </h1>
-            <p className="text-text-light text-base md:text-lg max-w-2xl leading-relaxed">
+            <p className="text-[#6B7280] text-base md:text-lg max-w-2xl leading-relaxed">
               Explore our line of industrial setups. Engineered with heavy components, high safety ratios, and intuitive controller architectures.
             </p>
           </div>
@@ -921,7 +921,7 @@ export default function Products() {
       </section>
 
       {/* Product Section */}
-      <section className="py-16 bg-white min-h-[600px]">
+      <section className="py-16 bg-[#FFFFFF] min-h-[600px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Category Filters */}
@@ -931,8 +931,8 @@ export default function Products() {
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-4 py-2 md:px-6 md:py-2.5 text-xs md:text-sm font-medium rounded-full transition-all duration-300 active:scale-95 ${selectedCategory === cat
-                    ? 'bg-primary text-white shadow-md shadow-primary/25 ring-1 ring-primary'
-                    : 'bg-white text-slate-600 border border-slate-200 hover:border-slate-300 hover:bg-slate-50 hover:text-slate-900'
+                    ? 'bg-[#DE1D3A] text-white shadow-md shadow-[#DE1D3A]/25 ring-1 ring-[#DE1D3A]'
+                    : 'bg-[#FFFFFF] text-[#6B7280] border border-[#E5E7EB] hover:border-[#DE1D3A] hover:bg-[#F8FAFC] hover:text-[#111827]'
                   }`}
               >
                 {cat}
@@ -952,38 +952,38 @@ export default function Products() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.98 }}
                 transition={{ duration: 0.3 }}
-                className="group border border-slate-100 bg-white  rounded-2xl overflow-hidden hover:shadow-xl hover:border-[#DE1D3A]/20 transition-all duration-300 flex flex-col cursor-pointer"
+                className="group border border-[#E5E7EB] bg-[#FFFFFF]  rounded-2xl overflow-hidden hover:shadow-xl hover:border-[#DE1D3A]/20 transition-all duration-300 flex flex-col cursor-pointer"
                 onClick={() => setSelectedProduct(product)}
               >
                 {/* Image Section */}
-                <div className="relative h-56 overflow-hidden bg-white flex items-center justify-center p-6">
+                <div className="relative h-56 overflow-hidden bg-[#FFFFFF] flex items-center justify-center p-6">
                   <img
                     src={product.image}
                     alt={product.name}
                     className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
                   />
-                  <span className="absolute top-4 left-4 bg-white/95 backdrop-blur px-2.5 py-1 rounded text-primary text-[10px] font-bold uppercase tracking-wider shadow">
+                  <span className="absolute top-4 left-4 bg-[#FFFFFF]/95 backdrop-blur px-2.5 py-1 rounded text-[#DE1D3A] text-[10px] font-bold uppercase tracking-wider shadow">
                     {product.category}
                   </span>
                 </div>
                 {/* Details Section */}
                 <div className="p-6 flex-grow flex flex-col items-start text-left">
-                  <h3 className="font-display font-bold text-lg text-black group-hover:text-[#DE1D3A]/90 transition-colors duration-200 mb-1">
+                  <h3 className="font-display font-bold text-lg text-[#111827] group-hover:text-[#DE1D3A]/90 transition-colors duration-200 mb-1">
                     {product.name}
                   </h3>
                   <p className="text-[#DE1D3A]/70 text-[11px] font-bold tracking-wide uppercase mb-3">
                     {product.tagline}
                   </p>
-                  <p className="text-text-light text-xs sm:text-sm leading-relaxed mb-6 flex-grow">
+                  <p className="text-[#6B7280] text-xs sm:text-sm leading-relaxed mb-6 flex-grow">
                     {product.description.slice(0, 110)}...
                   </p>
 
 
-                  <div className="w-full pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-text font-semibold">
+                  <div className="w-full pt-4 border-t border-[#E5E7EB] flex items-center justify-between text-xs text-[#6B7280] font-semibold">
                     <span className="flex items-center text-[#DE1D3A]">
                       <Info className="w-3.5 h-3.5 mr-1" /> View Technical Specs
                     </span>
-                    <ChevronRight className="w-4 h-4 text-slate-400 group-hover:translate-x-1 transition-transform duration-200" />
+                    <ChevronRight className="w-4 h-4 text-[#6B7280] group-hover:translate-x-1 transition-transform duration-200" />
                   </div>
                 </div>
               </motion.div>
@@ -999,7 +999,7 @@ export default function Products() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-primary/70 backdrop-blur-sm overflow-y-auto"
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#1F2937]/70 backdrop-blur-sm overflow-y-auto"
           >
             {/* Backdrop click to close */}
             <div className="absolute inset-0 cursor-pointer" onClick={handleCloseModal} />
@@ -1009,22 +1009,22 @@ export default function Products() {
               initial={{ scale: 0.95, y: 15 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.95, y: 15 }}
-              className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative z-10 border border-slate-100 flex flex-col text-left"
+              className="bg-[#FFFFFF] rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative z-10 border border-[#E5E7EB] flex flex-col text-left"
             >
               {/* Header Info */}
-              <div className="p-6 md:p-8 border-b border-slate-100 flex justify-between items-start">
+              <div className="p-6 md:p-8 border-b border-[#E5E7EB] flex justify-between items-start">
                 <div>
-                  <span className="px-2.5 py-1 rounded bg-accent/10 text-accent text-[10px] font-bold uppercase tracking-wider">
+                  <span className="px-2.5 py-1 rounded bg-[#FCE8EC] text-[#DE1D3A] text-[10px] font-bold uppercase tracking-wider">
                     {selectedProduct.category}
                   </span>
-                  <h2 className="text-2xl sm:text-3xl font-bold font-display text-primary mt-2">
+                  <h2 className="text-2xl sm:text-3xl font-bold font-display text-[#111827] mt-2">
                     {selectedProduct.name}
                   </h2>
-                  <p className="text-text-light text-sm mt-1">{selectedProduct.tagline}</p>
+                  <p className="text-[#6B7280] text-sm mt-1">{selectedProduct.tagline}</p>
                 </div>
                 <button
                   onClick={handleCloseModal}
-                  className="p-2 text-slate-400 hover:text-primary rounded-lg bg-slate-50 hover:bg-slate-100 transition-colors duration-200"
+                  className="p-2 text-[#6B7280] hover:text-[#DE1D3A] rounded-lg bg-[#F8FAFC] hover:bg-[#E5E7EB] transition-colors duration-200"
                   aria-label="Close modal"
                 >
                   <X className="w-5 h-5" />
@@ -1037,42 +1037,42 @@ export default function Products() {
                 {/* Left: General info & Accessories */}
                 <div className="space-y-6">
                   <div>
-                    <h4 className="font-display font-bold text-sm uppercase tracking-widest text-primary mb-3">
+                    <h4 className="font-display font-bold text-sm uppercase tracking-widest text-[#DE1D3A] mb-3">
                       Description
                     </h4>
-                    <p className="text-text text-sm leading-relaxed">
+                    <p className="text-[#6B7280] text-sm leading-relaxed">
                       {selectedProduct.description}
                     </p>
                   </div>
 
                   <div>
-                    <h4 className="font-display font-bold text-sm uppercase tracking-widest text-primary mb-3">
+                    <h4 className="font-display font-bold text-sm uppercase tracking-widest text-[#DE1D3A] mb-3">
                       Included Accessories
                     </h4>
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {selectedProduct.accessories.map((acc, idx) => (
-                        <li key={idx} className="flex items-center gap-2 text-text text-xs">
-                          <Check className="w-4 h-4 text-green-600 flex-shrink-0" />
+                        <li key={idx} className="flex items-center gap-2 text-[#6B7280] text-xs">
+                          <Check className="w-4 h-4 text-[#22C55E] flex-shrink-0" />
                           <span>{acc}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="pt-4 border-t border-slate-100 flex flex-wrap gap-3">
+                  <div className="pt-4 border-t border-[#E5E7EB] flex flex-wrap gap-3">
                     <button
                       onClick={() => {
                         handleCloseModal();
                         navigate(`/contact?product=${encodeURIComponent(selectedProduct.name)}`);
                       }}
-                      className="px-6 py-3 bg-accent hover:bg-accent-hover text-white text-xs font-semibold uppercase tracking-wider rounded-lg transition-colors duration-200 flex items-center group shadow"
+                      className="px-6 py-3 bg-[#DE1D3A] hover:bg-[#B7152D] text-white text-xs font-semibold uppercase tracking-wider rounded-lg transition-colors duration-200 flex items-center group shadow"
                     >
                       Request Quote Callback
                       <ArrowRight className="w-3.5 h-3.5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                     </button>
                     <button
                       onClick={() => window.print()}
-                      className="px-5 py-3 border border-slate-200 text-slate-600 hover:text-primary hover:bg-slate-50 text-xs font-semibold uppercase tracking-wider rounded-lg transition-colors duration-200 flex items-center gap-1.5"
+                      className="px-5 py-3 border border-[#E5E7EB] text-[#6B7280] hover:text-[#DE1D3A] hover:bg-[#F8FAFC] text-xs font-semibold uppercase tracking-wider rounded-lg transition-colors duration-200 flex items-center gap-1.5"
                     >
                       <FileText className="w-3.5 h-3.5" /> Print Datasheet
                     </button>
@@ -1081,18 +1081,18 @@ export default function Products() {
 
                 {/* Right: Technical specifications table */}
                 <div>
-                  <h4 className="font-display font-bold text-sm uppercase tracking-widest text-primary mb-3">
+                  <h4 className="font-display font-bold text-sm uppercase tracking-widest text-[#DE1D3A] mb-3">
                     Technical Specifications
                   </h4>
-                  <div className="border border-slate-150 rounded-xl overflow-hidden shadow-sm">
-                    <table className="min-w-full divide-y divide-slate-100">
-                      <tbody className="divide-y divide-slate-100 bg-white">
+                  <div className="border border-[#E5E7EB] rounded-xl overflow-hidden shadow-sm">
+                    <table className="min-w-full divide-y divide-[#E5E7EB]">
+                      <tbody className="divide-y divide-[#E5E7EB] bg-[#FFFFFF]">
                         {selectedProduct.specs.map((spec, idx) => (
-                          <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
-                            <td className="px-4 py-3 text-xs font-bold text-primary font-display uppercase tracking-wider w-1/3">
+                          <tr key={idx} className={idx % 2 === 0 ? 'bg-[#FFFFFF]' : 'bg-[#F8FAFC]'}>
+                            <td className="px-4 py-3 text-xs font-bold text-[#111827] font-display uppercase tracking-wider w-1/3">
                               {spec.label}
                             </td>
-                            <td className="px-4 py-3 text-xs text-text">
+                            <td className="px-4 py-3 text-xs text-[#6B7280]">
                               {spec.value}
                             </td>
                           </tr>

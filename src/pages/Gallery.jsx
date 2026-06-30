@@ -83,17 +83,17 @@ export default function Gallery() {
   return (
     <PageWrapper>
       {/* Header */}
-      <section className="relative pt-32 pb-16 bg-bg-section border-b border-slate-200/60 overflow-hidden">
+      <section className="relative pt-32 pb-16 bg-[#F8FAFC] border-b border-[#E5E7EB]/60 overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000003_1px,transparent_1px),linear-gradient(to_bottom,#00000003_1px,transparent_1px)] bg-[size:3rem_3rem]" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left relative z-10">
           <div className="space-y-4 max-w-3xl">
-            <span className="text-accent font-bold text-xs uppercase tracking-widest">
+            <span className="text-[#DE1D3A] font-bold text-xs uppercase tracking-widest">
               Visual Archive
             </span>
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-primary font-display leading-tight">
+            <h1 className="text-4xl sm:text-5xl font-extrabold text-[#111827] font-display leading-tight">
               Machinery & Facility Gallery
             </h1>
-            <p className="text-text-light text-base md:text-lg max-w-2xl leading-relaxed">
+            <p className="text-[#6B7280] text-base md:text-lg max-w-2xl leading-relaxed">
               Take a virtual walkthrough of our fabrication yards, on-site commissioning operations, and detailed engineering assemblies.
             </p>
           </div>
@@ -101,19 +101,19 @@ export default function Gallery() {
       </section>
 
       {/* Masonry Section */}
-      <section className="py-16 bg-white min-h-[500px]">
+      <section className="py-16 bg-[#FFFFFF] min-h-[500px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Category Filter Pills */}
-          <div className="flex flex-wrap items-center justify-center gap-2 mb-12 border-b border-slate-100 pb-8">
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-12 border-b border-[#E5E7EB] pb-8">
             {filters.map((filter) => (
               <button
                 key={filter}
                 onClick={() => setSelectedFilter(filter)}
                 className={`px-5 py-2.5 text-xs font-bold uppercase tracking-wider rounded-lg transition-all duration-300 ${
                   selectedFilter === filter
-                    ? 'bg-primary text-white shadow-md'
-                    : 'bg-bg-section text-text hover:bg-slate-200 border border-slate-100'
+                    ? 'bg-[#DE1D3A] text-white shadow-md'
+                    : 'bg-[#F8FAFC] text-[#6B7280] hover:bg-[#E5E7EB] border border-[#E5E7EB]'
                 }`}
               >
                 {filter}
@@ -133,7 +133,7 @@ export default function Gallery() {
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.3 }}
                   onClick={() => handleOpenLightbox(idx)}
-                  className="relative overflow-hidden rounded-2xl border border-slate-100 shadow-sm cursor-zoom-in group h-72 sm:h-80 bg-slate-900"
+                  className="relative overflow-hidden rounded-2xl border border-[#E5E7EB] shadow-sm cursor-zoom-in group h-72 sm:h-80 bg-slate-900"
                 >
                   <img
                     src={item.src}
@@ -142,9 +142,9 @@ export default function Gallery() {
                   />
                   
                   {/* Glass Hover Overlay */}
-                  <div className="absolute inset-0 bg-primary/45 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-left">
+                  <div className="absolute inset-0 bg-[#DE1D3A]/45 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-left">
                     <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 space-y-2">
-                      <span className="inline-block px-2.5 py-0.5 bg-accent text-white text-[9px] font-bold uppercase tracking-wider rounded">
+                      <span className="inline-block px-2.5 py-0.5 bg-[#1F2937] text-white text-[9px] font-bold uppercase tracking-wider rounded">
                         {item.category}
                       </span>
                       <h4 className="text-white font-display font-bold text-base sm:text-lg">

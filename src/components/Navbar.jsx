@@ -110,14 +110,14 @@ export default function Navbar() {
 
       <header
         className={`fixed left-0 right-0 z-50 transition-all duration-500  ease-in-out ${isScrolled
-            ? 'top-0.5 px-0'
-            : 'top-5 sm:top-14 px-4 sm:px-6 lg:px-8'
+          ? 'top-0.5 px-0'
+          : 'top-5 sm:top-14 px-4 sm:px-6 lg:px-8'
           }`}
       >
         <div
           className={`mx-auto w-full transition-all duration-500    ease-in-out ${isScrolled
-              ? 'max-w-none rounded-none bg-white/90 backdrop-blur-lg shadow-[0_4px_25px_rgba(15,23,42,0.06)] border-b border-slate-100 py-3 px-4 sm:px-6 lg:px-8'
-              : 'max-w-7xl rounded-2xl bg-white/80 backdrop-blur-lg border border-slate-200/30 shadow-[0_8px_30px_rgba(15,23,42,0.04)] py-4 px-6 md:px-8'
+            ? 'max-w-none rounded-none bg-white/90 backdrop-blur-lg shadow-[0_4px_25px_rgba(15,23,42,0.06)] border-b border-slate-100 py-3 px-4 sm:px-6 lg:px-8'
+            : 'max-w-7xl rounded-2xl bg-white/80 backdrop-blur-lg border border-slate-200/30 shadow-[0_8px_30px_rgba(15,23,42,0.04)] py-4 px-6 md:px-8'
             }`}
         >
           <div className="flex items-center  justify-between ">
@@ -155,8 +155,8 @@ export default function Navbar() {
                       </span>
                       <span
                         className={`absolute -bottom-1 left-0 h-[2px] bg-[#DE1D3A] transition-all duration-300 ease-out ${isActive
-                            ? 'w-full opacity-100'
-                            : 'w-0 opacity-0 group-hover:w-full group-hover:opacity-100'
+                          ? 'w-full opacity-100'
+                          : 'w-0 opacity-0 group-hover:w-full group-hover:opacity-100'
                           }`}
                       />
                     </span>

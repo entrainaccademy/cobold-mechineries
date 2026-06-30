@@ -141,17 +141,17 @@ These local edge modules monitor vibration frequencies. If the module detects hi
   return (
     <PageWrapper>
       {/* Header */}
-      <section className="relative pt-32 pb-16 bg-bg-section border-b border-slate-200/60 overflow-hidden">
+      <section className="relative pt-32 pb-16 bg-[#F8FAFC] border-b border-[#E5E7EB]/60 overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000003_1px,transparent_1px),linear-gradient(to_bottom,#00000003_1px,transparent_1px)] bg-[size:3rem_3rem]" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left relative z-10">
           <div className="space-y-4 max-w-3xl">
-            <span className="text-accent font-bold text-xs uppercase tracking-widest">
+            <span className="text-[#DE1D3A] font-bold text-xs uppercase tracking-widest">
               Knowledge Hub
             </span>
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-primary font-display leading-tight">
+            <h1 className="text-4xl sm:text-5xl font-extrabold text-[#111827] font-display leading-tight">
               Technical Journal & News
             </h1>
-            <p className="text-text-light text-base md:text-lg max-w-2xl leading-relaxed">
+            <p className="text-[#6B7280] text-base md:text-lg max-w-2xl leading-relaxed">
               Read insights, guides, and engineering logs from our design specialists. Learn about machinery maintenance, IoT automation, and metalwork tips.
             </p>
           </div>
@@ -159,11 +159,11 @@ These local edge modules monitor vibration frequencies. If the module detects hi
       </section>
 
       {/* Main Content */}
-      <section className="py-16 bg-white min-h-[600px]">
+      <section className="py-16 bg-[#FFFFFF] min-h-[600px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Search and Filters Bar */}
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-12 border-b border-slate-100 pb-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-12 border-b border-[#E5E7EB] pb-8">
             {/* Category Pills */}
             <div className="flex flex-wrap items-center gap-1.5 order-2 md:order-1">
               {categories.map((cat) => (
@@ -172,8 +172,8 @@ These local edge modules monitor vibration frequencies. If the module detects hi
                   onClick={() => setSelectedCategory(cat)}
                   className={`px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-lg transition-all duration-300 ${
                     selectedCategory === cat
-                      ? 'bg-primary text-white'
-                      : 'bg-bg-section text-text hover:bg-slate-200'
+                      ? 'bg-[#DE1D3A] text-white'
+                      : 'bg-[#F8FAFC] text-[#6B7280] hover:bg-[#E5E7EB]'
                   }`}
                 >
                   {cat}
@@ -188,9 +188,9 @@ These local edge modules monitor vibration frequencies. If the module detects hi
                 placeholder="Search articles..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 bg-slate-50 text-sm text-primary rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all duration-200"
+                className="w-full pl-10 pr-4 py-2.5 bg-[#F8FAFC] text-sm text-[#111827] rounded-lg border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#DE1D3A]/50 focus:border-[#DE1D3A] transition-all duration-200"
               />
-              <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
+              <Search className="w-4 h-4 text-[#6B7280] absolute left-3.5 top-3.5" />
             </div>
           </div>
 
@@ -198,26 +198,26 @@ These local edge modules monitor vibration frequencies. If the module detects hi
           {selectedCategory === 'All' && !searchQuery && featuredArticle && (
             <div
               onClick={() => setActiveArticle(featuredArticle)}
-              className="bg-bg-section border border-slate-100 hover:border-slate-200 hover:bg-white rounded-2xl p-6 md:p-10 mb-12 shadow-sm hover:shadow-xl transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center cursor-pointer text-left group"
+              className="bg-[#F8FAFC] border border-[#E5E7EB] hover:border-[#DE1D3A]/20 hover:bg-[#FFFFFF] rounded-2xl p-6 md:p-10 mb-12 shadow-sm hover:shadow-xl transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center cursor-pointer text-left group"
             >
               <div className="lg:col-span-7 space-y-4">
-                <span className="inline-block px-3 py-1 bg-accent text-white text-[10px] font-bold uppercase tracking-wider rounded">
+                <span className="inline-block px-3 py-1 bg-[#DE1D3A] text-white text-[10px] font-bold uppercase tracking-wider rounded">
                   Featured Article
                 </span>
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-primary font-display group-hover:text-accent transition-colors duration-200 leading-tight">
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-[#111827] font-display group-hover:text-[#DE1D3A] transition-colors duration-200 leading-tight">
                   {featuredArticle.title}
                 </h2>
-                <p className="text-text-light text-sm sm:text-base leading-relaxed">
+                <p className="text-[#6B7280] text-sm sm:text-base leading-relaxed">
                   {featuredArticle.summary}
                 </p>
-                <div className="flex flex-wrap items-center gap-6 text-xs text-text-light pt-2">
+                <div className="flex flex-wrap items-center gap-6 text-xs text-[#6B7280] pt-2">
                   <span className="flex items-center gap-1"><User className="w-4 h-4" /> {featuredArticle.author}</span>
                   <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> {featuredArticle.date}</span>
                   <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> {featuredArticle.readTime}</span>
                 </div>
               </div>
               <div className="lg:col-span-5 flex justify-end">
-                <span className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-white border border-slate-200 group-hover:bg-accent group-hover:text-white group-hover:border-accent transition-all duration-300 shadow">
+                <span className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#FFFFFF] border border-[#E5E7EB] group-hover:bg-[#DE1D3A] group-hover:text-white group-hover:border-[#DE1D3A] transition-all duration-300 shadow">
                   <ArrowRight className="w-6 h-6 transform group-hover:translate-x-0.5 transition-transform" />
                 </span>
               </div>
@@ -226,12 +226,12 @@ These local edge modules monitor vibration frequencies. If the module detects hi
 
           {/* Articles Grid */}
           {filteredArticles.length === 0 ? (
-            <div className="py-20 text-center text-slate-400">
+            <div className="py-20 text-center text-[#6B7280]">
               <BookOpen className="w-12 h-12 mx-auto mb-4 opacity-50" />
               <p className="text-base font-semibold">No articles found matching your query.</p>
               <button
                 onClick={() => { setSearchQuery(''); setSelectedCategory('All'); }}
-                className="text-accent font-semibold text-sm mt-2 hover:underline"
+                className="text-[#DE1D3A] font-semibold text-sm mt-2 hover:underline"
               >
                 Clear all filters
               </button>
@@ -242,27 +242,27 @@ These local edge modules monitor vibration frequencies. If the module detects hi
                 <div
                   key={article.id}
                   onClick={() => setActiveArticle(article)}
-                  className="bg-white border border-slate-100 hover:border-slate-250 hover:shadow-xl rounded-2xl p-8 transition-all duration-300 flex flex-col justify-between cursor-pointer group"
+                  className="bg-[#FFFFFF] border border-[#E5E7EB] hover:border-[#DE1D3A]/20 hover:shadow-xl rounded-2xl p-8 transition-all duration-300 flex flex-col justify-between cursor-pointer group"
                 >
                   <div className="space-y-4">
-                    <span className="text-accent text-[10px] font-bold uppercase tracking-wider bg-accent/5 px-2.5 py-1 rounded">
+                    <span className="text-[#DE1D3A] text-[10px] font-bold uppercase tracking-wider bg-[#FCE8EC] px-2.5 py-1 rounded">
                       {article.category}
                     </span>
-                    <h3 className="font-display font-bold text-lg sm:text-xl text-primary group-hover:text-accent transition-colors duration-205 mt-2">
+                    <h3 className="font-display font-bold text-lg sm:text-xl text-[#111827] group-hover:text-[#DE1D3A] transition-colors duration-205 mt-2">
                       {article.title}
                     </h3>
-                    <p className="text-text-light text-sm leading-relaxed">
+                    <p className="text-[#6B7280] text-sm leading-relaxed">
                       {article.summary}
                     </p>
                   </div>
                   
-                  <div className="border-t border-slate-100 pt-6 mt-6 flex flex-wrap justify-between items-center gap-4 text-xs text-text-light">
+                  <div className="border-t border-[#E5E7EB] pt-6 mt-6 flex flex-wrap justify-between items-center gap-4 text-xs text-[#6B7280]">
                     <div className="flex gap-4">
                       <span>{article.date}</span>
                       <span>•</span>
                       <span>{article.readTime}</span>
                     </div>
-                    <span className="inline-flex items-center text-primary font-bold text-xs group-hover:text-accent transition-colors">
+                    <span className="inline-flex items-center text-[#DE1D3A] font-bold text-xs group-hover:text-[#B7152D] transition-colors">
                       Read Article <ChevronRight className="w-4 h-4 ml-0.5 group-hover:translate-x-0.5 transition-transform" />
                     </span>
                   </div>
@@ -280,7 +280,7 @@ These local edge modules monitor vibration frequencies. If the module detects hi
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-primary/70 backdrop-blur-sm overflow-y-auto"
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#1F2937]/70 backdrop-blur-sm overflow-y-auto"
           >
             {/* Backdrop click to close */}
             <div className="absolute inset-0 cursor-pointer" onClick={() => setActiveArticle(null)} />
@@ -290,33 +290,33 @@ These local edge modules monitor vibration frequencies. If the module detects hi
               initial={{ scale: 0.95, y: 15 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.95, y: 15 }}
-              className="bg-white rounded-2xl max-w-3xl w-full max-h-[85vh] overflow-y-auto shadow-2xl relative z-10 border border-slate-100 flex flex-col text-left"
+              className="bg-[#FFFFFF] rounded-2xl max-w-3xl w-full max-h-[85vh] overflow-y-auto shadow-2xl relative z-10 border border-[#E5E7EB] flex flex-col text-left"
             >
               {/* Close Button */}
               <button
                 onClick={() => setActiveArticle(null)}
-                className="absolute top-4 right-4 p-2 text-slate-400 hover:text-primary rounded-lg bg-slate-50 hover:bg-slate-100 transition-colors z-10"
+                className="absolute top-4 right-4 p-2 text-[#6B7280] hover:text-[#DE1D3A] rounded-lg bg-[#F8FAFC] hover:bg-[#E5E7EB] transition-colors z-10"
                 aria-label="Close reader"
               >
                 <X className="w-5 h-5" />
               </button>
 
               {/* Reader Header */}
-              <div className="p-6 md:p-10 border-b border-slate-100">
-                <span className="px-2.5 py-1 rounded bg-accent/10 text-accent text-[10px] font-bold uppercase tracking-wider">
+              <div className="p-6 md:p-10 border-b border-[#E5E7EB]">
+                <span className="px-2.5 py-1 rounded bg-[#FCE8EC] text-[#DE1D3A] text-[10px] font-bold uppercase tracking-wider">
                   {activeArticle.category}
                 </span>
-                <h2 className="text-2xl sm:text-3xl font-bold font-display text-primary mt-3 mb-4 leading-tight">
+                <h2 className="text-2xl sm:text-3xl font-bold font-display text-[#111827] mt-3 mb-4 leading-tight">
                   {activeArticle.title}
                 </h2>
                 
                 {/* Meta details */}
-                <div className="flex flex-wrap items-center gap-6 text-xs text-text-light border-t border-slate-100 pt-4">
+                <div className="flex flex-wrap items-center gap-6 text-xs text-[#6B7280] border-t border-[#E5E7EB] pt-4">
                   <div className="flex items-center gap-1.5">
-                    <div className="w-6 h-6 rounded-full bg-slate-100 text-primary font-bold flex items-center justify-center">
+                    <div className="w-6 h-6 rounded-full bg-[#FCE8EC] text-[#DE1D3A] font-bold flex items-center justify-center">
                       {activeArticle.author.charAt(0)}
                     </div>
-                    <span className="font-semibold text-primary">{activeArticle.author}</span>
+                    <span className="font-semibold text-[#111827]">{activeArticle.author}</span>
                   </div>
                   <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> {activeArticle.date}</span>
                   <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> {activeArticle.readTime}</span>
@@ -324,11 +324,11 @@ These local edge modules monitor vibration frequencies. If the module detects hi
               </div>
 
               {/* Reader Body */}
-              <div className="p-6 md:p-10 overflow-y-auto text-slate-700 leading-relaxed font-sans text-sm sm:text-base space-y-6">
+              <div className="p-6 md:p-10 overflow-y-auto text-[#6B7280] leading-relaxed font-sans text-sm sm:text-base space-y-6">
                 {activeArticle.content.trim().split('\n\n').map((paragraph, index) => {
                   if (paragraph.startsWith('### ')) {
                     return (
-                      <h4 key={index} className="font-display font-bold text-lg sm:text-xl text-primary pt-4">
+                      <h4 key={index} className="font-display font-bold text-lg sm:text-xl text-[#111827] pt-4">
                         {paragraph.replace('### ', '')}
                       </h4>
                     );
@@ -337,8 +337,8 @@ These local edge modules monitor vibration frequencies. If the module detects hi
                     const match = paragraph.match(/^(\d\.\s)(.*?)(:\s)(.*)/);
                     if (match) {
                       return (
-                        <p key={index} className="pl-4 border-l-2 border-accent py-0.5">
-                          <strong className="text-primary">{match[2]}</strong>: {match[4]}
+                        <p key={index} className="pl-4 border-l-2 border-[#DE1D3A] py-0.5">
+                          <strong className="text-[#111827]">{match[2]}</strong>: {match[4]}
                         </p>
                       );
                     }
@@ -352,13 +352,13 @@ These local edge modules monitor vibration frequencies. If the module detects hi
               </div>
 
               {/* Reader Footer */}
-              <div className="p-6 md:p-8 bg-slate-50 border-t border-slate-100 flex flex-wrap justify-between items-center gap-4">
-                <span className="text-xs text-text-light">
+              <div className="p-6 md:p-8 bg-[#F8FAFC] border-t border-[#E5E7EB] flex flex-wrap justify-between items-center gap-4">
+                <span className="text-xs text-[#6B7280]">
                   Published by Cobolt Machineries Engineering Cell.
                 </span>
                 <button
                   onClick={() => setActiveArticle(null)}
-                  className="px-4 py-2 border border-slate-200 bg-white text-slate-600 hover:text-primary text-xs font-semibold rounded-lg transition-colors"
+                  className="px-4 py-2 border border-[#E5E7EB] bg-[#FFFFFF] text-[#6B7280] hover:text-[#DE1D3A] text-xs font-semibold rounded-lg transition-colors"
                 >
                   Close Article
                 </button>

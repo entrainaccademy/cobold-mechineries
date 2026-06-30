@@ -242,7 +242,7 @@ export default function Home() {
   return (
     <PageWrapper>
       {/* Hero Section */}
-      <section className="relative h-screen  min-h-[600px] w-full overflow-hidden bg-slate-900">
+      <section className="relative h-screen  min-h-[600px] w-full overflow-hidden bg-[#1F2937]">
         {/* Background Image or Video with Zoom/Autoplay */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <video
@@ -266,7 +266,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="inline-block px-3 py-1.5 bg-red/100 border border-[#DE1D3A]/40 text-[#DE1D3A]  text-xs font-thin uppercase tracking-widest rounded-md mb-6"
+                className="inline-block px-3 py-1.5 bg-transparent border border-[#DE1D3A]/40 text-[#DE1D3A]  text-xs font-thin uppercase tracking-widest rounded-md mb-6"
               >
                 Advanced Engineering Systems
               </motion.span>
@@ -295,7 +295,7 @@ export default function Home() {
                 {/* Laptop/Desktop Buttons (Hidden on mobile/tablet) */}
                 <Link
                   to="/products"
-                  className="hidden lg:flex px-8 py-3.5 bg-[#DE1D3A] hover:bg-[#DE1D3A] text-white text-sm font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 items-center group font-sans"
+                  className="hidden lg:flex px-8 py-3.5 bg-[#DE1D3A] hover:bg-[#B7152D] text-white text-sm font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 items-center group font-sans"
                 >
                   Explore Products
                   <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
@@ -310,7 +310,7 @@ export default function Home() {
                 {/* Mobile/Tablet Call Button (Fixed Floating on Bottom Right, Hidden on Laptop/Desktop) */}
                 <a
                   href="tel:7592084226"
-                  className="lg:hidden fixed bottom-6 right-6 z-50 w-14 h-14 bg-gradient-to-r from-accent to-amber-500 hover:from-accent-hover hover:to-orange-600 text-white rounded-full shadow-2xl shadow-accent/40 transition-all duration-300 flex items-center justify-center animate-pulse-glow hover:scale-105 active:scale-95"
+                  className="lg:hidden fixed bottom-6 right-6 z-50 w-14 h-14 bg-gradient-to-r from-[#DE1D3A] to-[#F59E0B] hover:from-[#B7152D] hover:to-[#F59E0B] text-white rounded-full shadow-2xl shadow-[#DE1D3A]/40 transition-all duration-300 flex items-center justify-center animate-pulse-glow hover:scale-105 active:scale-95"
                   aria-label="Call Now"
                 >
                   <Phone className="w-6 h-6 text-white" />
@@ -322,17 +322,17 @@ export default function Home() {
       </section>
 
       {/* Our Clients Section (Logo Strip) */}
-      <section className="bg-slate-000    py-6 sm:py-12 overflow-hidden relative">
+      <section className="bg-[#F8FAFC]    py-6 sm:py-12 overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-1 bg-red-000  sm:px-6 lg:px-8">
-          <p className="text-center text-[13px] font-thin text-slate-400 uppercase tracking-widest mb-4 sm:mb-8 sm:text-[20px] font-sans">
+          <p className="text-center text-[13px] font-thin text-[#6B7280] uppercase tracking-widest mb-4 sm:mb-8 sm:text-[20px] font-sans">
             Our Esteemed Clients
           </p>
 
           {/* Logo Marquee Wrapper 1 */}
           <div className="relative w-full ">
             {/* Left and Right side soft fade gradients for premium aesthetic */}
-            <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-r from-slate-00 to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-l from-slate-00 to-transparent z-10 pointer-events-none" />
+            <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-r from-[#F8FAFC] to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-l from-[#F8FAFC] to-transparent z-10 pointer-events-none" />
 
 
             {/* Marquee Track (Left to Right) */}
@@ -369,8 +369,8 @@ export default function Home() {
           {/* Logo Marquee Wrapper 2 */}   {/* row2 */}
           <div className="relative w-full  hidden lg:block overflow-hidden mt-8">
             {/* Left and Right side soft fade gradients for premium aesthetic */}
-            <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none" />
+            <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-r from-[#F8FAFC] to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-l from-[#F8FAFC] to-transparent z-10 pointer-events-none" />
 
             {/* Marquee Track (Right to Left) */}
             <div className="flex w-max items-center gap-1 sm:gap-16 animate-marquee-reverse py-2 select-none">
@@ -407,7 +407,7 @@ export default function Home() {
       </section>
 
       {/* Company Overview Section */}
-      <section className="py-4 sm:py-24   bg-white">
+      <section className="py-4 sm:py-24   bg-[#FFFFFF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             {/* Images Column */}
@@ -418,13 +418,13 @@ export default function Home() {
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className="lg:col-span-6 relative"
             >
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-100 max-h-[500px]">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-[#E5E7EB] max-h-[500px]">
                 <img
                   src={hmAbout1}
                   alt="Industrial Engineering Team"
                   className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#DE1D3A]/30 to-transparent" />
               </div>
               {/* Overlay Stat Block */}
               <motion.div
@@ -434,14 +434,14 @@ export default function Home() {
                 transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
                 className="absolute -bottom-6 -right-6 hidden sm:block"
               >
-                <div className="bg-white border border-slate-100 shadow-xl rounded-xl p-6 max-w-xs animate-float">
+                <div className="bg-[#FFFFFF] border border-[#E5E7EB] shadow-xl rounded-xl p-6 max-w-xs animate-float">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center text-accent">
-                      <Award className="w-6 h-6" />
+                    <div className="w-12 h-12 bg-[#FCE8EC] rounded-lg flex items-center justify-center text-[#DE1D3A]">
+                      <Award className="w-6 h-6 text-[#DE1D3A]" />
                     </div>
                     <div>
-                      <h4 className="font-display font-bold text-2xl text-primary">10+</h4>
-                      <p className="text-text-light text-xs font-medium uppercase tracking-wider">Years Engineering Experience</p>
+                      <h4 className="font-display font-bold text-2xl text-[#DE1D3A]">10+</h4>
+                      <p className="text-[#6B7280]  text-xs font-medium uppercase tracking-wider">Years Engineering Experience</p>
                     </div>
                   </div>
                 </div>
@@ -453,39 +453,39 @@ export default function Home() {
               <span className="text-[#DE1D3A] font-bold text-xs uppercase tracking-widest">
                 Company Overview
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-primary font-display leading-tight">
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#111827] font-display leading-tight">
                 Pioneering Precision & Manufacturing Excellence Since 2001
               </h2>
-              <p className="text-text text-base leading-relaxed">
+              <p className="text-[#6B7280] text-base leading-relaxed">
                 Cobolt Machineries is a premium global manufacturer of high-end industrial machinery. We bridge the gap between complex engineering concepts and reliable physical manufacturing equipment, delivering solutions that scale operations while preserving razor-sharp accuracy.
               </p>
-              <p className="text-text text-base leading-relaxed">
+              <p className="text-[#6B7280] text-base leading-relaxed">
                 With a dedicated state-of-the-art foundry and high-precision CNC toolsets, our in-house engineers design, construct, and calibrate CNC setups, hydraulics, stamping stations, and automated conveyor lines.
               </p>
               <div className="pt-4 flex flex-wrap gap-8">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-accent/5 flex items-center justify-center text-accent">
+                  <div className="w-10 h-10 rounded-full bg-[#FCE8EC] flex items-center justify-center text-[#DE1D3A]">
                     <Award className="w-5 h-5 text-[#DE1D3A]" />
                   </div>
                   <div>
-                    <h5 className="font-bold text-primary text-sm font-display">ISO 9001:2015</h5>
-                    <p className="text-text-light text-xs">Quality Management Certified</p>
+                    <h5 className="font-bold text-[#111827] text-sm font-display">ISO 9001:2015</h5>
+                    <p className=" text-[#6B7280]  text-xs">Quality Management Certified</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-accent/5 flex items-center justify-center text-accent">
+                  <div className="w-10 h-10 rounded-full bg-[#FCE8EC] flex items-center justify-center text-[#DE1D3A]">
                     <Users className="w-5 h-5 text-[#DE1D3A]" />
                   </div>
                   <div>
-                    <h5 className="font-bold text-primary text-sm font-display">120+ Active Clients</h5>
-                    <p className="text-text-light text-xs">Heavy Manufacturing Sectors</p>
+                    <h5 className="font-bold  text-[#111827] text-sm font-display">120+ Active Clients</h5>
+                    <p className=" text-[#6B7280] text-xs">Heavy Manufacturing Sectors</p> 
                   </div>
                 </div>
               </div>
               <div className="pt-6">
                 <Link
                   to="/about"
-                  className="inline-flex items-center text-[#DE1D3A] hover:text-accent-hover font-semibold text-sm transition-colors duration-200 group"
+                  className="inline-flex items-center text-[#DE1D3A] hover:text-[#B7152D] font-semibold text-sm transition-colors duration-200 group"
                 >
                   Discover Our Story
                   <ArrowRight className="w-4 h-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" />
@@ -497,18 +497,18 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-24 bg-slate-50/50 border-y border-slate-200/50 relative overflow-hidden">
+      <section className="py-24 bg-[#F8FAFC]/50 border-y border-[#E5E7EB]/50 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-[#DE1D3A]/5 via-transparent to-transparent opacity-60 pointer-events-none" />
 
         <div className="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16  space-y-4">
-            <span className="font-sans font-semibold tracking-wider text-xs text-[#DE1D3A] uppercase px-3.5 py-1.5 bg-[#DE1D3A]/5 rounded-full border border-[#DE1D3A]/10 inline-block">
+            <span className="font-sans font-semibold tracking-wider text-xs text-[#DE1D3A] uppercase px-3.5 py-1.5 bg-[#FCE8EC]/50 rounded-full border border-[#DE1D3A]/20 inline-block">
               Our Core Strengths
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-primary font-display tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#111827] font-display tracking-tight">
               Why Heavy Manufacturers Partner with Cobolt
             </h2>
-            <p className="text-text-light text-base max-w-2xl mx-auto leading-relaxed">
+            <p className="text-[#6B7280] text-base max-w-2xl mx-auto leading-relaxed">
               We understand that even a single minute of machine downtime represents massive loss. We engineer stability into every joint and code reliability into every system.
             </p>
           </div>
@@ -518,16 +518,16 @@ export default function Home() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-10"
+            className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 bg-[#F8FAFC] gap-4 sm:gap-10"
           >
             {features.map((feature, idx) => (
               <motion.div
                 key={idx}
                 variants={cardVariants}
-                className="group relative border border-[#DE1D3A]/40   shadow-xs shadow-[#DE1D3A]/60  hover:border-[#DE1D3A]/20 hover:shadow-[0_20px_40px_rgba(222,29,58,0.06)] rounded-2xl p-4 md:p-8 hover:-translate-y-2 transition-all duration-500 flex flex-col items-start text-left overflow-hidden"
+                className="group relative border border-[#E5E7EB]   shadow-xs shadow-[#DE1D3A]/60  hover:border-[#DE1D3A]/20 hover:shadow-[0_20px_40px_rgba(222,29,58,0.06)] rounded-2xl p-4 md:p-8 hover:-translate-y-2 transition-all duration-500 flex flex-col items-start text-left overflow-hidden"
               >
                 {/* Large Background Card Number */}
-                <div className=" hidden md:block absolute top-6 right-8 text-3xl  font-extrabold font-display text-slate-100 select-none pointer-events-none group-hover:text-[#DE1D3A]/10 transition-colors duration-500">
+                <div className=" hidden md:block absolute top-6 right-8 text-3xl  font-extrabold font-display text-[#E5E7EB] select-none pointer-events-none group-hover:text-[#DE1D3A]/10 transition-colors duration-500">
                   {String(idx + 1).padStart(2, '0')}
                 </div>
 
@@ -537,10 +537,10 @@ export default function Home() {
                 </div>
 
                 {/* Content */}
-                <h3 className="font-display font-semibold md:font-bold text-sm  md:text-lg  bg-yellow-000 md:bg-red-000 text-primary mb-3 group-hover:text-[#DE1D3A] transition-colors duration-300">
+                <h3 className="font-display font-semibold md:font-bold text-sm  md:text-lg  bg-yellow-000 md:bg-red-000 text-[#6B7280] mb-3 group-hover:text-[#DE1D3A] transition-colors duration-300">
                   {feature.title}
                 </h3>
-                <p className="text-light  text-[12px] md:text-sm leading-relaxed">
+                <p className="text-[#6B7280]  text-[12px] md:text-sm leading-relaxed">
                   {feature.description}
                 </p>
 
@@ -554,13 +554,13 @@ export default function Home() {
 
 
       {/* Latest Products Section (Premium Showcase) */}
-      <section className="py-1 sm:py-32 bg-white text-text relative overflow-hidden">
+      <section className="py-1 sm:py-32 bg-[#FFFFFF] text-[#6B7280] relative overflow-hidden">
         {/* Subtle grid pattern at very low opacity */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#0f172a02_1px,transparent_1px),linear-gradient(to_bottom,#0f172a02_1px,transparent_1px)] bg-[size:3.5rem_3.5rem] pointer-events-none" />
 
         {/* Soft radial glow effects */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-accent/5 via-transparent to-transparent opacity-60 pointer-events-none" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-slate-100/60 via-transparent to-transparent opacity-80 pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-[#DE1D3A]/5 via-transparent to-transparent opacity-60 pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-[#E5E7EB]/60 via-transparent to-transparent opacity-80 pointer-events-none" />
 
         {/* Animated background glow */}
         <motion.div
@@ -573,7 +573,7 @@ export default function Home() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute top-1/4 left-1/3 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[130px] pointer-events-none"
+          className="absolute top-1/4 left-1/3 w-[600px] h-[600px] bg-[#DE1D3A]/5 rounded-full blur-[130px] pointer-events-none"
         />
 
         <motion.div
@@ -588,10 +588,10 @@ export default function Home() {
             <span className="font-sans font-semibold tracking-wider text-xs text-[#DE1D3A] uppercase px-3.5 py-1.5 bg-[#DE1D3A]/5 rounded-full border border-[#DE1D3A]/10 inline-block">
               New Engineering Arrivals
             </span>
-            <h2 className="text-2xl md:text-4xl sm:text-5xl font-bold md:font-extrabold text-primary font-display tracking-tight leading-[1.12]">
+            <h2 className="text-2xl md:text-4xl sm:text-5xl font-bold md:font-extrabold text-[#111827] font-display tracking-tight leading-[1.12]">
               Latest Food Processing & Packaging Machinery
             </h2>
-            <p className="text-text-light font-light   px-4 md:px-0 md:text-primary text-sm  md:text-sm  md:font-light md:text-gray-400  leading-relaxed font-sans max-w-xl mx-auto">
+            <p className="text-[#6B7280] font-light   px-4 md:px-0 text-sm  md:text-sm  md:font-light  leading-relaxed font-sans max-w-xl mx-auto">
               Engineered with food-grade SUS304/SUS316 stainless steel, smart PLC automation, and high-throughput reliability.
             </p>
              <div className="pt-4">
@@ -604,7 +604,7 @@ export default function Home() {
         px-6
         py-3
         bg-[#DE1D3A]
-        hover:bg-[#C21833]
+        hover:bg-[#B7152D]
         text-white
         text-sm
         font-semibold
@@ -631,8 +631,8 @@ export default function Home() {
                 key={product.id}
                 className="
         group relative
-        bg-white
-        border border-slate-200
+        bg-[#FFFFFF]
+        border border-[#E5E7EB]
         rounded-2xl
         overflow-hidden
         shadow-sm
@@ -647,29 +647,29 @@ export default function Home() {
                 <div className="absolute top-0 left-0 w-full h-1 bg-[#DE1D3A]" />
 
                 {/* Image */}
-                <div className="relative aspect-[4/3] overflow-hidden bg-slate-50">
+                <div className="relative aspect-[4/3] overflow-hidden bg-[#F8FAFC]">
                   <img
                     src={product.image}
                     alt={product.name}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
 
-                  <span className="absolute top-4 left-4 bg-white text-[#DE1D3A] border border-[#DE1D3A]/20 px-3 py-1 rounded-full text-[10px] font-semibold uppercase shadow-sm">
+                  <span className="absolute top-4 left-4 bg-[#FFFFFF] text-[#DE1D3A] border border-[#DE1D3A]/20 px-3 py-1 rounded-full text-[10px] font-semibold uppercase shadow-sm">
                     {product.category}
                   </span>
                 </div>
 
                 {/* Content */}
                 <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="font-display font-bold text-xl text-slate-900 mb-3 group-hover:text-[#DE1D3A] transition-colors">
+                  <h3 className="font-display font-bold text-xl text-[#111827] mb-3 group-hover:text-[#DE1D3A] transition-colors">
                     {product.name}
                   </h3>
 
-                  <div className="inline-flex w-fit text-[11px] font-medium text-[#DE1D3A] bg-[#DE1D3A]/5 px-3 py-1 rounded-full mb-4">
+                  <div className="inline-flex w-fit text-[11px] font-medium text-[#DE1D3A] bg-[#FCE8EC] px-3 py-1 rounded-full mb-4">
                     {product.specs}
                   </div>
 
-                  <p className="text-slate-600 text-sm leading-relaxed flex-grow mb-6">
+                  <p className="text-[#6B7280] text-sm leading-relaxed flex-grow mb-6">
                     {product.description}
                   </p>
 
@@ -680,7 +680,8 @@ export default function Home() {
             py-3
             border border-[#DE1D3A]
             text-[#DE1D3A]
-            hover:bg-[#DE1D3A]
+            hover:bg-[#B7152D]
+            hover:border-[#B7152D]
             hover:text-white
             rounded-xl
             text-sm
@@ -706,8 +707,8 @@ export default function Home() {
                 key={product.id}
                 className="
         group relative
-        bg-white
-        border border-slate-200
+        bg-[#FFFFFF]
+        border border-[#E5E7EB]
         rounded-2xl
         overflow-hidden
         shadow-sm
@@ -722,29 +723,29 @@ export default function Home() {
                 <div className="absolute top-0 left-0 w-full h-1 bg-[#DE1D3A]" />
 
                 {/* Image */}
-                <div className="relative aspect-[4/3] overflow-hidden bg-slate-50">
+                <div className="relative aspect-[4/3] overflow-hidden bg-[#F8FAFC]">
                   <img
                     src={product.image}
                     alt={product.name}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
 
-                  <span className="absolute top-4 left-4 bg-white text-[#DE1D3A] border border-[#DE1D3A]/20 px-3 py-1 rounded-full text-[10px] font-semibold uppercase shadow-sm">
+                  <span className="absolute top-4 left-4 bg-[#FFFFFF] text-[#DE1D3A] border border-[#DE1D3A]/20 px-3 py-1 rounded-full text-[10px] font-semibold uppercase shadow-sm">
                     {product.category}
                   </span>
                 </div>
 
                 {/* Content */}
                 <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="font-display font-bold text-xl text-slate-900 mb-3 group-hover:text-[#DE1D3A] transition-colors">
+                  <h3 className="font-display font-bold text-xl text-[#111827] mb-3 group-hover:text-[#DE1D3A] transition-colors">
                     {product.name}
                   </h3>
 
-                  <div className="inline-flex w-fit text-[11px] font-medium text-[#DE1D3A] bg-[#DE1D3A]/5 px-3 py-1 rounded-full mb-4">
+                  <div className="inline-flex w-fit text-[11px] font-medium text-[#DE1D3A] bg-[#FCE8EC] px-3 py-1 rounded-full mb-4">
                     {product.specs}
                   </div>
 
-                  <p className="text-slate-600 text-sm leading-relaxed flex-grow mb-6">
+                  <p className="text-[#6B7280] text-sm leading-relaxed flex-grow mb-6">
                     {product.description}
                   </p>
 
@@ -755,7 +756,8 @@ export default function Home() {
             py-3
             border border-[#DE1D3A]
             text-[#DE1D3A]
-            hover:bg-[#DE1D3A]
+            hover:bg-[#B7152D]
+            hover:border-[#B7152D]
             hover:text-white
             rounded-xl
             text-sm
@@ -774,15 +776,15 @@ export default function Home() {
           {/* Premium Bottom Conversion CTA Section */}
           <motion.div
             variants={cardVariants}
-            className="mt-20 sm:mt-24 border border-slate-100 bg-slate-50/50 rounded-3xl p-8 sm:p-10 max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm hover:shadow-md transition-shadow duration-300"
+            className="mt-20 sm:mt-24 border border-[#E5E7EB] bg-[#F8FAFC]/50 rounded-3xl p-8 sm:p-10 max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm hover:shadow-md transition-shadow duration-300"
           >
             <div className="text-left space-y-2">
-              <h4 className="font-display font-bold text-xl text-primary tracking-tight">Need a custom engineering solution?</h4>
-              <p className="text-text-light text-sm max-w-lg font-sans">Our master fabricators can tailor dimensions, capacities, and PLC programs to your factory floor.</p>
+              <h4 className="font-display font-bold text-xl text-[#111827] tracking-tight">Need a custom engineering solution?</h4>
+              <p className="text-[#6B7280] text-sm max-w-lg font-sans">Our master fabricators can tailor dimensions, capacities, and PLC programs to your factory floor.</p>
             </div>
             <Link
               to="/contact"
-              className="px-8 py-3.5 bg-primary hover:bg-accent hover:-translate-y-0.5 text-white text-xs font-bold uppercase tracking-wider rounded-full transition-all duration-300 shadow-md flex items-center justify-center gap-2 flex-shrink-0"
+              className="px-8 py-3.5 bg-[#DE1D3A] hover:bg-[#B7152D] hover:-translate-y-0.5 text-white text-xs font-bold uppercase tracking-wider rounded-full transition-all duration-300 shadow-md flex items-center justify-center gap-2 flex-shrink-0"
             >
               Talk to an Engineer
               <ArrowRight className="w-4 h-4" />
@@ -796,38 +798,38 @@ export default function Home() {
   
      
       {/* Customer Testimonials Section */}
-      <section className="py-24 bg-bg-section border-t border-slate-200/50 overflow-hidden">
+      <section className="py-24 bg-[#F8FAFC] border-t border-[#E5E7EB]/50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <span className="text-[#DE1D3A] font-bold text-xs uppercase tracking-widest">
               Client Testimonials
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-primary font-display">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#111827] font-display">
               Trusted by Top Operators
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {testimonials.map((test, idx) => (
-              <div key={idx} className="bg-white border border-slate-100 rounded-xl p-8 shadow-sm flex flex-col justify-between text-left relative">
-                <Quote className="absolute top-6 right-6 w-10 h-10 text-slate-100 flex-shrink-0" />
+              <div key={idx} className="bg-[#FFFFFF] border border-[#E5E7EB] rounded-xl p-8 shadow-sm flex flex-col justify-between text-left relative">
+                <Quote className="absolute top-6 right-6 w-10 h-10 text-[#E5E7EB] flex-shrink-0" />
                 <div className="space-y-4 z-10">
                   <div className="flex gap-0.5">
                     {[...Array(test.rating)].map((_, i) => (
                       <span key={i} className="text-yellow-400 text-lg">★</span>
                     ))}
                   </div>
-                  <p className="text-text italic text-sm leading-relaxed">
+                  <p className="text-[#6B7280] italic text-sm leading-relaxed">
                     "{test.quote}"
                   </p>
                 </div>
-                <div className="border-t border-slate-100 pt-6 mt-6 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-primary font-display font-bold text-sm">
+                <div className="border-t border-[#E5E7EB] pt-6 mt-6 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-[#FCE8EC] flex items-center justify-center text-[#DE1D3A] font-display font-bold text-sm">
                     {test.author.charAt(0)}
                   </div>
                   <div>
-                    <h5 className="font-bold text-primary text-sm font-display">{test.author}</h5>
-                    <p className="text-text-light text-xs font-medium">{test.designation}</p>
+                    <h5 className="font-bold text-[#111827] text-sm font-display">{test.author}</h5>
+                    <p className="text-[#6B7280] text-xs font-medium">{test.designation}</p>
                   </div>
                 </div>
               </div>
@@ -837,20 +839,20 @@ export default function Home() {
       </section>
 
       {/* Latest Blog Posts Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-[#FFFFFF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
             <div className="space-y-4 text-left max-w-2xl">
               <span className="text-[#DE1D3A] font-bold text-xs uppercase tracking-widest">
                 Technical Journals
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-primary font-display">
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#111827] font-display">
                 Latest Machinery Updates & Trends
               </h2>
             </div>
             <Link
               to="/blog"
-              className="inline-flex items-center justify-center px-6 py-3 border border-slate-300 hover:border-primary text-sm font-semibold rounded-lg text-primary hover:bg-slate-50 transition-all duration-200 flex-shrink-0 group"
+              className="inline-flex items-center justify-center px-6 py-3 border border-[#E5E7EB] hover:border-[#DE1D3A] text-sm font-semibold rounded-lg text-[#DE1D3A] hover:bg-[#F8FAFC] transition-all duration-200 flex-shrink-0 group"
             >
               Visit Blog
               <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
@@ -858,32 +860,32 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="border border-slate-100 bg-bg-section hover:bg-white rounded-xl p-8 hover:shadow-xl transition-all duration-300 flex flex-col justify-between text-left group">
+            <div className="border border-[#E5E7EB] bg-[#F8FAFC] hover:bg-[#FFFFFF] rounded-xl p-8 hover:shadow-xl transition-all duration-300 flex flex-col justify-between text-left group">
               <div>
                 <span className="text-[#DE1D3A] text-xs font-semibold uppercase tracking-wider">Maintenance Guide</span>
-                <h3 className="font-display font-bold text-xl text-primary group-hover:text-[#DE1D3A] transition-colors duration-200 mt-3 mb-2">
+                <h3 className="font-display font-bold text-xl text-[#111827] group-hover:text-[#DE1D3A] transition-colors duration-200 mt-3 mb-2">
                   5 Essential Checks for High-Speed Spindles
                 </h3>
-                <p className="text-text-light text-sm leading-relaxed mb-6">
+                <p className="text-[#6B7280] text-sm leading-relaxed mb-6">
                   Spindle thermal drift is the primary cause of dimension errors. Learn how oil cooling systems and vibration sensing prevent spindle failure.
                 </p>
               </div>
-              <Link to="/blog" className="text-primary hover:text-[#DE1D3A] font-bold text-xs flex items-center gap-1.5 transition-colors duration-200">
+              <Link to="/blog" className="text-[#DE1D3A] hover:text-[#B7152D] font-bold text-xs flex items-center gap-1.5 transition-colors duration-200">
                 Read Article <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
 
-            <div className="border border-slate-100 bg-bg-section hover:bg-white rounded-xl p-8 hover:shadow-xl transition-all duration-300 flex flex-col justify-between text-left group">
+            <div className="border border-[#E5E7EB] bg-[#F8FAFC] hover:bg-[#FFFFFF] rounded-xl p-8 hover:shadow-xl transition-all duration-300 flex flex-col justify-between text-left group">
               <div>
                 <span className="text-[#DE1D3A] text-xs font-semibold uppercase tracking-wider">Industrial IoT</span>
-                <h3 className="font-display font-bold text-xl text-primary group-hover:text-[#DE1D3A] transition-colors duration-200 mt-3 mb-2">
+                <h3 className="font-display font-bold text-xl text-[#111827] group-hover:text-[#DE1D3A] transition-colors duration-200 mt-3 mb-2">
                   Integrating PLC Data with Enterprise ERP Systems
                 </h3>
-                <p className="text-text-light text-sm leading-relaxed mb-6">
+                <p className="text-[#6B7280] text-sm leading-relaxed mb-6">
                   How manufacturing floors leverage automated Modbus/TCP relays to log parts count and predictive health checks directly into billing databases.
                 </p>
               </div>
-              <Link to="/blog" className="text-primary hover:text-[#DE1D3A] font-bold text-xs flex items-center gap-1.5 transition-colors duration-200">
+              <Link to="/blog" className="text-[#DE1D3A] hover:text-[#B7152D] font-bold text-xs flex items-center gap-1.5 transition-colors duration-200">
                 Read Article <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
@@ -892,8 +894,8 @@ export default function Home() {
       </section>
 
       {/* Contact CTA Banner */}
-      <section className="py-20 bg-primary text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-800 via-primary to-primary opacity-60" />
+      <section className="py-20 bg-[#DE1D3A] text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#1F2937] via-[#DE1D3A] to-[#DE1D3A] opacity-60" />
 
         {/* Fine grid overlay */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:4rem_4rem]" />
@@ -908,7 +910,7 @@ export default function Home() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               to="/contact"
-              className="px-8 py-4 bg-[#DE1D3A]/70 hover:bg-accent-hover text-white text-sm font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center group"
+              className="px-8 py-4 bg-[#DE1D3A]/70 hover:bg-[#B7152D] text-white text-sm font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center group"
             >
               Consult an Engineer
               <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />

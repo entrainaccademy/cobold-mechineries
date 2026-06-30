@@ -145,17 +145,17 @@ export default function Contact() {
   return (
     <PageWrapper>
       {/* Header */}
-      <section className="relative pt-32 pb-16 bg-bg-section border-b border-slate-200/60 overflow-hidden">
+      <section className="relative pt-32 pb-16 bg-[#F8FAFC] border-b border-[#E5E7EB]/60 overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000003_1px,transparent_1px),linear-gradient(to_bottom,#00000003_1px,transparent_1px)] bg-[size:3rem_3rem]" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left relative z-10">
           <div className="space-y-4 max-w-3xl">
-            <span className="text-accent font-bold text-xs uppercase tracking-widest">
+            <span className="text-[#DE1D3A] font-bold text-xs uppercase tracking-widest">
               Get In Touch
             </span>
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-primary font-display leading-tight">
+            <h1 className="text-4xl sm:text-5xl font-extrabold text-[#111827] font-display leading-tight">
               Connect with Cobolt
             </h1>
-            <p className="text-text-light text-base md:text-lg max-w-2xl leading-relaxed">
+            <p className="text-[#6B7280] text-base md:text-lg max-w-2xl leading-relaxed">
               Have questions about machinery specs, structural ratings, or customized setups? Our operations crew and engineering desks are ready to help.
             </p>
           </div>
@@ -163,17 +163,17 @@ export default function Contact() {
       </section>
 
       {/* Main Grid: Form and Info */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-[#FFFFFF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
             
             {/* Left: Contact Info and Support metrics */}
             <div className="lg:col-span-5 space-y-8 text-left">
               <div className="space-y-4">
-                <h3 className="font-display font-bold text-2xl text-primary">
+                <h3 className="font-display font-bold text-2xl text-[#111827]">
                   Industrial Support Desk
                 </h3>
-                <p className="text-text-light text-sm leading-relaxed">
+                <p className="text-[#6B7280] text-sm leading-relaxed">
                   We maintain full support networks across main industrial parks. For bidding details, tender documents, or structural reviews, send details directly to our engineering cells.
                 </p>
               </div>
@@ -181,22 +181,22 @@ export default function Contact() {
               {/* Quick Contact Cards */}
               <div className="space-y-4">
                 {contactCards.map((card, idx) => (
-                  <div key={idx} className="flex items-center justify-between p-5 border border-slate-100 rounded-xl bg-bg-section hover:bg-white hover:border-slate-200 transition-all duration-300">
+                  <div key={idx} className="flex items-center justify-between p-5 border border-[#E5E7EB] rounded-xl bg-[#F8FAFC] hover:bg-[#FFFFFF] hover:border-[#DE1D3A]/20 transition-all duration-300">
                     <div className="flex items-center gap-4">
-                      <div className="w-11 h-11 rounded-lg bg-white border border-slate-150 text-accent flex items-center justify-center shadow-sm">
+                      <div className="w-11 h-11 rounded-lg bg-[#FFFFFF] border border-[#E5E7EB] text-[#DE1D3A] flex items-center justify-center shadow-sm">
                         <card.icon className="w-5 h-5" />
                       </div>
                       <div>
-                        <h4 className="font-display font-bold text-sm text-primary">{card.title}</h4>
-                        <p className="text-text-dark font-semibold text-xs mt-0.5">{card.details}</p>
-                        <p className="text-text-light text-[10px]">{card.sub}</p>
+                        <h4 className="font-display font-bold text-sm text-[#111827]">{card.title}</h4>
+                        <p className="text-[#111827] font-semibold text-xs mt-0.5">{card.details}</p>
+                        <p className="text-[#6B7280] text-[10px]">{card.sub}</p>
                       </div>
                     </div>
                     <a
                       href={card.action}
                       target={card.action.startsWith('http') ? '_blank' : '_self'}
                       rel="noreferrer"
-                      className="px-4 py-2 border border-slate-350 hover:bg-primary hover:text-white hover:border-primary text-xs font-semibold rounded-lg transition-all duration-200"
+                      className="px-4 py-2 border border-[#E5E7EB] hover:bg-[#DE1D3A] hover:text-white hover:border-[#DE1D3A] text-xs font-semibold rounded-lg transition-all duration-200"
                     >
                       {card.actionText}
                     </a>
@@ -205,29 +205,29 @@ export default function Contact() {
               </div>
 
               {/* Branch Locations Cards */}
-              <div className="space-y-4 pt-4 border-t border-slate-100/60">
-                <h4 className="font-display font-bold text-base text-primary mb-3">Our Facilities & Branches</h4>
+              <div className="space-y-4 pt-4 border-t border-[#E5E7EB]/60">
+                <h4 className="font-display font-bold text-base text-[#111827] mb-3">Our Facilities & Branches</h4>
                 
                 {/* Gujarat HQ */}
                 <div
                   id="loc-gujarat"
-                  className={`p-5 border rounded-xl bg-bg-section space-y-3 transition-all duration-505 ${
+                  className={`p-5 border rounded-xl bg-[#F8FAFC] space-y-3 transition-all duration-505 ${
                     highlightedLoc === 'gujarat'
-                      ? 'border-accent ring-2 ring-accent/30 bg-accent/5'
-                      : 'border-slate-100 hover:border-slate-200'
+                      ? 'border-[#DE1D3A] ring-2 ring-[#DE1D3A]/30 bg-[#FCE8EC]'
+                      : 'border-[#E5E7EB] hover:border-[#DE1D3A]/20'
                   }`}
                 >
                   <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <MapPin className="w-5 h-5 text-[#DE1D3A] flex-shrink-0 mt-0.5" />
                     <div>
-                      <h5 className="font-display font-bold text-sm text-primary">Corporate Headquarters (Gujarat)</h5>
-                      <p className="text-text-light text-xs leading-relaxed mt-1">
+                      <h5 className="font-display font-bold text-sm text-[#111827]">Corporate Headquarters (Gujarat)</h5>
+                      <p className="text-[#6B7280] text-xs leading-relaxed mt-1">
                         Plot 104, GIDC Industrial Estate, Sector 26, Gandhinagar, Gujarat 382028, India
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-4 pl-8 text-[10px] text-text-light">
-                    <Clock className="w-3.5 h-3.5 text-slate-400" />
+                  <div className="flex items-center gap-4 pl-8 text-[10px] text-[#6B7280]">
+                    <Clock className="w-3.5 h-3.5 text-[#6B7280]" />
                     <span>Visits: Mon - Fri (10:00 AM - 5:00 PM)</span>
                   </div>
                 </div>
@@ -235,23 +235,23 @@ export default function Contact() {
                 {/* Veepoor Kerala */}
                 <div
                   id="loc-veepoor"
-                  className={`p-5 border rounded-xl bg-bg-section space-y-3 transition-all duration-505 ${
+                  className={`p-5 border rounded-xl bg-[#F8FAFC] space-y-3 transition-all duration-505 ${
                     highlightedLoc === 'veepoor'
-                      ? 'border-accent ring-2 ring-accent/30 bg-accent/5'
-                      : 'border-slate-100 hover:border-slate-200'
+                      ? 'border-[#DE1D3A] ring-2 ring-[#DE1D3A]/30 bg-[#FCE8EC]'
+                      : 'border-[#E5E7EB] hover:border-[#DE1D3A]/20'
                   }`}
                 >
                   <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <MapPin className="w-5 h-5 text-[#DE1D3A] flex-shrink-0 mt-0.5" />
                     <div>
-                      <h5 className="font-display font-bold text-sm text-primary">Kerala Regional Foundry (Veepoor)</h5>
-                      <p className="text-text-light text-xs leading-relaxed mt-1">
+                      <h5 className="font-display font-bold text-sm text-[#111827]">Kerala Regional Foundry (Veepoor)</h5>
+                      <p className="text-[#6B7280] text-xs leading-relaxed mt-1">
                         Veepoor Industrial Zone, Calicut Bypass Road, Kozhikode, Kerala 673661, India
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-4 pl-8 text-[10px] text-text-light">
-                    <Clock className="w-3.5 h-3.5 text-slate-400" />
+                  <div className="flex items-center gap-4 pl-8 text-[10px] text-[#6B7280]">
+                    <Clock className="w-3.5 h-3.5 text-[#6B7280]" />
                     <span>Foundry visits by technical appointment</span>
                   </div>
                 </div>
@@ -259,23 +259,23 @@ export default function Contact() {
                 {/* Manjeri Kerala */}
                 <div
                   id="loc-manjeri"
-                  className={`p-5 border rounded-xl bg-bg-section space-y-3 transition-all duration-505 ${
+                  className={`p-5 border rounded-xl bg-[#F8FAFC] space-y-3 transition-all duration-505 ${
                     highlightedLoc === 'manjeri'
-                      ? 'border-accent ring-2 ring-accent/30 bg-accent/5'
-                      : 'border-slate-100 hover:border-slate-200'
+                      ? 'border-[#DE1D3A] ring-2 ring-[#DE1D3A]/30 bg-[#FCE8EC]'
+                      : 'border-[#E5E7EB] hover:border-[#DE1D3A]/20'
                   }`}
                 >
                   <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <MapPin className="w-5 h-5 text-[#DE1D3A] flex-shrink-0 mt-0.5" />
                     <div>
-                      <h5 className="font-display font-bold text-sm text-primary">Kerala Machinery Outlet (Manjeri)</h5>
-                      <p className="text-text-light text-xs leading-relaxed mt-1">
+                      <h5 className="font-display font-bold text-sm text-[#111827]">Kerala Machinery Outlet (Manjeri)</h5>
+                      <p className="text-[#6B7280] text-xs leading-relaxed mt-1">
                         Nilambur Road, Near Industrial Estate, Manjeri, Malappuram, Kerala 676121, India
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-4 pl-8 text-[10px] text-text-light">
-                    <Clock className="w-3.5 h-3.5 text-slate-400" />
+                  <div className="flex items-center gap-4 pl-8 text-[10px] text-[#6B7280]">
+                    <Clock className="w-3.5 h-3.5 text-[#6B7280]" />
                     <span>Showroom: Mon - Sat (9:00 AM - 6:00 PM)</span>
                   </div>
                 </div>
@@ -283,15 +283,15 @@ export default function Contact() {
             </div>
 
             {/* Right: Contact Form */}
-            <div className="lg:col-span-7 bg-bg-section border border-slate-100 rounded-2xl p-6 md:p-10 shadow-sm text-left">
-              <h3 className="font-display font-bold text-xl text-primary mb-6">
+            <div className="lg:col-span-7 bg-[#F8FAFC] border border-[#E5E7EB] rounded-2xl p-6 md:p-10 shadow-sm text-left">
+              <h3 className="font-display font-bold text-xl text-[#111827] mb-6">
                 Request Specifications Callback
               </h3>
 
               {isSubmitted ? (
-                <div className="p-6 bg-green-50 border border-green-200 rounded-xl text-green-800 space-y-3 animate-fade-in mb-6">
+                <div className="p-6 bg-[#22C55E]/10 border border-[#22C55E]/30 rounded-xl text-[#1F2937] space-y-3 animate-fade-in mb-6">
                   <div className="flex items-center gap-2 font-bold text-sm">
-                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-[#22C55E] flex-shrink-0" />
                     <span>Inquiry Submitted Successfully</span>
                   </div>
                   <p className="text-xs leading-relaxed">
@@ -304,7 +304,7 @@ export default function Contact() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {/* Name */}
                   <div>
-                    <label htmlFor="name" className="block text-xs font-bold uppercase tracking-wider text-primary mb-2">
+                    <label htmlFor="name" className="block text-xs font-bold uppercase tracking-wider text-[#111827] mb-2">
                       Full Name *
                     </label>
                     <input
@@ -313,19 +313,19 @@ export default function Contact() {
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      className={`w-full px-4 py-3 bg-white text-sm text-primary rounded-lg border ${
-                        formErrors.name ? 'border-red-500 focus:ring-red-200' : 'border-slate-200 focus:ring-accent/50'
-                      } focus:outline-none focus:ring-2 focus:border-accent transition-all duration-200`}
+                      className={`w-full px-4 py-3 bg-[#FFFFFF] text-sm text-[#111827] rounded-lg border ${
+                        formErrors.name ? 'border-[#DE1D3A] focus:ring-[#DE1D3A]/20' : 'border-[#E5E7EB] focus:ring-[#DE1D3A]/50'
+                      } focus:outline-none focus:ring-2 focus:border-[#DE1D3A] transition-all duration-200`}
                       placeholder="e.g. Vikram Singhania"
                     />
                     {formErrors.name && (
-                      <p className="text-red-500 text-[10px] font-semibold mt-1">{formErrors.name}</p>
+                      <p className="text-[#DE1D3A] text-[10px] font-semibold mt-1">{formErrors.name}</p>
                     )}
                   </div>
 
                   {/* Company */}
                   <div>
-                    <label htmlFor="company" className="block text-xs font-bold uppercase tracking-wider text-primary mb-2">
+                    <label htmlFor="company" className="block text-xs font-bold uppercase tracking-wider text-[#111827] mb-2">
                       Corporate/Entity Name
                     </label>
                     <input
@@ -334,7 +334,7 @@ export default function Contact() {
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-white text-sm text-primary rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all duration-200"
+                      className="w-full px-4 py-3 bg-[#FFFFFF] text-sm text-[#111827] rounded-lg border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#DE1D3A]/50 focus:border-[#DE1D3A] transition-all duration-200"
                       placeholder="e.g. AeroSteel Inc"
                     />
                   </div>
@@ -343,7 +343,7 @@ export default function Contact() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {/* Email */}
                   <div>
-                    <label htmlFor="email" className="block text-xs font-bold uppercase tracking-wider text-primary mb-2">
+                    <label htmlFor="email" className="block text-xs font-bold uppercase tracking-wider text-[#111827] mb-2">
                       Corporate Email *
                     </label>
                     <input
@@ -352,19 +352,19 @@ export default function Contact() {
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      className={`w-full px-4 py-3 bg-white text-sm text-primary rounded-lg border ${
-                        formErrors.email ? 'border-red-500 focus:ring-red-200' : 'border-slate-200 focus:ring-accent/50'
-                      } focus:outline-none focus:ring-2 focus:border-accent transition-all duration-200`}
+                      className={`w-full px-4 py-3 bg-[#FFFFFF] text-sm text-[#111827] rounded-lg border ${
+                        formErrors.email ? 'border-[#DE1D3A] focus:ring-[#DE1D3A]/20' : 'border-[#E5E7EB] focus:ring-[#DE1D3A]/50'
+                      } focus:outline-none focus:ring-2 focus:border-[#DE1D3A] transition-all duration-200`}
                       placeholder="e.g. vsinghania@aerosteel.com"
                     />
                     {formErrors.email && (
-                      <p className="text-red-500 text-[10px] font-semibold mt-1">{formErrors.email}</p>
+                      <p className="text-[#DE1D3A] text-[10px] font-semibold mt-1">{formErrors.email}</p>
                     )}
                   </div>
 
                   {/* Phone */}
                   <div>
-                    <label htmlFor="phone" className="block text-xs font-bold uppercase tracking-wider text-primary mb-2">
+                    <label htmlFor="phone" className="block text-xs font-bold uppercase tracking-wider text-[#111827] mb-2">
                       Contact Number *
                     </label>
                     <input
@@ -373,13 +373,13 @@ export default function Contact() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className={`w-full px-4 py-3 bg-white text-sm text-primary rounded-lg border ${
-                        formErrors.phone ? 'border-red-500 focus:ring-red-200' : 'border-slate-200 focus:ring-accent/50'
-                      } focus:outline-none focus:ring-2 focus:border-accent transition-all duration-200`}
+                      className={`w-full px-4 py-3 bg-[#FFFFFF] text-sm text-[#111827] rounded-lg border ${
+                        formErrors.phone ? 'border-[#DE1D3A] focus:ring-[#DE1D3A]/20' : 'border-[#E5E7EB] focus:ring-[#DE1D3A]/50'
+                      } focus:outline-none focus:ring-2 focus:border-[#DE1D3A] transition-all duration-200`}
                       placeholder="e.g. +91 98765 43210"
                     />
                     {formErrors.phone && (
-                      <p className="text-red-500 text-[10px] font-semibold mt-1">{formErrors.phone}</p>
+                      <p className="text-[#DE1D3A] text-[10px] font-semibold mt-1">{formErrors.phone}</p>
                     )}
                   </div>
                 </div>
@@ -387,7 +387,7 @@ export default function Contact() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {/* Service Type Dropdown */}
                   <div>
-                    <label htmlFor="serviceType" className="block text-xs font-bold uppercase tracking-wider text-primary mb-2">
+                    <label htmlFor="serviceType" className="block text-xs font-bold uppercase tracking-wider text-[#111827] mb-2">
                       Inquiry Category
                     </label>
                     <select
@@ -395,7 +395,7 @@ export default function Contact() {
                       name="serviceType"
                       value={formData.serviceType}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-white text-sm text-primary rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all duration-200"
+                      className="w-full px-4 py-3 bg-[#FFFFFF] text-sm text-[#111827] rounded-lg border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#DE1D3A]/50 focus:border-[#DE1D3A] transition-all duration-200"
                     >
                       <option value="Machinery Purchase">Machinery Purchase</option>
                       <option value="Engineering Service">Engineering Service</option>
@@ -406,7 +406,7 @@ export default function Contact() {
 
                   {/* Subject */}
                   <div>
-                    <label htmlFor="subject" className="block text-xs font-bold uppercase tracking-wider text-primary mb-2">
+                    <label htmlFor="subject" className="block text-xs font-bold uppercase tracking-wider text-[#111827] mb-2">
                       Subject Title
                     </label>
                     <input
@@ -415,7 +415,7 @@ export default function Contact() {
                       name="subject"
                       value={formData.subject}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-white text-sm text-primary rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all duration-200"
+                      className="w-full px-4 py-3 bg-[#FFFFFF] text-sm text-[#111827] rounded-lg border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#DE1D3A]/50 focus:border-[#DE1D3A] transition-all duration-200"
                       placeholder="e.g. COBOLT-X5 CNC specifications query"
                     />
                   </div>
@@ -423,7 +423,7 @@ export default function Contact() {
 
                 {/* Message */}
                 <div>
-                  <label htmlFor="message" className="block text-xs font-bold uppercase tracking-wider text-primary mb-2">
+                  <label htmlFor="message" className="block text-xs font-bold uppercase tracking-wider text-[#111827] mb-2">
                     Inquiry Message Details *
                   </label>
                   <textarea
@@ -432,13 +432,13 @@ export default function Contact() {
                     rows="5"
                     value={formData.message}
                     onChange={handleInputChange}
-                    className={`w-full px-4 py-3 bg-white text-sm text-primary rounded-lg border ${
-                      formErrors.message ? 'border-red-500 focus:ring-red-200' : 'border-slate-200 focus:ring-accent/50'
-                    } focus:outline-none focus:ring-2 focus:border-accent transition-all duration-200`}
+                    className={`w-full px-4 py-3 bg-[#FFFFFF] text-sm text-[#111827] rounded-lg border ${
+                      formErrors.message ? 'border-[#DE1D3A] focus:ring-[#DE1D3A]/20' : 'border-[#E5E7EB] focus:ring-[#DE1D3A]/50'
+                    } focus:outline-none focus:ring-2 focus:border-[#DE1D3A] transition-all duration-200`}
                     placeholder="Provide details about structural thickness parameters, axis speeds requirements, or materials characteristics."
                   />
                   {formErrors.message && (
-                    <p className="text-red-500 text-[10px] font-semibold mt-1">{formErrors.message}</p>
+                    <p className="text-[#DE1D3A] text-[10px] font-semibold mt-1">{formErrors.message}</p>
                   )}
                 </div>
 
@@ -447,7 +447,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full px-6 py-4 bg-primary hover:bg-accent text-white text-xs font-bold uppercase tracking-widest rounded-lg transition-colors duration-300 flex items-center justify-center gap-2 shadow"
+                    className="w-full px-6 py-4 bg-[#DE1D3A] hover:bg-[#B7152D] text-white text-xs font-bold uppercase tracking-widest rounded-lg transition-colors duration-300 flex items-center justify-center gap-2 shadow"
                   >
                     {isSubmitting ? (
                       <span>TRANSMITTING DETAILS...</span>
@@ -467,15 +467,15 @@ export default function Contact() {
       </section>
 
       {/* Google Maps Location Area */}
-      <section className="bg-bg-section py-16 border-t border-slate-200/50">
+      <section className="bg-[#F8FAFC] py-16 border-t border-[#E5E7EB]/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-4 mb-10 text-center max-w-2xl mx-auto">
-            <h3 className="font-display font-bold text-2xl text-primary">Plant Infrastructure Layout</h3>
-            <p className="text-text-light text-sm">
+            <h3 className="font-display font-bold text-2xl text-[#111827]">Plant Infrastructure Layout</h3>
+            <p className="text-[#6B7280] text-sm">
               We welcome custom design visits by appointment. Located in the heart of GIDC Sector 26, Gandhinagar.
             </p>
           </div>
-          <div className="w-full h-[450px] rounded-2xl overflow-hidden shadow-md border border-slate-250 bg-slate-100">
+          <div className="w-full h-[450px] rounded-2xl overflow-hidden shadow-md border border-[#E5E7EB] bg-[#F8FAFC]">
             <iframe
               title="Cobolt Gandhinagar Facility Location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.653429307044!2d72.6394541760447!3d23.237482808269784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395c2b2938a1cfd5%3A0xe54d92cd029e0839!2sGIDC%20Sector%2026%2C%20Gandhinagar%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1703248364821!5m2!1sen!2sin"

@@ -24,7 +24,7 @@ export default function Lightbox({ isOpen, onClose, currentImage, onPrev, onNext
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-primary/95 p-4 md:p-8"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-[#1F2937]/95 p-4 md:p-8"
         >
           {/* Backdrop click to close */}
           <div className="absolute inset-0 cursor-zoom-out" onClick={onClose} />

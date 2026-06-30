@@ -108,17 +108,17 @@ export default function Services() {
   return (
     <PageWrapper>
       {/* Header */}
-      <section className="relative pt-32 pb-16 bg-bg-section border-b border-slate-200/60 overflow-hidden">
+      <section className="relative pt-32 pb-16 bg-[#F8FAFC] border-b border-[#E5E7EB]/60 overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000003_1px,transparent_1px),linear-gradient(to_bottom,#00000003_1px,transparent_1px)] bg-[size:3rem_3rem]" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left relative z-10">
           <div className="space-y-4 max-w-3xl">
-            <span className="text-accent font-bold text-xs uppercase tracking-widest">
+            <span className="text-[#DE1D3A] font-bold text-xs uppercase tracking-widest">
               Engineering Support
             </span>
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-primary font-display leading-tight">
+            <h1 className="text-4xl sm:text-5xl font-extrabold text-[#111827] font-display leading-tight">
               Machinery Support & Services
             </h1>
-            <p className="text-text-light text-base md:text-lg max-w-2xl leading-relaxed">
+            <p className="text-[#6B7280] text-base md:text-lg max-w-2xl leading-relaxed">
               We back our hardware with certified technicians and proactive service packages. Keep your production floor operating at maximum capacity.
             </p>
           </div>
@@ -126,18 +126,18 @@ export default function Services() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-[#FFFFFF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {servicesList.map((service) => (
               <div
                 key={service.id}
-                className="bg-bg-section border border-slate-100 hover:border-slate-200 hover:bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden text-left group"
+                className="bg-[#F8FAFC] border border-[#E5E7EB] hover:border-[#DE1D3A]/20 hover:bg-[#FFFFFF] rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden text-left group"
               >
                 <div>
                   {/* Service Image Banner */}
                   <div className="relative">
-                    <div className="h-48 overflow-hidden bg-slate-100 rounded-t-2xl">
+                    <div className="h-48 overflow-hidden bg-[#F8FAFC] rounded-t-2xl">
                       <img
                         src={service.image}
                         alt={service.title}
@@ -147,32 +147,32 @@ export default function Services() {
                     </div>
                     
                     {/* Overlapping Floating Icon */}
-                    <div className="absolute -bottom-6 left-6 w-12 h-12 bg-white border border-slate-150 text-accent group-hover:bg-accent group-hover:text-white rounded-xl flex items-center justify-center transition-all duration-300 shadow-md z-10">
+                    <div className="absolute -bottom-6 left-6 w-12 h-12 bg-[#FFFFFF] border border-[#E5E7EB] text-[#DE1D3A] group-hover:bg-[#DE1D3A] group-hover:text-white rounded-xl flex items-center justify-center transition-all duration-300 shadow-md z-10">
                       <service.icon className="w-5 h-5" />
                     </div>
                   </div>
 
                   <div className="p-6 pt-10">
-                    <h3 className="font-display font-bold text-lg text-primary mb-2 mt-2">
+                    <h3 className="font-display font-bold text-lg text-[#111827] mb-2 mt-2">
                       {service.title}
                     </h3>
-                    <p className="text-accent text-[10px] font-semibold tracking-wide uppercase mb-4">
+                    <p className="text-[#DE1D3A] text-[10px] font-semibold tracking-wide uppercase mb-4">
                       {service.tagline}
                     </p>
-                    <p className="text-text text-sm leading-relaxed mb-6">
+                    <p className="text-[#6B7280] text-sm leading-relaxed mb-6">
                       {service.description}
                     </p>
                     
                     {/* Points */}
                     {service.points && (
                       <div className="space-y-3 mb-4">
-                        <h5 className="font-display font-bold text-xs uppercase tracking-wider text-primary">
+                        <h5 className="font-display font-bold text-xs uppercase tracking-wider text-[#DE1D3A]">
                           What's Included:
                         </h5>
                         <ul className="space-y-2">
                           {service.points.map((pt, idx) => (
-                            <li key={idx} className="flex items-start gap-2 text-xs text-text-light">
-                              <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 flex-shrink-0" />
+                            <li key={idx} className="flex items-start gap-2 text-xs text-[#6B7280]">
+                              <span className="w-1.5 h-1.5 rounded-full bg-[#DE1D3A] mt-1.5 flex-shrink-0" />
                               <span className="leading-relaxed">{pt}</span>
                             </li>
                           ))}
@@ -182,10 +182,10 @@ export default function Services() {
                   </div>
                 </div>
 
-                <div className="mx-6 pb-6 pt-4 border-t border-slate-150/60">
+                <div className="mx-6 pb-6 pt-4 border-t border-[#E5E7EB]/60">
                   <Link
                     to={`/contact?service=${encodeURIComponent(service.title)}`}
-                    className="inline-flex items-center text-primary font-bold text-xs group-hover:text-accent transition-colors duration-200"
+                    className="inline-flex items-center text-[#DE1D3A] font-bold text-xs group-hover:text-[#B7152D] transition-colors duration-200"
                   >
                     Inquire About This Service
                     <ArrowRight className="w-4 h-4 ml-1.5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -198,7 +198,7 @@ export default function Services() {
       </section>
 
       {/* Trust banner */}
-      <section className="py-16 bg-primary text-white text-center relative overflow-hidden">
+      <section className="py-16 bg-[#DE1D3A] text-white text-center relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-4">
           <h3 className="font-display font-bold text-2xl">Need Emergency Service Callout?</h3>
           <p className="text-slate-300 text-sm max-w-xl mx-auto">
@@ -207,7 +207,7 @@ export default function Services() {
           <div className="pt-4">
             <a
               href="tel:+917987654321"
-              className="inline-flex items-center justify-center px-6 py-3.5 bg-accent hover:bg-accent-hover text-white text-xs font-semibold uppercase tracking-wider rounded-lg transition-colors duration-200 shadow-md"
+              className="inline-flex items-center justify-center px-6 py-3.5 bg-[#FFFFFF] text-[#DE1D3A] hover:bg-[#FCE8EC] text-xs font-semibold uppercase tracking-wider rounded-lg transition-colors duration-200 shadow-md"
             >
               Call 24/7 Hotline: +91 79 8765 4321
             </a>
