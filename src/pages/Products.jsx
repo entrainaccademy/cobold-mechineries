@@ -903,17 +903,17 @@ export default function Products() {
   return (
     <PageWrapper>
       {/* Header */}
-      <section className="relative pt-32 pb-16 bg-[#F8FAFC] border-b border-[#E5E7EB]/60 overflow-hidden">
+      <section className="relative pt-32 pb-8 sm:pt-28 md:pt-32 md:pb-12 bg-[#F8FAFC] border-b border-[#E5E7EB]/60 overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000003_1px,transparent_1px),linear-gradient(to_bottom,#00000003_1px,transparent_1px)] bg-[size:3rem_3rem]" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left relative z-10">
-          <div className="space-y-4 max-w-3xl">
-            <span className="text-[#DE1D3A] font-bold text-xs uppercase tracking-widest">
+          <div className="space-y-2 sm:space-y-2 md:space-y-5 max-w-3xl">
+            <span className="text-[#DE1D3A] font-bold text-[10px] sm:text-xs uppercase tracking-widest">
               Industrial Catalog
             </span>
-            <h1 className=" text-2xl md:text-4xl sm:text-5xl font-extrabold text-[#111827] font-display leading-tight">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-[#111827] font-display leading-tight">
               Our Machineries & Toolings
             </h1>
-            <p className="text-[#6B7280] text-base md:text-lg max-w-2xl leading-relaxed">
+            <p className="text-[#6B7280] text-sm sm:text-base md:text-lg max-w-2xl leading-relaxed">
               Explore our line of industrial setups. Engineered with heavy components, high safety ratios, and intuitive controller architectures.
             </p>
           </div>
@@ -921,20 +921,20 @@ export default function Products() {
       </section>
 
       {/* Product Section */}
-      <section className="py-16 bg-[#FFFFFF] min-h-[600px]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-4 bg-[#FFFFFF] min-h-[600px]">
+        <div className="max-w-7xl mx-auto px-4 py-4 sm:py-6 lg:py-8 sm:px-6 lg:px-8">
 
           {/* Category Filters */}
-<div className="flex flex-wrap justify-center gap-1 mb-10">
+<div className="flex flex-wrap justify-center gap-2 mb-10">
   {categories.map((cat) => (
     <button
       key={cat}
       onClick={() => setSelectedCategory(cat)}
-      className={`px-2 py-1.5 text-[9px] rounded-full border transition-all duration-200
+      className={`px-2 py-2 text-[10px] font-medium rounded-xl border backdrop-blur-sm transition-all duration-300
         ${
           selectedCategory === cat
-            ? "border-[#DE1D3A] text-[#DE1D3A]  bg-[#DE1D3A]/5"
-            : "border-gray-300 text-gray-500 hover:border-[#DE1D3A]"
+            ? "bg-[#DE1D3A] text-white border-[#DE1D3A]"
+            : "bg-white/70 border-gray-200 text-gray-600 hover:border-[#DE1D3A]/40"
         }`}
     >
       {cat}
@@ -943,7 +943,7 @@ export default function Products() {
 </div>
 
           {/* Product Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2   lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 -mt-4 lg:grid-cols-3 gap-8">
             {filteredProducts.map((product) => (
               <motion.div
                 layout
