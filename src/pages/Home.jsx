@@ -430,7 +430,7 @@ shadow-2xl shadow-[#DE1D3A]/25
       </section>
 
       {/* Company Overview Section */}
-      <section className="py-4 sm:py-24   bg-[#FFFFFF]">
+      <section className="py-4 sm:py-24  bg-[#F8FAFC] ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             {/* Images Column */}
