@@ -119,7 +119,7 @@ export default function Navbar() {
         <div
           className={`mx-auto w-full transition-all duration-500     ease-in-out ${isScrolled
             ? 'max-w-none rounded-none bg-white/90 backdrop-blur-lg shadow-[0_4px_25px_rgba(15,23,42,0.06)] border-b border-slate-100 py-3 px-4 sm:px-6 lg:px-8'
-            : 'max-w-7xl  rounded-2xl  bg-white/30 md:bg-white/40 backdrop-blur-lg border border-slate-200/30 shadow-[0_8px_30px_rgba(15,23,42,0.04)] py-4 px-6 md:px-8'
+            : 'max-w-7xl  rounded-2xl  bg-white/30 md:bg-white/40 backdrop-blur-lg  border-red-900/40 shadow-[0_8px_30px_rgba(15,23,42,0.04)] py-4 px-6 md:px-8'
             }`}
         >
           <div className="flex items-center   justify-between ">
