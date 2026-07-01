@@ -245,7 +245,7 @@ export default function Home() {
   return (
     <PageWrapper>
       {/* Hero Section */}
-      <section className="relative h-screen  min-h-[600px] w-full overflow-hidden bg-[#1F2937]">
+      <section className="relative h-[55vh] min-h-[480px] sm:h-[70vh] sm:min-h-[550px] md:h-screen md:min-h-[600px] w-full overflow-hidden bg-[#1F2937]">
         {/* Background Image or Video with Zoom/Autoplay */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <video
@@ -263,13 +263,13 @@ export default function Home() {
 
         {/* Hero Content */}
         <div className="absolute inset-0 flex items-center">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div className="max-w-3xl text-left">
+          <div className="max-w-7xl mx-auto px-4  mt-16 md:mt-0 sm:px-6 lg:px-8 w-full">
+            <div className="max-w-3xl bg-red-000 text-left">
               <motion.span
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="inline-block px-3 py-1.5 bg-transparent border border-[#DE1D3A]/40 text-[#DE1D3A]  text-xs font-thin uppercase tracking-widest rounded-md mb-6"
+                className="inline-block px-1 py-1.5    bg-transparent md:border border-[#DE1D3A]/40 text-[#DE1D3A] mt-2 text-[8px] md:text-xs  font-thin uppercase tracking-widest rounded-md mb-4 md:mb-6"
               >
                 Advanced Engineering Systems
               </motion.span>
@@ -277,7 +277,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 25 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight font-display mb-6"
+                className="text-4xl sm:text-5xl md:text-6xl -mt-6 md:mt-0 font-extrabold text-white leading-tight font-display mb-4 md:mb-6"
               >
                 Precision Engineering & Machinery Solutions
               </motion.h1>
@@ -285,7 +285,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
-                className="text-base sm:text-lg text-slate-300 mb-10 leading-relaxed font-sans max-w-2xl"
+                className="  text-[12px]  leading-2 md:text-[16px] text-slate-200 mb-6 sm:mb-8 md:mb-10 leading-relaxed font-sans max-w-2xl"
               >
                 Delivering innovative industrial machinery and engineering excellence for modern industries.
               </motion.p>
@@ -293,7 +293,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 }}
-                className="flex flex-wrap gap-4"
+                className="flex flex-wrap  gap-4"
               >
                 {/* Laptop/Desktop Buttons (Hidden on mobile/tablet) */}
                 <Link
