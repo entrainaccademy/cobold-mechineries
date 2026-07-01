@@ -279,7 +279,7 @@ export default function Home() {
                 transition={{ delay: 0.4 }}
                 className="text-4xl sm:text-5xl md:text-6xl -mt-6 md:mt-0 font-extrabold text-white leading-tight font-display mb-4 md:mb-6"
               >
-                Precision Engineering & Machinery Solutions
+                Precision <br />Engineering & Machinery Solutions
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
