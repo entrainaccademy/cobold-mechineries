@@ -32,7 +32,7 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
-        display: ['Sora', 'sans-serif'],
+        display: ['Outfit', 'sans-serif'],
         sora: ['Sora', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
       },

@@ -447,7 +447,7 @@ shadow-2xl shadow-[#DE1D3A]/25
                   alt="Industrial Engineering Team"
                   className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#DE1D3A]/30 to-transparent" />
+                <div className="absolute inset-0 " />
               </div>
               {/* Overlay Stat Block */}
               <motion.div
