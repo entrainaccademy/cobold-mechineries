@@ -10,7 +10,7 @@ import slider2 from '../assets/slider2.jpg';
 import slider3 from '../assets/slider3.jpeg';
 import hmAbout1 from '../assets/hm_about1.jpg';
 
-import hereVideo from '../assets/herovideo.mp4';
+import hereVideo from '../assets/mainvd.mp4'
 
 
 
@@ -34,7 +34,7 @@ import brandimg13 from '../assets/brand_img13.png';
 import docota from '../assets/docota 4.jpg';
 import p6 from '../assets/Products/p6.jpeg';
 import tabletop2 from '../assets/TableTopFoodMixer2.jpeg';
-import  p5 from '../assets/Products/p5.jpg'
+import p5 from '../assets/Products/p5.jpg'
 import p3 from '../assets/Products/p3.jpeg'
 import p17 from '../assets/Products/p17.jpg'
 
@@ -199,7 +199,7 @@ export default function Home() {
       specs: "20L Bowl | Digital Timer | Reinforced Motor",
       description: "High-capacity planetary mixer with speed control and automatic bowl lifting mechanism for thick batters."
     }
-   
+
 
 
 
@@ -311,11 +311,11 @@ export default function Home() {
                 </Link>
 
                 {/* Floating WhatsApp Action Button (Fixed Floating on Bottom Right, Visible on All Screens) */}
-             <a
-  href="https://wa.me/919061782023"
-  target="_blank"
-  rel="noreferrer"
-className="
+                <a
+                  href="https://wa.me/919061782023"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="
   fixed bottom-6 right-6 z-50
   w-14 h-14  bg-gradient-to-r from-[#DE1D3A] to-[#FF6B81]
 shadow-2xl shadow-[#DE1D3A]/25
@@ -328,16 +328,16 @@ shadow-2xl shadow-[#DE1D3A]/25
   animate-pulse-glow
   hover:scale-105 active:scale-95
 "
-  aria-label="Chat on WhatsApp"
->
-  <svg
-    className="w-7 h-7 text-white fill-current"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path d="M12.004 0C5.378 0 0 5.378 0 12.004c0 2.115.549 4.18 1.597 6.009L.057 24l6.163-1.619c1.77.962 3.766 1.468 5.78 1.468 6.626 0 12.004-5.378 12.004-12.004C24.004 5.378 18.626 0 12.004 0zm0 22.015c-1.804 0-3.578-.485-5.127-1.402l-.367-.218-3.805 1.002.998-3.662-.24-.383a9.96 9.96 0 01-1.528-5.348c0-5.518 4.49-10.008 10.008-10.008 5.518 0 10.008 4.49 10.008 10.008-.002 5.522-4.492 10.012-10.008 10.012zm5.496-7.502c-.302-.152-1.785-.881-2.062-.981-.277-.101-.48-.152-.68.152-.201.303-.781.982-.957 1.183-.176.201-.353.227-.655.076-1.205-.603-2.072-1.054-2.898-2.47-.197-.339.197-.315.565-1.05.06-.121.03-.227-.015-.328-.045-.101-.48-1.153-.658-1.58-.173-.418-.348-.362-.48-.369-.124-.007-.267-.008-.41-.008s-.376.054-.572.27c-.197.216-.75.733-.75 1.79s.767 2.08.874 2.222c.106.142 1.51 2.305 3.657 3.232.51.22.909.352 1.22.45.514.163.982.14 1.352.085.412-.061 1.785-.73 2.037-1.436.252-.705.252-1.312.176-1.437-.076-.126-.277-.202-.579-.354z" />
-  </svg>
-</a>
+                  aria-label="Chat on WhatsApp"
+                >
+                  <svg
+                    className="w-7 h-7 text-white fill-current"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M12.004 0C5.378 0 0 5.378 0 12.004c0 2.115.549 4.18 1.597 6.009L.057 24l6.163-1.619c1.77.962 3.766 1.468 5.78 1.468 6.626 0 12.004-5.378 12.004-12.004C24.004 5.378 18.626 0 12.004 0zm0 22.015c-1.804 0-3.578-.485-5.127-1.402l-.367-.218-3.805 1.002.998-3.662-.24-.383a9.96 9.96 0 01-1.528-5.348c0-5.518 4.49-10.008 10.008-10.008 5.518 0 10.008 4.49 10.008 10.008-.002 5.522-4.492 10.012-10.008 10.012zm5.496-7.502c-.302-.152-1.785-.881-2.062-.981-.277-.101-.48-.152-.68.152-.201.303-.781.982-.957 1.183-.176.201-.353.227-.655.076-1.205-.603-2.072-1.054-2.898-2.47-.197-.339.197-.315.565-1.05.06-.121.03-.227-.015-.328-.045-.101-.48-1.153-.658-1.58-.173-.418-.348-.362-.48-.369-.124-.007-.267-.008-.41-.008s-.376.054-.572.27c-.197.216-.75.733-.75 1.79s.767 2.08.874 2.222c.106.142 1.51 2.305 3.657 3.232.51.22.909.352 1.22.45.514.163.982.14 1.352.085.412-.061 1.785-.73 2.037-1.436.252-.705.252-1.312.176-1.437-.076-.126-.277-.202-.579-.354z" />
+                  </svg>
+                </a>
               </motion.div>
             </div>
           </div>
@@ -479,10 +479,10 @@ shadow-2xl shadow-[#DE1D3A]/25
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#111827] font-display leading-tight">
                 Pioneering Precision & Manufacturing Excellence Since 2001
               </h2>
-              <p className="text-[#6B7280] text-base leading-relaxed">
+              <p className="text-[#6B7280] text-[14px] md:text-base leading-relaxed">
                 Cobolt Machineries is a premium global manufacturer of high-end industrial machinery. We bridge the gap between complex engineering concepts and reliable physical manufacturing equipment, delivering solutions that scale operations while preserving razor-sharp accuracy.
               </p>
-              <p className="text-[#6B7280] text-base leading-relaxed">
+              <p className="text-[#6B7280] text-[14px] md:text-base leading-relaxed">
                 With a dedicated state-of-the-art foundry and high-precision CNC toolsets, our in-house engineers design, construct, and calibrate CNC setups, hydraulics, stamping stations, and automated conveyor lines.
               </p>
               <div className="pt-4 flex flex-wrap gap-8">
@@ -501,7 +501,7 @@ shadow-2xl shadow-[#DE1D3A]/25
                   </div>
                   <div>
                     <h5 className="font-bold  text-[#111827] text-sm font-display">120+ Active Clients</h5>
-                    <p className=" text-[#6B7280] text-xs">Heavy Manufacturing Sectors</p> 
+                    <p className=" text-[#6B7280] text-xs">Heavy Manufacturing Sectors</p>
                   </div>
                 </div>
               </div>
@@ -531,7 +531,7 @@ shadow-2xl shadow-[#DE1D3A]/25
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#111827] font-display tracking-tight">
               Why Heavy Manufacturers Partner with Cobolt
             </h2>
-            <p className="text-[#6B7280] text-base max-w-2xl mx-auto leading-relaxed">
+            <p className="text-[#6B7280] text-[14px] md:text-base max-w-2xl mx-auto leading-relaxed">
               We understand that even a single minute of machine downtime represents massive loss. We engineer stability into every joint and code reliability into every system.
             </p>
           </div>
@@ -617,10 +617,10 @@ shadow-2xl shadow-[#DE1D3A]/25
             <p className="text-[#6B7280] font-light   px-4 md:px-0 text-sm  md:text-sm  md:font-light  leading-relaxed font-sans max-w-xl mx-auto">
               Engineered with food-grade SUS304/SUS316 stainless steel, smart PLC automation, and high-throughput reliability.
             </p>
-             <div className="pt-4">
-    <Link
-      to="/products"
-      className="
+            <div className="pt-4">
+              <Link
+                to="/products"
+                className="
         inline-flex
         items-center
         gap-2
@@ -640,11 +640,11 @@ shadow-2xl shadow-[#DE1D3A]/25
         hover:shadow-[#DE1D3A]/30
         hover:-translate-y-1
       "
-    >
-      View All Products
-      <ArrowRight className="w-4 h-4" />
-    </Link>
-  </div>
+              >
+                View All Products
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
           </motion.div>
 
           <div className="grid grid-cols-1   md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
@@ -670,17 +670,17 @@ shadow-2xl shadow-[#DE1D3A]/25
                 <div className="absolute top-0  left-0 w-full h-1 bg-[#DE1D3A]" />
 
                 {/* Image */}
-        <div className="relative  aspect-[4/3] overflow-hidden bg-white">
-  <img
-    src={product.image}
-    alt={product.name}
-    className="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105"
-  />
+                <div className="relative  aspect-[4/3] overflow-hidden bg-white">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105"
+                  />
 
-  <span className="absolute top-4 left-4 bg-[#F8FAFC] text-[#DE1D3A] border border-[#DE1D3A]/20 px-3 py-1 rounded-full text-[10px] font-semibold uppercase shadow-sm">
-    {product.category}
-  </span>
-</div>
+                  <span className="absolute top-4 left-4 bg-[#F8FAFC] text-[#DE1D3A] border border-[#DE1D3A]/20 px-3 py-1 rounded-full text-[10px] font-semibold uppercase shadow-sm">
+                    {product.category}
+                  </span>
+                </div>
                 {/* Content */}
                 <div className="p-6 flex bg-[#F8FAFC] flex-col flex-grow">
                   <h3 className="font-display font-bold text-xl text-[#111827] mb-3 group-hover:text-[#DE1D3A] transition-colors">
@@ -722,7 +722,7 @@ shadow-2xl shadow-[#DE1D3A]/25
 
 
           {/* Second Row: 2 cards centered */}
-        
+
 
           {/* Premium Bottom Conversion CTA Section */}
           <motion.div
@@ -744,10 +744,10 @@ shadow-2xl shadow-[#DE1D3A]/25
         </motion.div>
       </section>
 
-      
 
-  
-     
+
+
+
       {/* Customer Testimonials Section */}
       <section className="py-24 bg-[#F8FAFC] border-t border-[#E5E7EB]/50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -854,7 +854,7 @@ shadow-2xl shadow-[#DE1D3A]/25
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="bg-white/[0.02] backdrop-blur-md border border-white/5 rounded-3xl p-6 sm:p-10 md:p-16 text-center shadow-2xl relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-[#DE1D3A]/5 to-transparent pointer-events-none" />
-            
+
             <div className="relative z-10 space-y-6 max-w-3xl mx-auto">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#DE1D3A]/10 border border-[#DE1D3A]/20 text-[#DE1D3A] text-xs font-bold uppercase tracking-widest rounded-full">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#DE1D3A] animate-pulse" />
@@ -881,7 +881,7 @@ shadow-2xl shadow-[#DE1D3A]/25
                   className="w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 text-white text-sm font-semibold rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-95"
                 >
                   <svg className="w-5 h-5 text-white fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.004 0C5.378 0 0 5.378 0 12.004c0 2.115.549 4.18 1.597 6.009L.057 24l6.163-1.619c1.77.962 3.766 1.468 5.78 1.468 6.626 0 12.004-5.378 12.004-12.004C24.004 5.378 18.626 0 12.004 0zm0 22.015c-1.804 0-3.578-.485-5.127-1.402l-.367-.218-3.805 1.002.998-3.662-.24-.383a9.96 9.96 0 01-1.528-5.348c0-5.518 4.49-10.008 10.008-10.008 5.518 0 10.008 4.49 10.008 10.008-.002 5.522-4.492 10.012-10.008 10.012zm5.496-7.502c-.302-.152-1.785-.881-2.062-.981-.277-.101-.48-.152-.68.152-.201.303-.781.982-.957 1.183-.176.201-.353.227-.655.076-1.205-.603-2.072-1.054-2.898-2.47-.197-.339.197-.315.565-1.05.06-.121.03-.227-.015-.328-.045-.101-.48-1.153-.658-1.58-.173-.418-.348-.362-.48-.369-.124-.007-.267-.008-.41-.008s-.376.054-.572.27c-.197.216-.75.733-.75 1.79s.767 2.08.874 2.222c.106.142 1.51 2.305 3.657 3.232.51.22.909.352 1.22.45.514.163.982.14 1.352.085.412-.061 1.785-.73 2.037-1.436.252-.705.252-1.312.176-1.437-.076-.126-.277-.202-.579-.354z"/>
+                    <path d="M12.004 0C5.378 0 0 5.378 0 12.004c0 2.115.549 4.18 1.597 6.009L.057 24l6.163-1.619c1.77.962 3.766 1.468 5.78 1.468 6.626 0 12.004-5.378 12.004-12.004C24.004 5.378 18.626 0 12.004 0zm0 22.015c-1.804 0-3.578-.485-5.127-1.402l-.367-.218-3.805 1.002.998-3.662-.24-.383a9.96 9.96 0 01-1.528-5.348c0-5.518 4.49-10.008 10.008-10.008 5.518 0 10.008 4.49 10.008 10.008-.002 5.522-4.492 10.012-10.008 10.012zm5.496-7.502c-.302-.152-1.785-.881-2.062-.981-.277-.101-.48-.152-.68.152-.201.303-.781.982-.957 1.183-.176.201-.353.227-.655.076-1.205-.603-2.072-1.054-2.898-2.47-.197-.339.197-.315.565-1.05.06-.121.03-.227-.015-.328-.045-.101-.48-1.153-.658-1.58-.173-.418-.348-.362-.48-.369-.124-.007-.267-.008-.41-.008s-.376.054-.572.27c-.197.216-.75.733-.75 1.79s.767 2.08.874 2.222c.106.142 1.51 2.305 3.657 3.232.51.22.909.352 1.22.45.514.163.982.14 1.352.085.412-.061 1.785-.73 2.037-1.436.252-.705.252-1.312.176-1.437-.076-.126-.277-.202-.579-.354z" />
                   </svg>
                   <span>Chat on WhatsApp</span>
                 </a>
