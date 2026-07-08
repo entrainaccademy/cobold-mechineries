@@ -65,7 +65,7 @@ export default function Navbar() {
               className="flex items-center gap-2 hover:text-accent transition-colors text-slate-600 font-sans"
             >
               <Mail className="w-3.5 h-3.5 text-[#DE1D3A]" />
-              <span className="text-xs font-semibold text-slate-700">info@coboltmachineries.com</span>
+              <span className="text-xs font-semibold text-slate-700">infocobolt123@gmail.com</span>
             </a>
 
             {/* Social Icons */}
@@ -101,7 +101,7 @@ export default function Navbar() {
           </div>
 
           <a
-            href="tel:7592084226"
+            href="tel:+919061782023"
             className="flex items-center gap-1.5 px-4 py-1 bg-red/10 hover:bg-accent text-[#2596be] hover:text-white text-xs font-poppins font-semibold uppercase tracking-wider rounded-full transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 animate-pulse-glow"
           >
             <Phone className="w-3 h-3 text-[#DE1D3A]" />
@@ -257,12 +257,12 @@ export default function Navbar() {
               <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-1">
                 24/7 Hotline Support
               </span>
-               <a
-                 href="tel:9061782023"
-                 className="block text-sm font-sora font-semibold tracking-wider text-slate-800 hover:text-[#DE1D3A] transition-colors duration-200"
-               >
-                 +91 9061782023
-               </a>
+              <a
+                href="tel:9061782023"
+                className="block text-sm font-sora font-semibold tracking-wider text-slate-800 hover:text-[#DE1D3A] transition-colors duration-200"
+              >
+                +91 9061782023
+              </a>
             </div>
 
             <div className="space-y-2 border-t border-slate-100 pt-4">
@@ -284,10 +284,10 @@ export default function Navbar() {
             </div>
           </div>
 
-           <div className="flex flex-col gap-4">
-<Link
-  to="/contact"
-  className="
+          <div className="flex flex-col gap-4">
+            <Link
+              to="/contact"
+              className="
     w-full flex items-center justify-center
     px-6 py-3.5
     bg-gradient-to-r from-[#DE1D3A] to-[#F04A63]
@@ -300,10 +300,10 @@ export default function Navbar() {
     hover:scale-[1.02]
     text-center
   "
->
-  Get in Touch
-  <ArrowRight className="w-4 h-4 ml-2" />
-</Link>     {/* Social Icons for Mobile */}
+            >
+              Get in Touch
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>     {/* Social Icons for Mobile */}
             <div className="flex justify-center gap-6 pt-2 border-t border-slate-100 mt-2">
               <a
                 href="https://www.youtube.com/@coboltmachineries"
