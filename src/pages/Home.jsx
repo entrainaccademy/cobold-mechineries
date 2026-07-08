@@ -694,7 +694,7 @@ shadow-2xl shadow-[#DE1D3A]/25
                   <p className="text-[#6B7280] text-sm leading-relaxed flex-grow mb-6">
                     {product.description}
                   </p>
-
+{/* 
                   <Link
                     to="/contact"
                     className="
@@ -714,7 +714,7 @@ shadow-2xl shadow-[#DE1D3A]/25
                   >
                     Get Product Details
                     <ArrowRight className="w-4 h-4" />
-                  </Link>
+                  </Link> */}
                 </div>
               </motion.div>
             ))}
@@ -749,7 +749,7 @@ shadow-2xl shadow-[#DE1D3A]/25
 
 
       {/* Customer Testimonials Section */}
-      <section className="py-24 bg-[#F8FAFC] border-t border-[#E5E7EB]/50 overflow-hidden">
+      {/* <section className="py-24 bg-[#F8FAFC] border-t border-[#E5E7EB]/50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <span className="text-[#DE1D3A] font-bold text-xs uppercase tracking-widest">
@@ -787,7 +787,7 @@ shadow-2xl shadow-[#DE1D3A]/25
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Latest Blog Posts Section */}
       <section className="py-24 bg-[#FFFFFF]">

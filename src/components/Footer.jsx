@@ -23,7 +23,7 @@ export default function Footer() {
     { name: 'Products', path: '/products' },
     { name: 'Services', path: '/services' },
     { name: 'Blog Articles', path: '/blog' },
-    { name: 'Gallery', path: '/gallery' },
+    // { name: 'Gallery', path: '/gallery' },
     { name: 'Contact Us', path: '/contact' },
   ];
 
@@ -139,6 +139,25 @@ export default function Footer() {
             </div>
           </div>
 
+             {/* Services Links */}
+          <div>
+            <h4 className="font-display font-bold text-sm tracking-widest text-primary uppercase mb-6">
+              Our Services
+            </h4>
+            <ul className="space-y-3">
+              {servicesLinks.map((link, idx) => (
+                <li key={idx}>
+                  <Link
+                    to={link.path}
+                    className="text-text-light hover:text-accent text-sm transition-colors duration-200"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Quick Links */}
           <div>
             <h4 className="font-display font-bold text-sm tracking-widest text-primary uppercase mb-6">
@@ -158,24 +177,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services Links */}
-          <div>
-            <h4 className="font-display font-bold text-sm tracking-widest text-primary uppercase mb-6">
-              Our Services
-            </h4>
-            <ul className="space-y-3">
-              {servicesLinks.map((link, idx) => (
-                <li key={idx}>
-                  <Link
-                    to={link.path}
-                    className="text-text-light hover:text-accent text-sm transition-colors duration-200"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+       
 
           {/* Contact Details */}
           <div className="space-y-4">

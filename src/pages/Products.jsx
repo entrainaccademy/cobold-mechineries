@@ -953,7 +953,7 @@ export default function Products() {
                 exit={{ opacity: 0, scale: 0.98 }}
                 transition={{ duration: 0.3 }}
                 className="group border border-[#E5E7EB] bg-[#FFFFFF]  rounded-2xl overflow-hidden hover:shadow-xl hover:border-[#DE1D3A]/20 transition-all duration-300 flex flex-col cursor-pointer"
-                onClick={() => setSelectedProduct(product)}
+                // onClick={() => setSelectedProduct(product)}
               >
                 {/* Image Section */}
                 <div className="relative h-56 overflow-hidden bg-[#FFFFFF] flex items-center justify-center p-6">
@@ -979,12 +979,12 @@ export default function Products() {
                   </p>
 
 
-                  <div className="w-full pt-4 border-t border-[#E5E7EB] flex items-center justify-between text-xs text-[#6B7280] font-semibold">
+                  {/* <div className="w-full pt-4 border-t border-[#E5E7EB] flex items-center justify-between text-xs text-[#6B7280] font-semibold">
                     <span className="flex items-center text-[#DE1D3A]">
                       <Info className="w-3.5 h-3.5 mr-1" /> View Technical Specs
                     </span>
                     <ChevronRight className="w-4 h-4 text-[#6B7280] group-hover:translate-x-1 transition-transform duration-200" />
-                  </div>
+                  </div> */}
                 </div>
               </motion.div>
             ))}
