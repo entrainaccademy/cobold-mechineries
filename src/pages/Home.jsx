@@ -29,6 +29,11 @@ import brandimg10 from '../assets/brand_img10.png';
 import brandimg11 from '../assets/brand_img11.png';
 import brandimg12 from '../assets/brand_img12.png';
 import brandimg13 from '../assets/brand_img13.png';
+import brandimg14 from '../assets/icon_sml2.png';
+import brandimg15 from '../assets/neva2.png';
+import brandimg16 from '../assets/sattara2n.png';
+import brandimg17 from '../assets/supreme2.png';
+import brandimg18 from '../assets/mfc.png';
 
 
 // import icecream from '../assets/icecream.jpg';
@@ -50,6 +55,15 @@ const brandLogos = [
   brandimg11,
   brandimg12,
   brandimg13,
+  brandimg14,
+  brandimg15,
+  brandimg16,
+   brandimg9,
+   brandimg17,
+   brandimg18,
+  
+
+  brandimg7 
 ];
 
 
@@ -64,6 +78,28 @@ const brandLogos2 = [
   brandimg7,
 
 ];
+
+const brandLogosinmobile = [
+
+  brandimg8,
+  brandimg6,
+  brandimg10,
+  brandimg11,
+  brandimg12,
+  brandimg13,
+  brandimg14,
+  brandimg15,
+  brandimg16,
+   brandimg9,
+  brandimg1,
+  brandimg2,
+  brandimg3,
+  brandimg4,
+  brandimg5,
+ brandimg7,
+ brandimg18
+];
+
 
 
 
@@ -364,8 +400,8 @@ shadow-2xl shadow-[#DE1D3A]/25
             Our Esteemed Clients
           </p>
 
-          {/* Logo Marquee Wrapper 1 */}
-          <div className="relative w-full ">
+          {/* Logo Marquee Wrapper 1 (Desktop/Tablet) */}
+          <div className="relative w-full hidden md:block">
             {/* Left and Right side soft fade gradients for premium aesthetic */}
             <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-r from-[#F8FAFC] to-transparent z-10 pointer-events-none" />
             <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-l from-[#F8FAFC] to-transparent z-10 pointer-events-none" />
@@ -396,6 +432,43 @@ shadow-2xl shadow-[#DE1D3A]/25
                     src={logo}
                     alt={`Client Logo ${idx + 1} Dup`}
                     className="max-w-full max-h-full  object-contain filter grayscale opacity-50 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Logo Marquee Wrapper Mobile (Mobile only) */}
+          <div className="relative w-full md:hidden">
+            {/* Left and Right side soft fade gradients for premium aesthetic */}
+            <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#F8FAFC] to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#F8FAFC] to-transparent z-10 pointer-events-none" />
+
+            {/* Marquee Track (Left to Right) */}
+            <div className="flex w-max items-center gap-0 animate-marquee py-2 select-none">
+              {/* First Track Set */}
+              {brandLogosinmobile.map((logo, idx) => (
+                <div
+                  key={`client-logo-mobile-${idx}`}
+                  className="flex items-center justify-center w-24 h-12 flex-shrink-0 transition-transform duration-300 hover:scale-105"
+                >
+                  <img
+                    src={logo}
+                    alt={`Client Logo Mobile ${idx + 1}`}
+                    className="max-w-full max-h-full object-contain filter grayscale opacity-50 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer"
+                  />
+                </div>
+              ))}
+              {/* Second Track Set (Duplicate for Infinite Loop) */}
+              {brandLogosinmobile.map((logo, idx) => (
+                <div
+                  key={`client-logo-mobile-dup-${idx}`}
+                  className="flex items-center justify-center w-24 h-12 flex-shrink-0 transition-transform duration-300 hover:scale-105"
+                >
+                  <img
+                    src={logo}
+                    alt={`Client Logo Mobile ${idx + 1} Dup`}
+                    className="max-w-full max-h-full object-contain filter grayscale opacity-50 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer"
                   />
                 </div>
               ))}
