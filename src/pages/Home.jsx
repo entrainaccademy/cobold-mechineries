@@ -10,8 +10,9 @@ import slider2 from '../assets/slider2.jpg';
 import slider3 from '../assets/slider3.jpeg';
 import hmAbout1 from '../assets/hm_about1.jpg';
 
-// import hereVideo from '../assets/mainvd.mp4'
-import hero5mb from '../../public/mainvd5mb.mp4'
+// import hereVideo from '../assets/mainvd.mp4;'
+import hero5mb from '../../public/mainvd5mb.mp4';
+import heroinmobile from '../../public/heroinmobile.MP4';
 
 
 
@@ -88,6 +89,16 @@ const cardVariants = {
 };
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
 
 
@@ -250,8 +261,8 @@ export default function Home() {
         {/* Background Image or Video with Zoom/Autoplay */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <video
-            // src={hereVideo}
-            src={hero5mb}
+            src={isMobile ? heroinmobile : hero5mb}
+            key={isMobile ? 'mobile' : 'desktop'}
             autoPlay
             loop
             muted

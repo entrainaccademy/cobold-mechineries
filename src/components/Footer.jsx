@@ -193,20 +193,19 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <Phone className="w-4.5 h-4.5 text-[#DE1D3A] flex-shrink-0" />
               <a href="tel:7592084226" className="text-text-light hover:text-accent text-sm transition-colors duration-200">
-                +91 9061 782023
+                +91 9061782023
               </a>
             </div>
             <div className="flex items-center gap-3">
               <Mail className="w-4.5 h-4.5 text-[#DE1D3A] flex-shrink-0" />
               <a href="mailto:info@coboltmachineries.com" className="text-text-light hover:text-accent text-sm transition-colors duration-200">
-                info@coboltmachineries.com
+                info@cobolt123@gmail.com
               </a>
             </div>
             <div className="pt-2">
               <span className="inline-flex items-center px-3 py-1 rounded bg-green-50 text-green-700 text-xs font-semibold border border-green-200">
                
-Mon – Sat: 9 am – 8 pm,
-Sunday: CLOSED
+Mon – Sat: 9 am – 8 pm
               </span>
             </div>
           </div>
