@@ -34,6 +34,8 @@ import brandimg15 from '../assets/neva2.png';
 import brandimg16 from '../assets/sattara2n.png';
 import brandimg17 from '../assets/supreme2.png';
 import brandimg18 from '../assets/mfc.png';
+import brandimg19 from '../assets/eatveg.png';
+
 
 
 // import icecream from '../assets/icecream.jpg';
@@ -61,6 +63,7 @@ const brandLogos = [
    brandimg9,
    brandimg17,
    brandimg18,
+   brandimg19,
   
 
   brandimg7 
@@ -97,7 +100,8 @@ const brandLogosinmobile = [
   brandimg4,
   brandimg5,
  brandimg7,
- brandimg18
+ brandimg18,
+ brandimg19
 ];
 
 

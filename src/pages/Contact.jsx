@@ -127,9 +127,9 @@ export default function Contact() {
     {
       icon: Mail,
       title: "Email Our Engineers",
-      details: "info@coboltmachineries.com",
+      details: "infocobolt123@gmail.com",
       sub: "Send specifications for bidding",
-      action: "mailto:info@coboltmachineries.com",
+      action: "mailto:info@cobolt123@gmail.com",
       actionText: "Email Us"
     },
     {
