@@ -267,27 +267,12 @@ export default function Navbar() {
 
             <div className="space-y-2 border-t border-slate-100 pt-4">
               <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-1">
-<<<<<<< HEAD
                 Branch Facility
               </span>
               <div className="flex flex-col gap-2 text-xs text-slate-600">
                 <Link to="/contact?loc=veepoor" className="hover:text-[#DE1D3A] transition-colors flex items-center gap-1.5">
                   <span className="w-1 h-1 rounded-full bg-[#DE1D3A] flex-shrink-0" />
                   <span>Veemboor, Manjeri, Kerala</span>
-=======
-                Branch Facilities
-              </span>
-              <div className="flex flex-col gap-2 text-xs text-slate-600">
-
-
-                <Link to="/contact?loc=manjeri" className="hover:text-[#DE1D3A] transition-colors flex items-center gap-1.5">
-                  <span className="w-1 h-1 rounded-full bg-[#DE1D3A] flex-shrink-0" />
-                  <span>Manjeri Outlet Center (Kerala)</span>
-                </Link>
-                <Link to="/contact?loc=veepoor" className="hover:text-[#DE1D3A] transition-colors flex items-center gap-1.5">
-                  <span className="w-1 h-1 rounded-full bg-[#DE1D3A] flex-shrink-0" />
-                  <span>Veepoor Foundry Center (Kerala)</span>
->>>>>>> ac6964ac411137460cede0ebc62244fc8e5819ae
                 </Link>
               </div>
             </div>

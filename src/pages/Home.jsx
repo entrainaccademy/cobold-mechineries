@@ -10,15 +10,9 @@ import slider2 from '../assets/slider2.jpg';
 import slider3 from '../assets/slider3.jpeg';
 import hmAbout1 from '../assets/hm_about1.jpg';
 
-<<<<<<< HEAD
 // Video paths from public directory
 const hero5mb = '/mainvd5mb.mp4';
 const heroinmobile = '/heroinmobile.MP4';
-=======
-// import hereVideo from '../assets/mainvd.mp4;'
-import hero5mb from '../../public/mainvd5mb.mp4';
-import heroinmobile from '../../public/heroinmobile.MP4';
->>>>>>> ac6964ac411137460cede0ebc62244fc8e5819ae
 
 
 

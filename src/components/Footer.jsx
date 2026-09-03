@@ -187,11 +187,7 @@ export default function Footer() {
             <div className="flex items-start gap-3">
               <MapPin className="w-4.5 h-4.5 text-[#DE1D3A] mt-0.5 flex-shrink-0" />
               <span className="text-text-light text-sm leading-relaxed">
-<<<<<<< HEAD
                 Veemboor, Manjeri, Kerala - 679582
-=======
-                 veemboor, menjery, kerala -679582
->>>>>>> ac6964ac411137460cede0ebc62244fc8e5819ae
               </span>
             </div>
             <div className="flex items-center gap-3">
