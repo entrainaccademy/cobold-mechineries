@@ -226,9 +226,9 @@ export default function Contact() {
                       <MapPin className="w-5 h-5" />
                     </div>
                     <div>
-                      <h5 className="font-display font-bold text-sm text-[#111827]">Kerala Regional Foundry (Veepoor)</h5>
+                      <h5 className="font-display font-bold text-sm text-[#111827]">Kerala Regional Foundry (Veemboor)</h5>
                       <p className="text-[#6B7280] text-xs leading-relaxed mt-1">
-                        Veepoor Industrial Zone, Calicut Bypass Road, Kozhikode, Kerala 673661, India
+                        Veemboor Industrial Zone, Manjeri, Malappuram, Kerala 676122, India
                       </p>
                     </div>
                   </div>
