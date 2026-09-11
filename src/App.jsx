@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
@@ -14,6 +14,7 @@ import Services from './pages/Services';
 import Blog from './pages/Blog';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
+import Careers from './pages/Careers';
 
 // Scroll Restoration helper
 function ScrollToTop() {
@@ -42,6 +43,7 @@ function AnimatedRoutes() {
         <Route path="/services" element={<Services />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/careers" element={<Careers />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </AnimatePresence>

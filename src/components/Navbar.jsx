@@ -47,6 +47,7 @@ export default function Navbar() {
     { name: 'Products', path: '/products' },
     { name: 'Services', path: '/services' },
     { name: 'Blog', path: '/blog' },
+    { name: 'Careers', path: '/careers' },
     // { name: 'Gallery', path: '/gallery' },
   ];
 

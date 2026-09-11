@@ -23,6 +23,7 @@ export default function Footer() {
     { name: 'Products', path: '/products' },
     { name: 'Services', path: '/services' },
     { name: 'Blog Articles', path: '/blog' },
+    { name: 'Careers', path: '/careers' },
     // { name: 'Gallery', path: '/gallery' },
     { name: 'Contact Us', path: '/contact' },
   ];
