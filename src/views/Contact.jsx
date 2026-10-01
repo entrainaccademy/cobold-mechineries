@@ -1,10 +1,12 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useSearchParams } from 'next/navigation';
 import { Mail, Phone, MapPin, Send, MessageSquare, Clock, ShieldCheck, CheckCircle2, User, Building, Landmark } from 'lucide-react';
 import PageWrapper from '../components/PageWrapper';
 
 export default function Contact() {
-  const location = useLocation();
+  const searchParams = useSearchParams();
   
   // State for form fields
   const [formData, setFormData] = useState({
@@ -24,10 +26,9 @@ export default function Contact() {
 
   // Read query params on load (e.g. ?product=COBOLT-X5 or ?service=AMC or ?loc=veepoor)
   useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const productParam = params.get('product');
-    const serviceParam = params.get('service');
-    const locParam = params.get('loc');
+    const productParam = searchParams?.get('product');
+    const serviceParam = searchParams?.get('service');
+    const locParam = searchParams?.get('loc');
     
     if (productParam) {
       setFormData(prev => ({
@@ -59,7 +60,7 @@ export default function Contact() {
       const timer = setTimeout(() => setHighlightedLoc(null), 5000);
       return () => clearTimeout(timer);
     }
-  }, [location.search]);
+  }, [searchParams]);
 
   // Form Validation
   const validateForm = () => {

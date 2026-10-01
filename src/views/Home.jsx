@@ -1,8 +1,12 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Settings, ShieldCheck, Cpu, Clock, Award, Users, ChevronLeft, ChevronRight, Quote, Landmark, Zap, Layers, Truck } from 'lucide-react';
 import PageWrapper from '../components/PageWrapper';
+
+const getSrc = (img) => (typeof img === 'object' && img?.src ? img.src : img);
 
 // Asset imports
 import slider1 from '../assets/slider1.jpg';
@@ -354,14 +358,14 @@ export default function Home() {
               >
                 {/* Laptop/Desktop Buttons (Hidden on mobile/tablet) */}
                 <Link
-                  to="/products"
+                  href="/products"
                   className="hidden lg:flex px-8 py-3.5 bg-[#DE1D3A] hover:bg-[#B7152D] text-white text-sm font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 items-center group font-sans"
                 >
                   Explore Products
                   <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
                 <Link
-                  to="/contact"
+                  href="/contact"
                   className="hidden lg:flex px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white text-sm font-semibold rounded-lg border border-white/20 hover:border-white/40 transition-all duration-300 font-sans"
                 >
                   Contact Us
@@ -424,7 +428,7 @@ shadow-2xl shadow-[#DE1D3A]/25
                   className="flex items-center  justify-center w-28 sm:w-36 h-12 sm:h-16 flex-shrink-0 transition-transform duration-300 hover:scale-105"
                 >
                   <img
-                    src={logo}
+                    src={getSrc(logo)}
                     alt={`Client Logo ${idx + 1}`}
                     className="max-w-full  max-h-full object-contain filter grayscale opacity-50 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer"
                   />
@@ -437,7 +441,7 @@ shadow-2xl shadow-[#DE1D3A]/25
                   className="flex items-center  justify-center w-28 sm:w-36 h-12 sm:h-16 flex-shrink-0 transition-transform duration-300 hover:scale-105"
                 >
                   <img
-                    src={logo}
+                    src={getSrc(logo)}
                     alt={`Client Logo ${idx + 1} Dup`}
                     className="max-w-full max-h-full  object-contain filter grayscale opacity-50 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer"
                   />
@@ -461,7 +465,7 @@ shadow-2xl shadow-[#DE1D3A]/25
                   className="flex items-center justify-center w-24 h-12 flex-shrink-0 transition-transform duration-300 hover:scale-105"
                 >
                   <img
-                    src={logo}
+                    src={getSrc(logo)}
                     alt={`Client Logo Mobile ${idx + 1}`}
                     className="max-w-full max-h-full object-contain filter grayscale opacity-50 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer"
                   />
@@ -474,7 +478,7 @@ shadow-2xl shadow-[#DE1D3A]/25
                   className="flex items-center justify-center w-24 h-12 flex-shrink-0 transition-transform duration-300 hover:scale-105"
                 >
                   <img
-                    src={logo}
+                    src={getSrc(logo)}
                     alt={`Client Logo Mobile ${idx + 1} Dup`}
                     className="max-w-full max-h-full object-contain filter grayscale opacity-50 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer"
                   />
@@ -498,7 +502,7 @@ shadow-2xl shadow-[#DE1D3A]/25
                   className="flex items-center justify-center w-28 sm:w-36 h-12 sm:h-16 flex-shrink-0 transition-transform duration-300 hover:scale-105"
                 >
                   <img
-                    src={logo}
+                    src={getSrc(logo)}
                     alt={`Client Logo ${idx + 1}`}
                     className="max-w-full max-h-full object-contain filter grayscale opacity-50 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer"
                   />
@@ -511,7 +515,7 @@ shadow-2xl shadow-[#DE1D3A]/25
                   className="flex items-center justify-center w-28 sm:w-36 h-12 sm:h-16 flex-shrink-0 transition-transform duration-300 hover:scale-105"
                 >
                   <img
-                    src={logo}
+                    src={getSrc(logo)}
                     alt={`Client Logo ${idx + 1} Dup`}
                     className="max-w-full max-h-full object-contain filter grayscale opacity-50 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer"
                   />
@@ -537,7 +541,7 @@ shadow-2xl shadow-[#DE1D3A]/25
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-[#E5E7EB] max-h-[500px]">
                 <img
-                  src={hmAbout1}
+                  src={getSrc(hmAbout1)}
                   alt="Industrial Engineering Team"
                   className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700"
                 />
@@ -601,7 +605,7 @@ shadow-2xl shadow-[#DE1D3A]/25
               </div>
               <div className="pt-6">
                 <Link
-                  to="/about"
+                  href="/about"
                   className="inline-flex items-center text-[#DE1D3A] hover:text-[#B7152D] font-semibold text-sm transition-colors duration-200 group"
                 >
                   Discover Our Story
@@ -713,7 +717,7 @@ shadow-2xl shadow-[#DE1D3A]/25
             </p>
             <div className="pt-4">
               <Link
-                to="/products"
+                href="/products"
                 className="
         inline-flex
         items-center
@@ -766,7 +770,7 @@ shadow-2xl shadow-[#DE1D3A]/25
                 {/* Image */}
                 <div className="relative  aspect-[4/3] overflow-hidden bg-white">
                   <img
-                    src={product.image}
+                    src={getSrc(product.image)}
                     alt={product.name}
                     className="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105"
                   />
@@ -828,7 +832,7 @@ shadow-2xl shadow-[#DE1D3A]/25
               <p className="text-[#6B7280] text-sm max-w-lg font-sans">Our master fabricators can tailor dimensions, capacities, and PLC programs to your factory floor.</p>
             </div>
             <Link
-              to="/contact"
+              href="/contact"
               className="px-8 py-3.5 bg-[#DE1D3A] hover:bg-[#B7152D] hover:-translate-y-0.5 text-white text-xs font-bold uppercase tracking-wider rounded-full transition-all duration-300 shadow-md flex items-center justify-center gap-2 flex-shrink-0"
             >
               Talk to an Engineer
@@ -896,7 +900,7 @@ shadow-2xl shadow-[#DE1D3A]/25
               </h2>
             </div>
             <Link
-              to="/blog"
+              href="/blog"
               className="inline-flex items-center justify-center px-6 py-3 border border-[#E5E7EB] hover:border-[#DE1D3A] text-sm font-semibold rounded-lg text-[#DE1D3A] hover:bg-[#F8FAFC] transition-all duration-200 flex-shrink-0 group"
             >
               Visit Blog
@@ -915,7 +919,7 @@ shadow-2xl shadow-[#DE1D3A]/25
                   Spindle thermal drift is the primary cause of dimension errors. Learn how oil cooling systems and vibration sensing prevent spindle failure.
                 </p>
               </div>
-              <Link to="/blog" className="text-[#DE1D3A] hover:text-[#B7152D] font-bold text-xs flex items-center gap-1.5 transition-colors duration-200">
+              <Link href="/blog" className="text-[#DE1D3A] hover:text-[#B7152D] font-bold text-xs flex items-center gap-1.5 transition-colors duration-200">
                 Read Article <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
@@ -930,7 +934,7 @@ shadow-2xl shadow-[#DE1D3A]/25
                   How manufacturing floors leverage automated Modbus/TCP relays to log parts count and predictive health checks directly into billing databases.
                 </p>
               </div>
-              <Link to="/blog" className="text-[#DE1D3A] hover:text-[#B7152D] font-bold text-xs flex items-center gap-1.5 transition-colors duration-200">
+              <Link href="/blog" className="text-[#DE1D3A] hover:text-[#B7152D] font-bold text-xs flex items-center gap-1.5 transition-colors duration-200">
                 Read Article <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
@@ -962,7 +966,7 @@ shadow-2xl shadow-[#DE1D3A]/25
               </p>
               <div className="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
                 <Link
-                  to="/contact"
+                  href="/contact"
                   className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-[#DE1D3A] to-[#B7152D] hover:from-[#B7152D] hover:to-[#DE1D3A] text-white text-sm font-semibold rounded-xl shadow-lg shadow-[#DE1D3A]/20 hover:shadow-xl hover:shadow-[#DE1D3A]/30 hover:scale-[1.02] active:scale-95 transition-all duration-300 flex items-center justify-center group"
                 >
                   Consult an Engineer

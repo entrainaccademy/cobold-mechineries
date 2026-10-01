@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Calendar, User, Clock, ArrowRight, X, ChevronRight, BookOpen } from 'lucide-react';

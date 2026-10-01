@@ -1,8 +1,12 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Award, Compass, Eye, ShieldCheck, Zap, Users, Factory, Globe } from 'lucide-react';
 import PageWrapper from '../components/PageWrapper';
 import hmAbout1 from '../assets/hm_about1.jpg';
+
+const getSrc = (img) => (typeof img === 'object' && img?.src ? img.src : img);
 
 export default function About() {
   const values = [
@@ -128,7 +132,7 @@ export default function About() {
             <div className="lg:col-span-5 relative">
               <div className="rounded-2xl overflow-hidden shadow-xl border border-[#E5E7EB] max-h-[420px]">
                 <img
-                  src={hmAbout1}
+                  src={getSrc(hmAbout1)}
                   alt="Industrial factory floor"
                   className="w-full h-full object-cover object-center"
                 />

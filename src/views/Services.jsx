@@ -1,8 +1,12 @@
+'use client';
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ShieldAlert, FileSliders, Settings2, Hammer, Landmark, ArrowRight, CheckCircle } from 'lucide-react';
 import PageWrapper from '../components/PageWrapper';
+
+const getSrc = (img) => (typeof img === 'object' && img?.src ? img.src : img);
 
 import service1 from '../assets/service1.jpg';
 import service2 from '../assets/service2.jpg';
@@ -139,7 +143,7 @@ export default function Services() {
                   <div className="relative">
                     <div className="h-48 overflow-hidden bg-[#F8FAFC] rounded-t-2xl">
                       <img
-                        src={service.image}
+                        src={getSrc(service.image)}
                         alt={service.title}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
@@ -184,7 +188,7 @@ export default function Services() {
 
                 <div className="mx-6 pb-6 pt-4 border-t border-[#E5E7EB]/60">
                   <Link
-                    to={`/contact?service=${encodeURIComponent(service.title)}`}
+                    href={`/contact?service=${encodeURIComponent(service.title)}`}
                     className="inline-flex items-center text-[#DE1D3A] font-bold text-xs group-hover:text-[#B7152D] transition-colors duration-200"
                   >
                     Inquire About This Service

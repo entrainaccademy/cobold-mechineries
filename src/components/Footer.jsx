@@ -1,8 +1,10 @@
+'use client';
+
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Mail, Phone, MapPin, Send, Facebook, Twitter, Linkedin, Youtube, CheckCircle2 } from 'lucide-react';
 
-import logo from '../assets/blacklogotr.png'
+import logo from '../assets/blacklogotr.png';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -24,7 +26,6 @@ export default function Footer() {
     { name: 'Services', path: '/services' },
     { name: 'Blog Articles', path: '/blog' },
     { name: 'Careers', path: '/careers' },
-    // { name: 'Gallery', path: '/gallery' },
     { name: 'Contact Us', path: '/contact' },
   ];
 
@@ -36,6 +37,8 @@ export default function Footer() {
     { name: 'Annual Maintenance (AMC)', path: '/services' },
     { name: 'Custom Machinery Solutions', path: '/services' },
   ];
+
+  const logoSrc = typeof logo === 'object' && logo.src ? logo.src : logo;
 
   return (
     <footer className="bg-bg-section border-t border-slate-200/80">
@@ -70,6 +73,7 @@ export default function Footer() {
                   <button
                     type="submit"
                     className="inline-flex items-center justify-center p-3 text-white bg-primary hover:bg-accent rounded-lg transition-colors duration-200 shadow"
+                    aria-label="Subscribe to newsletter"
                   >
                     <Send className="w-4 h-4" />
                   </button>
@@ -85,16 +89,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand Info */}
           <div className="space-y-6">
-            <Link to="/" className="flex items-center gap-3">
+            <Link href="/" className="flex items-center gap-3">
               <img
                 className="h-12 w-auto object-contain"
-                src={logo}
+                src={logoSrc}
                 alt="Cobolt Machineries Logo"
                 onError={(e) => {
                   e.target.src = 'https://placehold.co/120x40/0F172A/FFFFFF?text=Cobolt';
                 }}
               />
-             
             </Link>
             <p className="text-text-light text-sm leading-relaxed">
               Delivering precision engineering and high-performance industrial machinery designed to optimize efficiency and build future-proof infrastructure.
@@ -140,7 +143,7 @@ export default function Footer() {
             </div>
           </div>
 
-             {/* Services Links */}
+          {/* Services Links */}
           <div>
             <h4 className="font-display font-bold text-sm tracking-widest text-primary uppercase mb-6">
               Our Services
@@ -149,7 +152,7 @@ export default function Footer() {
               {servicesLinks.map((link, idx) => (
                 <li key={idx}>
                   <Link
-                    to={link.path}
+                    href={link.path}
                     className="text-text-light hover:text-accent text-sm transition-colors duration-200"
                   >
                     {link.name}
@@ -168,7 +171,7 @@ export default function Footer() {
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <Link
-                    to={link.path}
+                    href={link.path}
                     className="text-text-light hover:text-accent text-sm transition-colors duration-200"
                   >
                     {link.name}
@@ -177,8 +180,6 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-
-       
 
           {/* Contact Details */}
           <div className="space-y-4">
@@ -193,26 +194,25 @@ export default function Footer() {
             </div>
             <div className="flex items-center gap-3">
               <Phone className="w-4.5 h-4.5 text-[#DE1D3A] flex-shrink-0" />
-              <a href="tel:7592084226" className="text-text-light hover:text-accent text-sm transition-colors duration-200">
+              <a href="tel:+919061782023" className="text-text-light hover:text-accent text-sm transition-colors duration-200">
                 +91 9061782023
               </a>
             </div>
             <div className="flex items-center gap-3">
               <Mail className="w-4.5 h-4.5 text-[#DE1D3A] flex-shrink-0" />
-              <a href="mailto:info@coboltmachineries.com" className="text-text-light hover:text-accent text-sm transition-colors duration-200">
+              <a href="mailto:info@cobolt123@gmail.com" className="text-text-light hover:text-accent text-sm transition-colors duration-200">
                 info@cobolt123@gmail.com
               </a>
             </div>
             <div className="pt-2">
               <span className="inline-flex items-center px-3 py-1 rounded bg-green-50 text-green-700 text-xs font-semibold border border-green-200">
-               
-Mon – Sat: 9 am – 8 pm
+                Mon – Sat: 9 am – 8 pm
               </span>
             </div>
           </div>
         </div>
       </div>
- 
+
       {/* Bottom Copyright */}
       <div className="bg-slate-100/50 py-6 border-t border-slate-200/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
@@ -220,9 +220,9 @@ Mon – Sat: 9 am – 8 pm
             &copy; {new Date().getFullYear()} Cobolt Machineries Private Limited. All rights reserved.
           </p>
           <div className="flex space-x-6 text-xs text-text-light">
-            <a href="#privacy" className="hover:text-accent transition-colors duration-200">Privacy Policy</a>
-            <a href="#terms" className="hover:text-accent transition-colors duration-200">Terms of Service</a>
-            <a href="#sitemap" className="hover:text-accent transition-colors duration-200">Sitemap</a>
+            <Link href="/contact" className="hover:text-accent transition-colors duration-200">Privacy Policy</Link>
+            <Link href="/contact" className="hover:text-accent transition-colors duration-200">Terms of Service</Link>
+            <Link href="/sitemap.xml" className="hover:text-accent transition-colors duration-200">Sitemap</Link>
           </div>
         </div>
       </div>

@@ -1,6 +1,8 @@
+'use client';
+
 import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Lightbox({ isOpen, onClose, currentImage, onPrev, onNext }) {
   // Listen for keyboard controls
@@ -16,6 +18,8 @@ export default function Lightbox({ isOpen, onClose, currentImage, onPrev, onNext
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, onClose, onPrev, onNext]);
+
+  const imgSrc = currentImage && (typeof currentImage.src === 'object' && currentImage.src?.src ? currentImage.src.src : currentImage.src);
 
   return (
     <AnimatePresence>
@@ -56,7 +60,7 @@ export default function Lightbox({ isOpen, onClose, currentImage, onPrev, onNext
             className="relative max-w-5xl w-full max-h-[85vh] flex flex-col items-center justify-center z-10"
           >
             <img
-              src={currentImage.src}
+              src={imgSrc}
               alt={currentImage.title}
               className="max-w-full max-h-[70vh] object-contain rounded-lg shadow-2xl border border-white/10"
             />

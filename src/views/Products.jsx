@@ -1,8 +1,12 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useSearchParams, useRouter } from 'next/navigation';
 import { ArrowRight, Info, Check, X, FileText, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import PageWrapper from '../components/PageWrapper';
+
+const getSrc = (img) => (typeof img === 'object' && img?.src ? img.src : img);
 
 // Assets
 import slider1 from '../assets/slider1.jpg';
@@ -68,8 +72,8 @@ import i2 from '../assets/Products/i2.jpg';
 
 
 export default function Products() {
-  const location = useLocation();
-  const navigate = useNavigate();
+  const searchParams = useSearchParams();
+  const router = useRouter();
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -880,20 +884,19 @@ export default function Products() {
 
   // Read URL query parameters to pre-open a product modal
   useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const productId = params.get('id');
+    const productId = searchParams?.get('id');
     if (productId) {
       const prod = productsList.find(p => p.id === productId);
       if (prod) {
         setSelectedProduct(prod);
       }
     }
-  }, [location.search]);
+  }, [searchParams]);
 
   // Clean URL when closing modal
   const handleCloseModal = () => {
     setSelectedProduct(null);
-    navigate('/products', { replace: true });
+    router.replace('/products', { scroll: false });
   };
 
   const filteredProducts = selectedCategory === 'All'
@@ -958,7 +961,7 @@ export default function Products() {
                 {/* Image Section */}
                 <div className="relative h-56 overflow-hidden bg-[#FFFFFF] flex items-center justify-center p-6">
                   <img
-                    src={product.image}
+                    src={getSrc(product.image)}
                     alt={product.name}
                     className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
                   />
@@ -1063,7 +1066,7 @@ export default function Products() {
                     <button
                       onClick={() => {
                         handleCloseModal();
-                        navigate(`/contact?product=${encodeURIComponent(selectedProduct.name)}`);
+                        router.push(`/contact?product=${encodeURIComponent(selectedProduct.name)}`);
                       }}
                       className="px-6 py-3 bg-[#DE1D3A] hover:bg-[#B7152D] text-white text-xs font-semibold uppercase tracking-wider rounded-lg transition-colors duration-200 flex items-center group shadow"
                     >

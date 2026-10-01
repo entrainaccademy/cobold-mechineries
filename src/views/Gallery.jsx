@@ -1,8 +1,12 @@
+'use client';
+
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Eye, Layers, ZoomIn } from 'lucide-react';
 import PageWrapper from '../components/PageWrapper';
 import Lightbox from '../components/Lightbox';
+
+const getSrc = (img) => (typeof img === 'object' && img?.src ? img.src : img);
 
 // Assets
 import slider1 from '../assets/slider1.jpg';
@@ -136,7 +140,7 @@ export default function Gallery() {
                   className="relative overflow-hidden rounded-2xl border border-[#E5E7EB] shadow-sm cursor-zoom-in group h-72 sm:h-80 bg-slate-900"
                 >
                   <img
-                    src={item.src}
+                    src={getSrc(item.src)}
                     alt={item.title}
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100"
                   />
