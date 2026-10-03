@@ -54,7 +54,7 @@ export default function Navbar() {
   const logoSrc = typeof blacklogo === 'object' && blacklogo.src ? blacklogo.src : blacklogo;
 
   return (
-    <>
+    <div className="print:hidden">
       {/* Top Info Bar (Desktop Only) */}
       <div className="hidden md:block w-full bg-slate-50/80 backdrop-blur-sm border-b border-slate-100 py-2.5 text-xs relative z-50">
         <div className="max-w-7xl mx-auto px-8 flex justify-between items-center">
@@ -338,6 +338,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

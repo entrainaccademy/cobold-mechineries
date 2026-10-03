@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Check, FileText, ChevronRight, ShieldCheck, Award } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Check, ChevronRight, ShieldCheck, Award, Printer } from 'lucide-react';
 import PageWrapper from '../components/PageWrapper';
 
 const getSrc = (img) => (typeof img === 'object' && img?.src ? img.src : img);
@@ -29,11 +29,11 @@ export default function ProductDetail({ product, relatedProducts = [] }) {
 
   return (
     <PageWrapper>
-      <div className="pt-28 pb-16 bg-white min-h-screen">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="pt-28 pb-16 print:pt-6 print:pb-0 bg-white min-h-screen print:min-h-0">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 print:px-2 print:max-w-none">
           
-          {/* Top Navigation & Breadcrumbs */}
-          <div className="flex items-center justify-between py-4 border-b border-gray-100 mb-6 text-xs text-gray-500 bg-white">
+          {/* Top Navigation & Breadcrumbs (Hidden in Print) */}
+          <div className="flex items-center justify-between py-4 border-b border-gray-100 mb-6 text-xs text-gray-500 bg-white print:hidden">
             <nav className="flex items-center space-x-2">
               <Link href="/" className="hover:text-[#DE1D3A] transition-colors">
                 Home
@@ -56,54 +56,54 @@ export default function ProductDetail({ product, relatedProducts = [] }) {
             </Link>
           </div>
 
-          {/* Product Header Title */}
-          <div className="text-left mb-8">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 font-display leading-tight">
+          {/* Product Header Title (Printed) */}
+          <div className="text-left mb-8 print:mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl print:text-2xl font-bold text-gray-900 font-display leading-tight uppercase">
               {product.name}
             </h1>
             {product.tagline && (
-              <p className="text-sm sm:text-base font-medium text-[#DE1D3A]/80 mt-1">
+              <p className="text-sm sm:text-base print:text-sm font-medium text-[#DE1D3A] mt-1">
                 {product.tagline}
               </p>
             )}
           </div>
 
-          {/* Main Showcase: Image + Technical Specifications in flex-row (Borderless) */}
-          <div className="mb-12 flex flex-col md:flex-row items-center md:items-start gap-8 lg:gap-12">
+          {/* Main Showcase: Image + Technical Specifications (Printed) */}
+          <div className="mb-12 print:mb-0 flex flex-col md:flex-row print:flex-row items-center md:items-start print:items-start gap-8 lg:gap-12 print:gap-8">
             
             {/* Left: Product Image */}
-            <div className="w-full md:w-1/2 flex items-center justify-center p-4 sm:p-6 min-h-[280px] sm:min-h-[340px]">
+            <div className="w-full md:w-1/2 print:w-1/2 flex items-center justify-center p-4 sm:p-6 print:p-2 min-h-[280px] sm:min-h-[340px] print:min-h-0 bg-white">
               <img
                 src={getSrc(product.image)}
                 alt={product.name}
-                className="max-h-[320px] w-auto max-w-full object-contain filter drop-shadow-sm"
+                className="max-h-[320px] print:max-h-[340px] w-auto max-w-full object-contain filter drop-shadow-sm print:drop-shadow-none"
               />
             </div>
 
             {/* Right: Technical Specifications */}
-            <div className="w-full md:w-1/2 flex flex-col justify-center text-left">
-              <h2 className="text-sm sm:text-base font-bold text-gray-900 font-display uppercase tracking-wider mb-4">
+            <div className="w-full md:w-1/2 print:w-1/2 flex flex-col justify-center text-left">
+              <h2 className="text-sm sm:text-base print:text-sm font-bold text-gray-900 font-display uppercase tracking-wider mb-4 print:mb-3">
                 Technical Specifications
               </h2>
 
               {product.specs ? (
-                <div className="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-xs">
-                  <table className="min-w-full divide-y divide-gray-100 text-left">
-                    <tbody className="divide-y divide-gray-100 bg-white">
+                <div className="border border-gray-200 print:border-gray-300 rounded-xl print:rounded-lg overflow-hidden bg-white shadow-xs print:shadow-none">
+                  <table className="min-w-full divide-y divide-gray-100 print:divide-gray-200 text-left">
+                    <tbody className="divide-y divide-gray-100 print:divide-gray-200 bg-white">
                       {Array.isArray(product.specs) ? (
                         product.specs.map((spec, idx) => (
                           <tr key={idx} className="bg-white">
-                            <td className="px-5 py-3 sm:py-3.5 text-sm sm:text-base font-bold text-gray-900 w-2/5 border-r border-gray-100">
+                            <td className="px-5 py-3.5 print:px-4 print:py-3 text-sm sm:text-base print:text-xs font-bold text-gray-900 w-2/5 border-r border-gray-100 print:border-gray-200">
                               {typeof spec === 'object' ? spec.label : 'Specification'}
                             </td>
-                            <td className="px-5 py-3 sm:py-3.5 text-sm sm:text-base font-medium text-gray-700">
+                            <td className="px-5 py-3.5 print:px-4 print:py-3 text-sm sm:text-base print:text-xs font-medium text-gray-700">
                               {typeof spec === 'object' ? spec.value : spec}
                             </td>
                           </tr>
                         ))
                       ) : (
                         <tr className="bg-white">
-                          <td className="px-5 py-4 text-sm sm:text-base text-gray-700" colSpan={2}>
+                          <td className="px-5 py-4 print:px-4 print:py-3 text-sm sm:text-base print:text-xs text-gray-700" colSpan={2}>
                             {product.specs}
                           </td>
                         </tr>
@@ -117,8 +117,8 @@ export default function ProductDetail({ product, relatedProducts = [] }) {
             </div>
           </div>
 
-          {/* Bottom Section: Description & Actions + Accessories & Trust Badges */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-start text-left pt-6 border-t border-gray-100">
+          {/* Bottom Section: Description & Actions + Accessories & Trust Badges (Hidden in Print) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-start text-left pt-6 border-t border-gray-100 print:hidden">
             
             {/* Description & Action Buttons */}
             <div className="space-y-6">
@@ -141,13 +141,13 @@ export default function ProductDetail({ product, relatedProducts = [] }) {
                   <ArrowRight className="w-4 h-4" />
                 </Link>
 
-                <button
+                {/* <button
                   onClick={() => window.print()}
-                  className="px-5 py-3.5 border border-gray-200 bg-white text-gray-600 hover:text-gray-900 hover:border-gray-400 text-xs font-semibold uppercase tracking-wider rounded-xl transition-colors flex items-center justify-center gap-1.5"
+                  className="px-5 py-3.5 border border-gray-200 bg-white text-gray-600 hover:text-gray-900 hover:border-gray-400 text-xs font-semibold uppercase tracking-wider rounded-xl transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
                   title="Print Specification Sheet"
                 >
-                  <FileText className="w-4 h-4" /> Print Specs
-                </button>
+                  <Printer className="w-4 h-4" /> Print Specs
+                </button> */}
               </div>
             </div>
 
@@ -193,9 +193,9 @@ export default function ProductDetail({ product, relatedProducts = [] }) {
 
           </div>
 
-          {/* Related Products */}
+          {/* Related Products (Hidden in Print) */}
           {relatedProducts.length > 0 && (
-            <div className="mt-16 pt-10 border-t border-gray-100 text-left">
+            <div className="mt-16 pt-10 border-t border-gray-100 text-left print:hidden">
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-lg font-bold text-gray-900 font-display">
                   Related Products

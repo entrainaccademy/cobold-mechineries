@@ -41,7 +41,7 @@ export default function Footer() {
   const logoSrc = typeof logo === 'object' && logo.src ? logo.src : logo;
 
   return (
-    <footer className="bg-bg-section border-t border-slate-200/80">
+    <footer className="bg-bg-section border-t border-slate-200/80 print:hidden">
       {/* Top Banner / Newsletter */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-b border-slate-200/60">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
