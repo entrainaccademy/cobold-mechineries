@@ -20,7 +20,10 @@ export const metadata = {
     telephone: true,
   },
   icons: {
-    icon: '/favicon.svg',
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/logo.png', type: 'image/png' },
+    ],
     shortcut: '/favicon.svg',
     apple: '/logo.png',
   },
