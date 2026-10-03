@@ -1,6 +1,7 @@
-import { Suspense } from 'react';
 import Contact from '../../views/Contact';
-import { SITE_CONFIG, SITE_URL } from '../../lib/siteConfig';
+import JsonLd from '../../components/JsonLd';
+import { SITE, ORG_ID, WEBSITE_ID, breadcrumbs } from '../../lib/schema';
+import { SITE_URL } from '../../lib/siteConfig';
 
 export const metadata = {
   title: 'Contact Us & Factory Location | Get Quote & Technical Consultation',
@@ -23,61 +24,23 @@ export const metadata = {
   },
 };
 
+const contactSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  '@id': `${SITE}/contact#webpage`,
+  url: `${SITE}/contact`,
+  name: 'Contact Us | Cobolt Machineries',
+  description: 'Contact information, inquiry form, and plant facility location in Kerala.',
+  isPartOf: { '@id': WEBSITE_ID },
+  about: { '@id': ORG_ID },
+};
+
 export default function ContactPage() {
-  const jsonLdBreadcrumb = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: SITE_URL,
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Contact Us',
-        item: `${SITE_URL}/contact`,
-      },
-    ],
-  };
-
-  const jsonLdContact = {
-    '@context': 'https://schema.org',
-    '@type': 'ContactPage',
-    name: 'Contact Cobolt Machineries',
-    description: 'Contact information, inquiry form, and plant facility location in Kerala.',
-    url: `${SITE_URL}/contact`,
-    mainEntity: {
-      '@type': 'LocalBusiness',
-      name: SITE_CONFIG.legalName,
-      telephone: SITE_CONFIG.phone,
-      email: SITE_CONFIG.email,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: SITE_CONFIG.address.streetAddress,
-        addressLocality: SITE_CONFIG.address.addressLocality,
-        addressRegion: SITE_CONFIG.address.addressRegion,
-        postalCode: SITE_CONFIG.address.postalCode,
-        addressCountry: SITE_CONFIG.address.addressCountry,
-      },
-    },
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdContact) }}
-      />
-      <Suspense fallback={<div className="min-h-screen pt-32 text-center text-slate-400">Loading contact information...</div>}>
-        <Contact />
-      </Suspense>
+      <JsonLd data={contactSchema} />
+      <JsonLd data={breadcrumbs([['Home', '/'], ['Contact', '/contact']])} />
+      <Contact />
     </>
   );
 }

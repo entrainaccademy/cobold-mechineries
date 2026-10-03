@@ -5,9 +5,19 @@ import { useSearchParams } from 'next/navigation';
 import { Mail, Phone, MapPin, Send, MessageSquare, Clock, ShieldCheck, CheckCircle2, User, Building, Landmark } from 'lucide-react';
 import PageWrapper from '../components/PageWrapper';
 
-export default function Contact() {
+function SearchParamsHandler({ onParams }) {
   const searchParams = useSearchParams();
-  
+  useEffect(() => {
+    if (!searchParams) return;
+    const productParam = searchParams.get('product');
+    const serviceParam = searchParams.get('service');
+    const locParam = searchParams.get('loc');
+    onParams({ productParam, serviceParam, locParam });
+  }, [searchParams, onParams]);
+  return null;
+}
+
+export default function Contact() {
   // State for form fields
   const [formData, setFormData] = useState({
     name: '',
@@ -24,12 +34,7 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [highlightedLoc, setHighlightedLoc] = useState(null);
 
-  // Read query params on load (e.g. ?product=COBOLT-X5 or ?service=AMC or ?loc=veepoor)
-  useEffect(() => {
-    const productParam = searchParams?.get('product');
-    const serviceParam = searchParams?.get('service');
-    const locParam = searchParams?.get('loc');
-    
+  const handleParamsChange = React.useCallback(({ productParam, serviceParam, locParam }) => {
     if (productParam) {
       setFormData(prev => ({
         ...prev,
@@ -48,7 +53,6 @@ export default function Contact() {
 
     if (locParam) {
       setHighlightedLoc(locParam);
-      // Wait for components to mount fully
       setTimeout(() => {
         const element = document.getElementById(`loc-${locParam}`);
         if (element) {
@@ -56,11 +60,10 @@ export default function Contact() {
         }
       }, 500);
       
-      // Clear highlight after 5 seconds for smooth restoration
       const timer = setTimeout(() => setHighlightedLoc(null), 5000);
       return () => clearTimeout(timer);
     }
-  }, [searchParams]);
+  }, []);
 
   // Form Validation
   const validateForm = () => {
@@ -128,9 +131,9 @@ export default function Contact() {
     {
       icon: Mail,
       title: "Email Our Engineers",
-      details: "infocobolt123@gmail.com",
+      details: "info@coboltmachineries.com",
       sub: "Send specifications for bidding",
-      action: "mailto:info@cobolt123@gmail.com",
+      action: "mailto:info@coboltmachineries.com",
       actionText: "Email Us"
     },
     {
@@ -145,6 +148,9 @@ export default function Contact() {
 
   return (
     <PageWrapper>
+      <React.Suspense fallback={null}>
+        <SearchParamsHandler onParams={handleParamsChange} />
+      </React.Suspense>
       {/* Header */}
       <section className="relative pt-32 pb-20 bg-gradient-to-br from-[#F8FAFC] via-[#FFFFFF] to-[#FCE8EC]/50 border-b border-[#E5E7EB]/60 overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000003_1px,transparent_1px),linear-gradient(to_bottom,#00000003_1px,transparent_1px)] bg-[size:3rem_3rem]" />

@@ -1,4 +1,6 @@
 import Home from '../views/Home';
+import JsonLd from '../components/JsonLd';
+import { organization, website } from '../lib/schema';
 import { SITE_CONFIG, SITE_URL } from '../lib/siteConfig';
 
 export const metadata = {
@@ -31,24 +33,13 @@ export const metadata = {
 };
 
 export default function HomePage() {
-  const jsonLdWebSite = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: SITE_CONFIG.name,
-    url: SITE_URL,
-    description: SITE_CONFIG.description,
-    publisher: {
-      '@type': 'Organization',
-      name: SITE_CONFIG.legalName,
-      logo: `${SITE_URL}/logo.png`,
-    },
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebSite) }}
+      <JsonLd
+        data={{
+          '@context': 'https://schema.org',
+          '@graph': [organization, website],
+        }}
       />
       <Home />
     </>

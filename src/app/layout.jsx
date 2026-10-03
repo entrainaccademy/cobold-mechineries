@@ -63,85 +63,14 @@ export const metadata = {
   alternates: {
     canonical: SITE_URL,
   },
+  verification: {
+    google: 'NiEAFME6vA1O4rMpSVJvT5rtj63AUF3HQyJr0xIuVEk',
+  },
 };
 
 export default function RootLayout({ children }) {
-  const jsonLdOrg = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: SITE_CONFIG.legalName,
-    alternateName: SITE_CONFIG.name,
-    url: SITE_URL,
-    logo: `${SITE_URL}/logo.png`,
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: SITE_CONFIG.phone,
-      contactType: 'customer service',
-      areaServed: 'IN',
-      availableLanguage: ['en', 'ml', 'hi'],
-    },
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: SITE_CONFIG.address.streetAddress,
-      addressLocality: SITE_CONFIG.address.addressLocality,
-      addressRegion: SITE_CONFIG.address.addressRegion,
-      postalCode: SITE_CONFIG.address.postalCode,
-      addressCountry: SITE_CONFIG.address.addressCountry,
-    },
-    sameAs: [
-      SITE_CONFIG.social.youtube,
-      SITE_CONFIG.social.facebook,
-      SITE_CONFIG.social.instagram,
-    ],
-  };
-
-  const jsonLdLocalBusiness = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: SITE_CONFIG.legalName,
-    image: `${SITE_URL}/blacklogotr.png`,
-    '@id': `${SITE_URL}#localbusiness`,
-    url: SITE_URL,
-    telephone: SITE_CONFIG.phone,
-    email: SITE_CONFIG.email,
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: SITE_CONFIG.address.streetAddress,
-      addressLocality: SITE_CONFIG.address.addressLocality,
-      addressRegion: SITE_CONFIG.address.addressRegion,
-      postalCode: SITE_CONFIG.address.postalCode,
-      addressCountry: SITE_CONFIG.address.addressCountry,
-    },
-    openingHoursSpecification: [
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: [
-          'Monday',
-          'Tuesday',
-          'Wednesday',
-          'Thursday',
-          'Friday',
-          'Saturday',
-        ],
-        opens: '09:00',
-        closes: '20:00',
-      },
-    ],
-    priceRange: '$$$',
-  };
-
   return (
     <html lang="en">
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdOrg) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdLocalBusiness) }}
-        />
-      </head>
       <body className="bg-white text-text font-sans antialiased selection:bg-accent/20 selection:text-primary overflow-x-hidden min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-grow flex flex-col">

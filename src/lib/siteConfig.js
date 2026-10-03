@@ -20,12 +20,12 @@ export const SITE_CONFIG = {
     'Manjeri machinery',
   ],
   phone: '+91 9061782023',
-  email: 'info@cobolt123@gmail.com',
+  email: 'info@coboltmachineries.com',
   address: {
-    streetAddress: 'Veemboor',
+    streetAddress: 'Veemboor Industrial Zone',
     addressLocality: 'Manjeri',
     addressRegion: 'Kerala',
-    postalCode: '679582',
+    postalCode: '676122',
     addressCountry: 'IN'
   },
   social: {

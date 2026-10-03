@@ -1,5 +1,7 @@
 import Gallery from '../../views/Gallery';
-import { SITE_CONFIG, SITE_URL } from '../../lib/siteConfig';
+import JsonLd from '../../components/JsonLd';
+import { gallerySchema, breadcrumbs } from '../../lib/schema';
+import { SITE_URL } from '../../lib/siteConfig';
 
 export const metadata = {
   title: 'Machinery & Facility Gallery | Visual Engineering Archive',
@@ -23,43 +25,10 @@ export const metadata = {
 };
 
 export default function GalleryPage() {
-  const jsonLdBreadcrumb = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: SITE_URL,
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Gallery',
-        item: `${SITE_URL}/gallery`,
-      },
-    ],
-  };
-
-  const jsonLdGallery = {
-    '@context': 'https://schema.org',
-    '@type': 'ImageGallery',
-    name: 'Cobolt Machineries Visual Archive',
-    description: 'Photos and project visuals from the Cobolt Machineries fabrication yards and client installations.',
-    url: `${SITE_URL}/gallery`,
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGallery) }}
-      />
+      <JsonLd data={gallerySchema} />
+      <JsonLd data={breadcrumbs([['Home', '/'], ['Gallery', '/gallery']])} />
       <Gallery />
     </>
   );

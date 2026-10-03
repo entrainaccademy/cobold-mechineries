@@ -1,6 +1,8 @@
 import { notFound } from 'next/navigation';
 import ProductDetail from '../../../views/ProductDetail';
+import JsonLd from '../../../components/JsonLd';
 import { productsList, getProductById, getRelatedProducts } from '../../../data/products';
+import { productSchema, breadcrumbs } from '../../../lib/schema';
 import { SITE_CONFIG, SITE_URL } from '../../../lib/siteConfig';
 
 export async function generateStaticParams() {
@@ -62,64 +64,17 @@ export default async function ProductDetailPage({ params }) {
   }
 
   const relatedProducts = getRelatedProducts(product.id, product.category, 3);
-
-  const jsonLdProduct = {
-    '@context': 'https://schema.org',
-    '@type': 'Product',
-    name: product.name,
-    description: product.description,
-    category: product.category,
-    brand: {
-      '@type': 'Brand',
-      name: 'Cobolt Machineries',
-    },
-    url: `${SITE_URL}/products/${product.id}`,
-    offers: {
-      '@type': 'AggregateOffer',
-      priceCurrency: 'INR',
-      availability: 'https://schema.org/InStock',
-      seller: {
-        '@type': 'Organization',
-        name: 'Cobolt Machineries',
-      },
-    },
-  };
-
-  const jsonLdBreadcrumb = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: SITE_URL,
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Products',
-        item: `${SITE_URL}/products`,
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: product.name,
-        item: `${SITE_URL}/products/${product.id}`,
-      },
-    ],
-  };
+  const jsonLdProduct = productSchema(product);
+  const jsonLdBreadcrumb = breadcrumbs([
+    ['Home', '/'],
+    ['Products', '/products'],
+    [product.name, `/products/${product.id}`],
+  ]);
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdProduct) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
-      />
+      <JsonLd data={jsonLdProduct} />
+      <JsonLd data={jsonLdBreadcrumb} />
       <ProductDetail product={product} relatedProducts={relatedProducts} />
     </>
   );
