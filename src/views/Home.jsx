@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Settings, ShieldCheck, Cpu, Clock, Award, Users, ChevronLeft, ChevronRight, Quote, Landmark, Zap, Layers, Truck } from 'lucide-react';
+import { ArrowRight, Settings, ShieldCheck, Cpu, Clock, Award, Users, ChevronLeft, ChevronRight, Quote, Landmark, Zap, Layers, Truck, Info } from 'lucide-react';
 import PageWrapper from '../components/PageWrapper';
 
 const getSrc = (img) => (typeof img === 'object' && img?.src ? img.src : img);
@@ -742,70 +742,41 @@ shadow-2xl shadow-[#DE1D3A]/25
             </div>
           </motion.div>
 
-          <div className="grid grid-cols-1   md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
             {latestProducts.slice(0, 6).map((product, idx) => (
               <motion.div
                 variants={cardVariants}
                 key={`${product.id}-${idx}`}
-                className="
-                  group relative
-                  bg-[#FFFFFF]
-                  border border-[#E5E7EB]
-                  rounded-2xl
-                  overflow-hidden
-                  shadow-sm
-                  hover:shadow-xl
-                  hover:border-[#DE1D3A]/20
-                  transition-all duration-500
-                  hover:-translate-y-1
-                  flex flex-col h-full
-                "
+                className="group border border-[#E5E7EB] bg-[#FFFFFF] rounded-2xl overflow-hidden hover:shadow-xl hover:border-[#DE1D3A]/30 transition-all duration-300 flex flex-col h-full hover:-translate-y-1"
               >
-                {/* Top Accent */}
-                <div className="absolute top-0 left-0 w-full h-1 bg-[#DE1D3A]" />
-
-                <Link href={`/products/${product.id}`} className="flex flex-col flex-grow">
-                  {/* Image */}
-                  <div className="relative aspect-[4/3] overflow-hidden bg-white">
+                <Link href={`/products/${product.id}`} className="flex flex-col h-full cursor-pointer">
+                  {/* Image Section */}
+                  <div className="relative h-60 bg-[#FFFFFF] flex items-center justify-center p-6">
                     <img
                       src={getSrc(product.image)}
                       alt={product.name}
-                      className="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105"
+                      className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
                     />
-
-                    <span className="absolute top-4 left-4 bg-[#F8FAFC] text-[#DE1D3A] border border-[#DE1D3A]/20 px-3 py-1 rounded-full text-[10px] font-semibold uppercase shadow-sm">
-                      {product.category}
-                    </span>
                   </div>
-                  {/* Content */}
-                  <div className="p-6 flex bg-[#F8FAFC] flex-col flex-grow justify-between">
+
+                  {/* Details Section */}
+                  <div className="p-6 pt-2 flex-grow flex flex-col items-start text-left justify-between">
                     <div>
-                      <h3 className="font-display font-bold text-xl text-[#111827] mb-3 group-hover:text-[#DE1D3A] transition-colors">
+                      <h3 className="font-display font-bold text-lg text-[#111827] group-hover:text-[#DE1D3A] transition-colors duration-200 mb-2">
                         {product.name}
                       </h3>
-
-                      <div className="inline-flex w-fit text-[11px] font-medium text-[#DE1D3A] bg-[#FCE8EC] px-3 py-1 rounded-full mb-4">
-                        {product.specs}
-                      </div>
+                      {product.description && (
+                        <p className="text-[#6B7280] text-xs sm:text-sm leading-relaxed line-clamp-3">
+                          {product.description}
+                        </p>
+                      )}
                     </div>
 
-                    <div
-                      className="
-                        w-full
-                        py-3
-                        border border-[#DE1D3A]
-                        text-[#DE1D3A]
-                        group-hover:bg-[#DE1D3A]
-                        group-hover:text-white
-                        rounded-xl
-                        text-sm
-                        font-semibold
-                        transition-all duration-300
-                        flex items-center justify-center gap-2
-                      "
-                    >
-                      Get Product Details
-                      <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                    <div className="w-full pt-4 border-t border-[#E5E7EB] flex items-center justify-between text-xs text-[#6B7280] font-semibold mt-4">
+                      <span className="flex items-center text-[#DE1D3A] group-hover:underline">
+                        <Info className="w-3.5 h-3.5 mr-1" /> View Full Details & Specs
+                      </span>
+                      <ChevronRight className="w-4 h-4 text-[#DE1D3A] group-hover:translate-x-1 transition-transform duration-200" />
                     </div>
                   </div>
                 </Link>
