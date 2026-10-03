@@ -185,34 +185,34 @@ export default function Home() {
 
   const featuredProducts = [
     {
-      id: "cnc-lathe",
-      name: "COBOLT-X5 Vertical CNC Lathe",
-      category: "CNC Machinery",
+      id: "DH-F-FREQUENCY-CHANGER-DOUGH-MIXERid",
+      name: "DH-F FREQUENCY CHANGER DOUGH MIXER",
+      category: "Food Preparation",
       image: slider1,
-      specs: "5-Axis Milling | 12000 RPM Spindle | Auto-Tool Changer",
-      description: "Designed for high-tolerance complex geometries in automotive and aerospace parts."
+      specs: "250 kg/hr | 1.5 HP (1100W) | SUS304 Steel",
+      description: "Designed for high-tolerance food processing and commercial batch preparation."
     },
     {
-      id: "hydraulic-press",
-      name: "COBOLT-H400 Heavy Duty Press",
-      category: "Hydraulics",
+      id: "bh-food-mixer-classic",
+      name: "BH FOOD MIXER CLASSIC SERIES",
+      category: "Food Preparation",
       image: slider2,
-      specs: "400 Tons Capacity | Smart PLC Control | Low-Vibration Bed",
-      description: "Engineered for deep-drawing, progressive stamping, and metal-forming operations."
+      specs: "300 mm Blade | 0-15 mm Adjustable | 250W Motor",
+      description: "Engineered for precision food slicing and commercial food prep operations."
     },
     {
-      id: "precision-milling",
-      name: "COBOLT-M3 Ultra-Milling Station",
-      category: "Precision Tools",
+      id: "BH-FOOT-MIXER",
+      name: "BH FOOD MIXER",
+      category: "Food Preparation",
       image: slider3,
-      specs: "High-Speed Linear Guides | Heidenhain Scales | Dust Containment",
-      description: "Unmatched finishing for die making and micro-mechanical component prototyping."
+      specs: "500x500 mm Rack | 30 Racks/hr | 3.6 kW Power",
+      description: "High-throughput commercial food equipment designed for busy commercial kitchens."
     }
   ];
 
   const latestProducts = [
     {
-      id: "icecream-freezer",
+      id: "table-top-food-mixer-id",
       name: "TABLE TOP FOOD MIXER",
       category: "Confectionery Rig",
       image: p3,
@@ -220,7 +220,7 @@ export default function Home() {
       description: "Industrial continuous ice cream freezer designed for consistent overrun calibration and rapid heat extraction."
     },
     {
-      id: "dhf-homogenizer",
+      id: "2-split-open-fryer-ofg321-322-323",
       name: "2 SPLIT OPEN FRYER-OFG321-322-323",
       category: "Fluid Machinery",
       image: p5,
@@ -228,7 +228,7 @@ export default function Home() {
       description: "Premium micron-level liquid particle disperser, optimized for emulsifying sauces, dairy mixtures, and cosmetic gels."
     },
     {
-      id: "docota-filler",
+      id: "Dacota4BurnerCookingRangeStandardOven",
       name: "DACOTA 4 BURNER 24 ",
       category: "Packaging Machinery",
       image: docota,
@@ -236,7 +236,7 @@ export default function Home() {
       description: "Automatic rotary cup filling and heat sealing line with integrated batch printing and container discharge."
     },
     {
-      id: "tabletop-mixer-1",
+      id: "BT-MIXER",
       name: "BT MIXER",
       category: "Food Processing",
       image: p6,
@@ -244,7 +244,7 @@ export default function Home() {
       description: "Industrial-grade commercial stand mixer with stainless steel components for bakeries and test kitchens."
     },
     {
-      id: "tabletop-mixer-2",
+      id: "TABLE-TOP-FOOD-MIXERid",
       name: "TABLE TOP FOOD MIXER",
       category: "Food Processing",
       image: tabletop2,
@@ -252,7 +252,7 @@ export default function Home() {
       description: "High-capacity planetary mixer with speed control and automatic bowl lifting mechanism for thick batters."
     },
     {
-      id: "pressure-fryer-pfe-800",
+      id: "PRESSURE-FRYER-ELECTRIC-800",
       name: "PRESSURE FRYER ELECTRIC-(BOAST MACHINE) PFE-800",
       category: "Food Processing",
       image: p17,
@@ -706,9 +706,6 @@ shadow-2xl shadow-[#DE1D3A]/25
         >
           {/* Section Headers */}
           <motion.div variants={cardVariants} className="text-center max-w-3xl mx-auto mb-16 sm:mb-20 space-y-4">
-            <span className="font-sans font-semibold tracking-wider text-xs text-[#DE1D3A] uppercase px-3.5 py-1.5 bg-[#DE1D3A]/5 rounded-full border border-[#DE1D3A]/10 inline-block">
-              New Engineering Arrivals
-            </span>
             <h2 className="text-2xl md:text-4xl sm:text-5xl font-bold md:font-extrabold text-[#111827] font-display tracking-tight leading-[1.12]">
               Latest Food Processing & Packaging Machinery
             </h2>
@@ -751,69 +748,67 @@ shadow-2xl shadow-[#DE1D3A]/25
                 variants={cardVariants}
                 key={`${product.id}-${idx}`}
                 className="
-        group relative
-        bg-[#FFFFFF]
-        border border-[#E5E7EB]
-        rounded-2xl
-        overflow-hidden
-        shadow-sm
-        hover:shadow-xl
-        hover:border-[#DE1D3A]/20
-        transition-all duration-500
-        hover:-translate-y-1
-        flex flex-col h-full
-      "
+                  group relative
+                  bg-[#FFFFFF]
+                  border border-[#E5E7EB]
+                  rounded-2xl
+                  overflow-hidden
+                  shadow-sm
+                  hover:shadow-xl
+                  hover:border-[#DE1D3A]/20
+                  transition-all duration-500
+                  hover:-translate-y-1
+                  flex flex-col h-full
+                "
               >
                 {/* Top Accent */}
-                <div className="absolute top-0  left-0 w-full h-1 bg-[#DE1D3A]" />
+                <div className="absolute top-0 left-0 w-full h-1 bg-[#DE1D3A]" />
 
-                {/* Image */}
-                <div className="relative  aspect-[4/3] overflow-hidden bg-white">
-                  <img
-                    src={getSrc(product.image)}
-                    alt={product.name}
-                    className="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105"
-                  />
+                <Link href={`/products/${product.id}`} className="flex flex-col flex-grow">
+                  {/* Image */}
+                  <div className="relative aspect-[4/3] overflow-hidden bg-white">
+                    <img
+                      src={getSrc(product.image)}
+                      alt={product.name}
+                      className="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105"
+                    />
 
-                  <span className="absolute top-4 left-4 bg-[#F8FAFC] text-[#DE1D3A] border border-[#DE1D3A]/20 px-3 py-1 rounded-full text-[10px] font-semibold uppercase shadow-sm">
-                    {product.category}
-                  </span>
-                </div>
-                {/* Content */}
-                <div className="p-6 flex bg-[#F8FAFC] flex-col flex-grow">
-                  <h3 className="font-display font-bold text-xl text-[#111827] mb-3 group-hover:text-[#DE1D3A] transition-colors">
-                    {product.name}
-                  </h3>
-
-                  <div className="inline-flex w-fit text-[11px] font-medium text-[#DE1D3A] bg-[#FCE8EC] px-3 py-1 rounded-full mb-4">
-                    {product.specs}
+                    <span className="absolute top-4 left-4 bg-[#F8FAFC] text-[#DE1D3A] border border-[#DE1D3A]/20 px-3 py-1 rounded-full text-[10px] font-semibold uppercase shadow-sm">
+                      {product.category}
+                    </span>
                   </div>
+                  {/* Content */}
+                  <div className="p-6 flex bg-[#F8FAFC] flex-col flex-grow justify-between">
+                    <div>
+                      <h3 className="font-display font-bold text-xl text-[#111827] mb-3 group-hover:text-[#DE1D3A] transition-colors">
+                        {product.name}
+                      </h3>
 
-                  <p className="text-[#6B7280] text-sm leading-relaxed flex-grow mb-6">
-                    {product.description}
-                  </p>
-{/* 
-                  <Link
-                    to="/contact"
-                    className="
-            w-full
-            py-3
-            border border-[#DE1D3A]
-            text-[#DE1D3A]
-            hover:bg-[#B7152D]
-            hover:border-[#B7152D]
-            hover:text-white
-            rounded-xl
-            text-sm
-            font-semibold
-            transition-all duration-300
-            flex items-center justify-center gap-2
-          "
-                  >
-                    Get Product Details
-                    <ArrowRight className="w-4 h-4" />
-                  </Link> */}
-                </div>
+                      <div className="inline-flex w-fit text-[11px] font-medium text-[#DE1D3A] bg-[#FCE8EC] px-3 py-1 rounded-full mb-4">
+                        {product.specs}
+                      </div>
+                    </div>
+
+                    <div
+                      className="
+                        w-full
+                        py-3
+                        border border-[#DE1D3A]
+                        text-[#DE1D3A]
+                        group-hover:bg-[#DE1D3A]
+                        group-hover:text-white
+                        rounded-xl
+                        text-sm
+                        font-semibold
+                        transition-all duration-300
+                        flex items-center justify-center gap-2
+                      "
+                    >
+                      Get Product Details
+                      <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                    </div>
+                  </div>
+                </Link>
               </motion.div>
             ))}
           </div>
