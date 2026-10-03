@@ -252,7 +252,7 @@ export default function Home() {
       description: "High-capacity planetary mixer with speed control and automatic bowl lifting mechanism for thick batters."
     },
     {
-      id: "tabletop-mixer-2",
+      id: "pressure-fryer-pfe-800",
       name: "PRESSURE FRYER ELECTRIC-(BOAST MACHINE) PFE-800",
       category: "Food Processing",
       image: p17,
@@ -746,10 +746,10 @@ shadow-2xl shadow-[#DE1D3A]/25
           </motion.div>
 
           <div className="grid grid-cols-1   md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
-            {latestProducts.slice(0, 6).map((product) => (
+            {latestProducts.slice(0, 6).map((product, idx) => (
               <motion.div
                 variants={cardVariants}
-                key={product.id}
+                key={`${product.id}-${idx}`}
                 className="
         group relative
         bg-[#FFFFFF]
