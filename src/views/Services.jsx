@@ -2,18 +2,19 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ShieldAlert, FileSliders, Settings2, Hammer, Landmark, ArrowRight, CheckCircle } from 'lucide-react';
 import PageWrapper from '../components/PageWrapper';
 
 const getSrc = (img) => (typeof img === 'object' && img?.src ? img.src : img);
 
-import service1 from '../assets/service1.jpg';
-import service2 from '../assets/service2.jpg';
-import service3 from '../assets/service3.jpg';
-import service4 from '../assets/service4.jpg';
-import service5 from '../assets/service5.jpg';
-import service6 from '../assets/service6.jpg';
+import service1 from '../assets/service1.webp';
+import service2 from '../assets/service2.webp';
+import service3 from '../assets/service3.webp';
+import service4 from '../assets/service4.webp';
+import service5 from '../assets/service5.webp';
+import service6 from '../assets/service6.webp';
 
 export default function Services() {
   const servicesList = [
@@ -142,9 +143,13 @@ export default function Services() {
                   {/* Service Image Banner */}
                   <div className="relative">
                     <div className="h-48 overflow-hidden bg-[#F8FAFC] rounded-t-2xl">
-                      <img
-                        src={getSrc(service.image)}
+                      <Image
+                        src={service.image}
                         alt={service.title}
+                        width={400}
+                        height={192}
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
+                        loading="lazy"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />

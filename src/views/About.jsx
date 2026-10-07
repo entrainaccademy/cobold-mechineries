@@ -1,12 +1,8 @@
-'use client';
-
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Award, Compass, Eye, ShieldCheck, Zap, Users, Factory, Globe } from 'lucide-react';
+import Image from 'next/image';
+import { Award, Compass, Eye, ShieldCheck, Zap, Factory, Globe } from 'lucide-react';
 import PageWrapper from '../components/PageWrapper';
-import hmAbout1 from '../assets/hm_about1.jpg';
-
-const getSrc = (img) => (typeof img === 'object' && img?.src ? img.src : img);
+import hmAbout1 from '../assets/hm_about1.webp';
 
 export default function About() {
   const values = [
@@ -27,50 +23,6 @@ export default function About() {
     }
   ];
 
-  const milestones = [
-    {
-      year: "2001",
-      title: "Company Founded",
-      desc: "Cobolt Machineries started as a custom toolmaker and component foundry in Gandhinagar, serving regional manufacturing plants."
-    },
-    {
-      year: "2008",
-      title: "National Quality Recognition",
-      desc: "Achieved domestic ISO-9001 certification. Upgraded factory to semi-automated lathe centers and doubled foundry output."
-    },
-    {
-      year: "2015",
-      title: "Export Launch & CNC Expansion",
-      desc: "Launched our first proprietary line of 3-axis and 5-axis vertical CNC milling centers. Established distribution channels in Southeast Asia."
-    },
-    {
-      year: "2022",
-      title: "IoT-Enabled Smart Automation",
-      desc: "Inaugurated our second 150,000 sq ft smart manufacturing hub in Gujarat. Integrated cloud analytics for predictive machine health diagnostics."
-    }
-  ];
-
-  const team = [
-    {
-      name: "Dr. Arjan Patel",
-      role: "Founder & Managing Director",
-      bio: "Ph.D. in Metallurgy from IIT Bombay. Over 30 years of industrial design experience.",
-      initials: "AP"
-    },
-    {
-      name: "Sarah Jenkins",
-      role: "Chief Systems Architect",
-      bio: "Formerly Senior Robotics Designer at Siemens. Leads the CNC automation & IoT division.",
-      initials: "SJ"
-    },
-    {
-      name: "Ramanathan Iyer",
-      role: "Director of Operations & AMC",
-      bio: "20 years managing millwright and maintenance setups. Controls customer satisfaction loops.",
-      initials: "RI"
-    }
-  ];
-
   return (
     <PageWrapper>
       {/* Page Header */}
@@ -79,11 +31,7 @@ export default function About() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000003_1px,transparent_1px),linear-gradient(to_bottom,#00000003_1px,transparent_1px)] bg-[size:3rem_3rem]" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="space-y-4 max-w-3xl"
-          >
+          <div className="space-y-4 max-w-3xl">
             <span className="text-[#DE1D3A] font-bold text-xs uppercase tracking-widest">
               Who We Are
             </span>
@@ -93,7 +41,7 @@ export default function About() {
             <p className="text-[#6B7280] text-base md:text-lg max-w-2xl leading-relaxed">
               We engineer state-of-the-art machinery that powers modern manufacturing, supporting precision parts creation and infrastructure reliability globally.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -131,9 +79,13 @@ export default function About() {
             {/* Visual */}
             <div className="lg:col-span-5 relative">
               <div className="rounded-2xl overflow-hidden shadow-xl border border-[#E5E7EB] max-h-[420px]">
-                <img
-                  src={getSrc(hmAbout1)}
+                <Image
+                  src={hmAbout1}
                   alt="Industrial factory floor"
+                  width={1000}
+                  height={667}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 500px"
+                  loading="lazy"
                   className="w-full h-full object-cover object-center"
                 />
               </div>
@@ -209,12 +161,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
-      {/* Timeline Section */}
-    
-
-      {/* Team Section */}
-     
     </PageWrapper>
   );
 }

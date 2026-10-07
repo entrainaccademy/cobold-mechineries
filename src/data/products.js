@@ -11,7 +11,7 @@ import p9 from '../assets/Products/p9.jpeg';
 import p10 from '../assets/Products/p10.jpg';
 import p11 from '../assets/Products/p11.jpg';
 import p12 from '../assets/Products/p12.jpg';
-import p13 from '../assets/Products/p13.png';
+import p13 from '../assets/Products/p13.webp';
 import p14 from '../assets/Products/p14.jpg';
 import p15 from '../assets/Products/p15.jpg';
 import p16 from '../assets/Products/p16.jpg';

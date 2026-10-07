@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Info, ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import PageWrapper from '../components/PageWrapper';
@@ -75,9 +76,11 @@ export default function Products() {
                 >
                   {/* Image Section */}
                   <div className="relative h-60 bg-[#FFFFFF] flex items-center justify-center p-6">
-                    <img
-                      src={getSrc(product.image)}
+                    <Image
+                      src={product.image}
                       alt={product.name}
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 360px"
+                      loading="lazy"
                       className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>

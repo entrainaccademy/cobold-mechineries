@@ -1,7 +1,35 @@
 import '../index.css';
+import { Inter, Outfit, Sora, Poppins } from 'next/font/google';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { SITE_CONFIG, SITE_URL } from '../lib/siteConfig';
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+});
+
+const outfit = Outfit({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-outfit',
+});
+
+const sora = Sora({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-sora',
+  preload: false,
+});
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['600', '700'],
+  display: 'swap',
+  variable: '--font-poppins',
+  preload: false,
+});
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -71,7 +99,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-white text-text font-sans antialiased selection:bg-accent/20 selection:text-primary overflow-x-hidden min-h-screen flex flex-col">
+      <body className={`${inter.variable} ${outfit.variable} ${sora.variable} ${poppins.variable} bg-white text-text font-sans antialiased selection:bg-accent/20 selection:text-primary overflow-x-hidden min-h-screen flex flex-col`}>
         <Navbar />
         <main className="flex-grow flex flex-col">
           {children}

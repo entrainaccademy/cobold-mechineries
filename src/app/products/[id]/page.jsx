@@ -42,7 +42,7 @@ export async function generateMetadata({ params }) {
       siteName: SITE_CONFIG.name,
       images: [
         {
-          url: typeof product.image === 'object' && product.image?.src ? product.image.src : '/slider1.jpg',
+          url: typeof product.image === 'object' && product.image?.src ? product.image.src : '/slider1.webp',
           alt: product.name,
         },
       ],

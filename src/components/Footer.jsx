@@ -1,24 +1,12 @@
-'use client';
-
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Send, Facebook, Twitter, Linkedin, Youtube, CheckCircle2 } from 'lucide-react';
+import Image from 'next/image';
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Youtube } from 'lucide-react';
+import NewsletterForm from './NewsletterForm';
 
-import logo from '../assets/blacklogotr.png';
+import logo from '../assets/blacklogotr.webp';
 
 export default function Footer() {
-  const [email, setEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (email) {
-      setSubscribed(true);
-      setEmail('');
-      setTimeout(() => setSubscribed(false), 5000);
-    }
-  };
-
   const quickLinks = [
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about' },
@@ -38,8 +26,6 @@ export default function Footer() {
     { name: 'Custom Machinery Solutions', path: '/services' },
   ];
 
-  const logoSrc = typeof logo === 'object' && logo.src ? logo.src : logo;
-
   return (
     <footer className="bg-bg-section border-t border-slate-200/80 print:hidden">
       {/* Top Banner / Newsletter */}
@@ -54,32 +40,7 @@ export default function Footer() {
             </p>
           </div>
           <div>
-            <form onSubmit={handleSubmit} className="flex gap-2 max-w-md md:ml-auto">
-              {subscribed ? (
-                <div className="flex items-center gap-2 text-green-600 font-semibold bg-green-50 px-4 py-3 rounded-lg border border-green-200 w-full animate-fade-in">
-                  <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
-                  <span>Subscription successful! Thank you.</span>
-                </div>
-              ) : (
-                <>
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Enter your corporate email"
-                    required
-                    className="flex-grow px-4 py-3 bg-white text-sm text-primary rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all duration-200"
-                  />
-                  <button
-                    type="submit"
-                    className="inline-flex items-center justify-center p-3 text-white bg-primary hover:bg-accent rounded-lg transition-colors duration-200 shadow"
-                    aria-label="Subscribe to newsletter"
-                  >
-                    <Send className="w-4 h-4" />
-                  </button>
-                </>
-              )}
-            </form>
+            <NewsletterForm />
           </div>
         </div>
       </div>
@@ -90,13 +51,14 @@ export default function Footer() {
           {/* Brand Info */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-3">
-              <img
+              <Image
                 className="h-12 w-auto object-contain"
-                src={logoSrc}
+                src={logo}
                 alt="Cobolt Machineries Logo"
-                onError={(e) => {
-                  e.target.src = 'https://placehold.co/120x40/0F172A/FFFFFF?text=Cobolt';
-                }}
+                width={600}
+                height={178}
+                sizes="(max-width: 768px) 162px, 162px"
+                loading="lazy"
               />
             </Link>
             <p className="text-text-light text-sm leading-relaxed">
@@ -153,6 +115,7 @@ export default function Footer() {
                 <li key={idx}>
                   <Link
                     href={link.path}
+                    prefetch={false}
                     className="text-text-light hover:text-accent text-sm transition-colors duration-200"
                   >
                     {link.name}
@@ -172,6 +135,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.path}
+                    prefetch={false}
                     className="text-text-light hover:text-accent text-sm transition-colors duration-200"
                   >
                     {link.name}

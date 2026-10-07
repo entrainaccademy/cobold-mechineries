@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowLeft, ArrowRight, Check, ChevronRight, ShieldCheck, Award, Printer } from 'lucide-react';
 import PageWrapper from '../components/PageWrapper';
 
@@ -73,9 +74,13 @@ export default function ProductDetail({ product, relatedProducts = [] }) {
             
             {/* Left: Product Image */}
             <div className="w-full md:w-1/2 print:w-1/2 flex items-center justify-center p-4 sm:p-6 print:p-2 min-h-[280px] sm:min-h-[340px] print:min-h-0 bg-white">
-              <img
-                src={getSrc(product.image)}
+              <Image
+                src={product.image}
                 alt={product.name}
+                width={500}
+                height={500}
+                priority
+                sizes="(max-width: 768px) 100vw, 500px"
                 className="max-h-[320px] print:max-h-[340px] w-auto max-w-full object-contain filter drop-shadow-sm print:drop-shadow-none"
               />
             </div>
@@ -216,9 +221,13 @@ export default function ProductDetail({ product, relatedProducts = [] }) {
                     className="group border border-gray-200 rounded-xl p-4 bg-white hover:border-[#DE1D3A]/40 hover:shadow-md transition-all flex flex-col justify-between"
                   >
                     <div className="h-40 bg-white border border-gray-100 rounded-lg flex items-center justify-center p-4 mb-4">
-                      <img
-                        src={getSrc(item.image)}
+                      <Image
+                        src={item.image}
                         alt={item.name}
+                        width={200}
+                        height={160}
+                        loading="lazy"
+                        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 300px"
                         className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>

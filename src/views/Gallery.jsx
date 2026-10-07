@@ -9,10 +9,10 @@ import Lightbox from '../components/Lightbox';
 const getSrc = (img) => (typeof img === 'object' && img?.src ? img.src : img);
 
 // Assets
-import slider1 from '../assets/slider1.jpg';
-import slider2 from '../assets/slider2.jpg';
-import slider3 from '../assets/slider3.jpeg';
-import hmAbout1 from '../assets/hm_about1.jpg';
+import slider1 from '../assets/slider1.webp';
+import slider2 from '../assets/slider2.webp';
+import slider3 from '../assets/slider3.webp';
+import hmAbout1 from '../assets/hm_about1.webp';
 
 export default function Gallery() {
   const [selectedFilter, setSelectedFilter] = useState('All');
@@ -142,6 +142,8 @@ export default function Gallery() {
                   <img
                     src={getSrc(item.src)}
                     alt={item.title}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100"
                   />
                   

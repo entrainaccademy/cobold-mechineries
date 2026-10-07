@@ -15,7 +15,7 @@ export const metadata = {
     url: `${SITE_URL}/blog`,
     images: [
       {
-        url: '/slider3.jpeg',
+        url: '/slider3.webp',
         width: 1200,
         height: 630,
         alt: 'Cobolt Machineries Engineering Insights',

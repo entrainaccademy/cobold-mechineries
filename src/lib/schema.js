@@ -119,7 +119,7 @@ export const serviceSchema = (s) => ({
 export const productSchema = (p) => {
   const imgSrc = typeof p.image === 'object' && p.image?.src
     ? `${SITE}${p.image.src}`
-    : (p.image ? (p.image.startsWith('http') ? p.image : `${SITE}${p.image}`) : `${SITE}/slider1.jpg`);
+    : (p.image ? (p.image.startsWith('http') ? p.image : `${SITE}${p.image}`) : `${SITE}/slider1.webp`);
 
   return {
     '@type': 'Product',
@@ -212,32 +212,32 @@ export const galleryItems = [
   {
     name: 'Vertical CNC Lathe Calibration',
     description: 'Final alignment stress testing of the vertical CNC milling head spindle prior to packaging.',
-    contentUrl: `${SITE}/slider1.jpg`,
+    contentUrl: `${SITE}/slider1.webp`,
   },
   {
     name: 'Hydraulic Die Installation',
     description: 'Rigging teams setting the solid main ram and slide cushion guides into the structural frame bed.',
-    contentUrl: `${SITE}/slider2.jpg`,
+    contentUrl: `${SITE}/slider2.webp`,
   },
   {
     name: 'Linear Motors & Guideway Assembly',
     description: 'Technicians aligning precision glass scale grids on micro-milling workbench rails.',
-    contentUrl: `${SITE}/slider3.jpeg`,
+    contentUrl: `${SITE}/slider3.webp`,
   },
   {
     name: 'Cobolt Assembly Facility',
     description: 'Perspective of our heavy machinery assembly facility showing precision layout.',
-    contentUrl: `${SITE}/hm_about1.jpg`,
+    contentUrl: `${SITE}/hm_about1.webp`,
   },
   {
     name: 'Column Milling Setup',
     description: 'Framework overview on the gantry center machining precision industrial housings.',
-    contentUrl: `${SITE}/slider1.jpg`,
+    contentUrl: `${SITE}/slider1.webp`,
   },
   {
     name: 'Plate Leveling Alignment Checks',
     description: 'Verifying mechanical roller spacing tolerances and optical sensors on straightener line.',
-    contentUrl: `${SITE}/slider2.jpg`,
+    contentUrl: `${SITE}/slider2.webp`,
   },
 ];
 

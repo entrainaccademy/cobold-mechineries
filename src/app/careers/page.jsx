@@ -15,7 +15,7 @@ export const metadata = {
     url: `${SITE_URL}/careers`,
     images: [
       {
-        url: '/hm_about1.jpg',
+        url: '/hm_about1.webp',
         width: 1200,
         height: 630,
         alt: 'Cobolt Machineries Career Opportunities',

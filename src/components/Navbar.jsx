@@ -2,10 +2,11 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X, ArrowRight, Phone, MapPin, Youtube, Facebook, Instagram, Mail } from 'lucide-react';
 
-import blacklogo from '../assets/blacklogotr.png';
+import blacklogo from '../assets/blacklogotr.webp';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,7 +22,7 @@ export default function Navbar() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -50,8 +51,6 @@ export default function Navbar() {
     { name: 'Blog', path: '/blog' },
     { name: 'Careers', path: '/careers' },
   ];
-
-  const logoSrc = typeof blacklogo === 'object' && blacklogo.src ? blacklogo.src : blacklogo;
 
   return (
     <div className="print:hidden">
@@ -131,13 +130,13 @@ export default function Navbar() {
             {/* Logo Brand Block */}
             <div className="flex-shrink-0 flex items-center">
               <Link href="/" className="flex items-center group gap-2">
-                <img
+                <Image
                   className="h-8 md:h-15 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-                  src={logoSrc}
+                  src={blacklogo}
                   alt="Cobolt Machineries Logo"
-                  onError={(e) => {
-                    e.target.src = 'https://placehold.co/120x40/0F172A/FFFFFF?text=Cobolt';
-                  }}
+                  width={600}
+                  height={178}
+                  sizes="(max-width: 768px) 115px, 202px"
                 />
               </Link>
             </div>
@@ -150,6 +149,7 @@ export default function Navbar() {
                   <Link
                     key={link.name}
                     href={link.path}
+                    prefetch={false}
                     className={`px-4 py-2 text-[13px] font-sans font-medium uppercase tracking-wider transition-all duration-300 relative group block ${
                       isActive
                         ? 'text-[#DE1D3A] font-semibold'
@@ -244,6 +244,7 @@ export default function Navbar() {
               >
                 <Link
                   href={link.path}
+                  prefetch={false}
                   className={`block py-3.5 px-4 text-xs font-poppins font-bold uppercase tracking-widest rounded-xl transition-all duration-300 ${
                     isActive
                       ? 'text-[#DE1D3A] bg-[#DE1D3A]/10 border-l-4 border-[#DE1D3A] pl-5'

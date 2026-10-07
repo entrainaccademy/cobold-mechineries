@@ -33,10 +33,10 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        display: ['Outfit', 'sans-serif'],
-        sora: ['Sora', 'sans-serif'],
-        poppins: ['Poppins', 'sans-serif'],
+        sans: ['var(--font-inter)', 'Inter', 'sans-serif'],
+        display: ['var(--font-outfit)', 'Outfit', 'sans-serif'],
+        sora: ['var(--font-sora)', 'Sora', 'sans-serif'],
+        poppins: ['var(--font-poppins)', 'Poppins', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out forwards',
