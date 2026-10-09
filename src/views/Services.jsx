@@ -215,10 +215,10 @@ export default function Services() {
           </p>
           <div className="pt-4">
             <a
-              href="tel:+917987654321"
+              href="tel:+919061782023"
               className="inline-flex items-center justify-center px-6 py-3.5 bg-[#FFFFFF] text-[#DE1D3A] hover:bg-[#FCE8EC] text-xs font-semibold uppercase tracking-wider rounded-lg transition-colors duration-200 shadow-md"
             >
-              Call 24/7 Hotline: +91 79 8765 4321
+              Call 24/7 Hotline: +91 9061782023
             </a>
           </div>
         </div>

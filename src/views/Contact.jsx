@@ -157,10 +157,6 @@ export default function Contact() {
         <div className="absolute top-1/2 right-0 w-96 h-96 bg-[#DE1D3A]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left relative z-10">
           <div className="space-y-4 max-w-3xl">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-transparent border border-[#DE1D3A]/30 text-[#DE1D3A] text-xs font-semibold uppercase tracking-widest rounded-full mb-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#DE1D3A]" />
-              Get In Touch
-            </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#111827] font-display leading-tight tracking-tight">
               Connect with Cobolt
             </h1>

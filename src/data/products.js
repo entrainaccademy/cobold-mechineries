@@ -230,7 +230,7 @@ export const productsList = [
     accessories: ["40L Stainless Steel Bowl", "Heavy Wire Whip", "Alloy Flat Beater", "Spiral Dough Hook", "Bowl Trolley"]
   },
   {
-    id: "CHOCOLATE-MELTING-POT-MANUAL ",
+    id: "CHOCOLATE-MELTING-POT-MANUAL",
     name: "CHOCOLATE MELTING POT -MANUAL CONTROL CHOCOLATE MELTER FOR HOME OR BAKERY USE",
     category: "Food Preparation Machines",
     image: p11,

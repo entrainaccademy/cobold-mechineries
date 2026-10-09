@@ -1,10 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Youtube } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Youtube, Instagram } from 'lucide-react';
 import NewsletterForm from './NewsletterForm';
 
 import logo from '../assets/blacklogotr.webp';
+import { SITE_CONFIG } from '../lib/siteConfig';
 
 export default function Footer() {
   const quickLinks = [
@@ -67,25 +68,16 @@ export default function Footer() {
             {/* Social Icons */}
             <div className="flex space-x-3 pt-2">
               <a
-                href="https://linkedin.com"
+                href={SITE_CONFIG.social.youtube}
                 target="_blank"
                 rel="noreferrer"
                 className="w-9 h-9 flex items-center justify-center rounded-lg bg-white border border-slate-200 text-text-light hover:text-white hover:bg-accent hover:border-accent transition-all duration-300"
-                aria-label="LinkedIn"
+                aria-label="YouTube"
               >
-                <Linkedin className="w-4 h-4" />
+                <Youtube className="w-4 h-4" />
               </a>
               <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noreferrer"
-                className="w-9 h-9 flex items-center justify-center rounded-lg bg-white border border-slate-200 text-text-light hover:text-white hover:bg-accent hover:border-accent transition-all duration-300"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-4 h-4" />
-              </a>
-              <a
-                href="https://facebook.com"
+                href={SITE_CONFIG.social.facebook}
                 target="_blank"
                 rel="noreferrer"
                 className="w-9 h-9 flex items-center justify-center rounded-lg bg-white border border-slate-200 text-text-light hover:text-white hover:bg-accent hover:border-accent transition-all duration-300"
@@ -94,13 +86,22 @@ export default function Footer() {
                 <Facebook className="w-4 h-4" />
               </a>
               <a
-                href="https://youtube.com"
+                href={SITE_CONFIG.social.instagram}
                 target="_blank"
                 rel="noreferrer"
                 className="w-9 h-9 flex items-center justify-center rounded-lg bg-white border border-slate-200 text-text-light hover:text-white hover:bg-accent hover:border-accent transition-all duration-300"
-                aria-label="YouTube"
+                aria-label="Instagram"
               >
-                <Youtube className="w-4 h-4" />
+                <Instagram className="w-4 h-4" />
+              </a>
+              <a
+                href={SITE_CONFIG.social.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="w-9 h-9 flex items-center justify-center rounded-lg bg-white border border-slate-200 text-text-light hover:text-white hover:bg-accent hover:border-accent transition-all duration-300"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-4 h-4" />
               </a>
             </div>
           </div>
