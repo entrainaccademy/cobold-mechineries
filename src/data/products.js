@@ -31,10 +31,15 @@ import b1 from '../assets/Products/b1.jpg';
 import b2 from '../assets/Products/b2.jpg';
 import b3 from '../assets/Products/b3.jpg';
 import b4 from '../assets/Products/b4.jpg';
+import b4new from '../assets/Products/b4new.png';
 import b5 from '../assets/Products/b5.jpg';
 import b6 from '../assets/Products/b6.jpg';
 import b7 from '../assets/Products/b7.jpg';
+import oneD3T from '../assets/Products/1D3T.jpg';
 
+
+import pizza from '../assets/Products/PIZZA OVEN BERJAYA.png';
+import  pizza1d from '../assets/Products/DECK ELECTRIC PIZZA OVEN.png';
 import c1 from '../assets/Products/c1.jpg';
 import c2 from '../assets/Products/c2.jpg';
 import c3 from '../assets/Products/c3.jpg';
@@ -491,125 +496,277 @@ export const productsList = [
     ],
     accessories: ["High-performance Vacuum Pump Oil", "Spare Heating Elements", "Teflon Tape", "Chamber Filler Plates"]
   },
+
+
+
+  //  banking 
+
+
   {
     id: "2Deck4Trays8TraysProoferGasDeckOven",
-    name: "2 DECK 4 TRAYS + 8 TRAYS PROOFER GAS DECK OVEN",
+    name: " M GAS BAKING OVEN 1D2T",
+    category: "Banking Equipments",
+    image: b4new,
+    
+    description: "220V  .015KW  TRAY SIZE:40X60CM  WITH FLAMOUT PROCTED FUNCTION,ALUMUIUM MAIN GAS PIPE,PURE COPPER BRANCH PIPE,ALUSTEEL INSIDE BAKING CHAMBER,CHAMBER SIZE:87X67X18.5CM,PLASTIC DOOR HANDLE,UNIFORM BAKING EFFECT",
+    specs:  [
+      { label: " Model", value: "DA-D-GBO-2D4T" },
+         { label: " Power Source", value: "Gas" },
+      { label: "VOLTAGE ", value: "220V/50HZ/1PH" },
+         { label: " Operation Type", value: "Semi-Automatic" },
+           { label: " Body Material", value: "	Stainless Steel" },
+            { label: " Deck Size", value: "87X67X19 CM" },
+       { label: "	MJ/H ", value: "16MJ/±10%" },
+       { label: "	TEMPERATURE RANGE ", value: "AMBIENT TO 400°C" },
+          { label: "Weight", value: "205KG" }
+    
+    
+    ],
+    // accessories: ["Slicing Discs (2mm & 4mm)", "Shredding Discs (3mm, 4mm & 7mm)", "Dicing Grid (10x10mm)", "Ejector Disc", "Cleaning Brush"]
+  },
+
+  
+
+  
+  {
+    id: "DA-M-GBO-1D2T",
+    name: "D GAS BAKING OVEN 1D2T ",
+    category: "Banking Equipments",
+    image: b4new,
+  
+    description: "220V 50Hz 0.075kW E.X. Size:108*68*65 N/G Weight:100/110 Pack. Size/CBM:118*78*72/0.66 Details:Tray size: 400*600mm 1.With flameout protected function. 2.Oven warranty 1 years. 3.Gas heater warranty 1 years. 4.Aluminum main gas pipe. 5.Pure copper branch gas pipe. 6.Alusteel inside baking chamber 7.Chamber size 470*670*185mm 8.Plastic door handle. 9.Uniform baking effect.",
+    specs: [
+      
+       { label: "Model ", value: "DA-M-GBO-1D2T" },
+       { label: "Source  ", value: "	Electric" },
+       { label: "Operation Type	 ", value: "Automatic" },
+
+      { label: "VOLTAGE ", value: "220V/50HZ/1PH" },
+      { label: "	MJ/H ", value: "16MJ/±10%" },
+      { label: "	TEMPERATURE RANGE ", value: "AMBIENT TO 400°C" },
+      // { label: "Blade & Shaft Material", value: "304 Stainless Steel" },
+      { label: "Weight", value: "80kg" }
+    ],
+    // accessories: ["500mm Stainless Steel Shaft", "Wall Mount Bracket", "Durable Blade Guard Tool"]
+  },
+
+  {
+    id: "DA-M-GBO-1D3T",
+    name: "D GAS BAKING OVEN 1D3T ",
+    category: "Banking Equipments",
+    image: b4 ,
+  
+    description: "220V 50Hz 0.075kW E.X. Size:108*68*65 N/G Weight:100/110 Pack. Size/CBM:118*78*72/0.66 Details:Tray size: 400*600mm 1.With flameout protected function. 2.Oven warranty 1 years. 3.Gas heater warranty 1 years. 4.Aluminum main gas pipe. 5.Pure copper branch gas pipe. 6.Alusteel inside baking chamber 7.Chamber size 470*670*185mm 8.Plastic door handle. 9.Uniform baking effect.",
+    specs: [
+      
+       { label: "Model ", value: "DA-M-GBO-1D3T" },
+       { label: "Source  ", value: "	Electric" },
+       { label: "Operation Type	 ", value: "Automatic" },
+
+      { label: "VOLTAGE ", value: "220V/50HZ/1PH" },
+      { label: "	MJ/H ", value: "16MJ/±10%" },
+      { label: "	TEMPERATURE RANGE ", value: "AMBIENT TO 400°C" },
+      // { label: "Blade & Shaft Material", value: "304 Stainless Steel" },
+      { label: "Weight", value: "96kg" }
+    ],
+    // accessories: ["500mm Stainless Steel Shaft", "Wall Mount Bracket", "Durable Blade Guard Tool"]
+  },
+
+ {
+    id: "DA-M-GBO-2D4T",
+    name: "D GAS BAKING OVEN 2D3T ",
     category: "Banking Equipments",
     image: b1,
-    tagline: "Multi-Function Slicing, Dicing, and Shredding Machine",
-    description: "High-output vegetable preparation machine equipped with multiple disc attachments for slicing, dicing, shredding, and grating. Perfect for commercial kitchens, pizzerias, and catering services.",
+  
+    description: "220V 50Hz 0.075kW E.X. Size:108*68*65 N/G Weight:100/110 Pack. Size/CBM:118*78*72/0.66 Details:Tray size: 400*600mm 1.With flameout protected function. 2.Oven warranty 1 years. 3.Gas heater warranty 1 years. 4.Aluminum main gas pipe. 5.Pure copper branch gas pipe. 6.Alusteel inside baking chamber 7.Chamber size 470*670*185mm 8.Plastic door handle. 9.Uniform baking effect.",
     specs: [
-      { label: "Production Capacity", value: "300 kg/hr" },
-      { label: "Motor Power", value: "750W (High Torque)" },
-      { label: "Disc Speed", value: "320 RPM" },
-      { label: "Housing Material", value: "Anodized Aluminum & Stainless Steel" },
-      { label: "Feed Inlets", value: "Large Kidney-Shaped & Cylindrical" },
-      { label: "Safety System", value: "Magnetic Safety Interlock on Lid" }
+      
+       { label: "Model ", value: "DA-M-GBO-1D3T" },
+       { label: "Source  ", value: "	Electric" },
+       { label: "Operation Type	 ", value: "Automatic" },
+
+      { label: "VOLTAGE ", value: "220V/50HZ/1PH" },
+      { label: "	MJ/H ", value: "16MJ/±10%" },
+      { label: "	TEMPERATURE RANGE ", value: "AMBIENT TO 400°C" },
+      // { label: "Blade & Shaft Material", value: "304 Stainless Steel" },
+      { label: "Weight", value: "205kg" }
     ],
-    accessories: ["Slicing Discs (2mm & 4mm)", "Shredding Discs (3mm, 4mm & 7mm)", "Dicing Grid (10x10mm)", "Ejector Disc", "Cleaning Brush"]
+    // accessories: ["500mm Stainless Steel Shaft", "Wall Mount Bracket", "Durable Blade Guard Tool"]
   },
-  {
-    id: "2Deck4TraysCommercialGasDeckOven",
-    name: "2 DECK 4 TRAYS COMMERCIAL GAS DECK OVEN",
-    category: "Banking Equipments",
-    image: b2,
-    tagline: "20-Liter Multi-Speed Stand Mixer",
-    description: "Professional planetary stand mixer designed for mixing dough, pastry, batters, and whipping creams. Features a heavy-duty gear-driven transmission and durable safety guard.",
-    specs: [
-      { label: "Bowl Capacity", value: "20 Liters" },
-      { label: "Max Flour Capacity", value: "5 kg Dry Flour" },
-      { label: "Speeds", value: "3 Speeds (105 / 180 / 408 RPM)" },
-      { label: "Motor Power", value: "1100W (Gear-driven)" },
-      { label: "Transmission", value: "Hardened Alloy Steel Gears" },
-      { label: "Safety Features", value: "Stainless Steel Wire Guard & Bowl Lift Lock" }
-    ],
-    accessories: ["20L Stainless Steel Bowl", "Stainless Steel Wire Whip", "Flat Beater", "Spiral Dough Hook"]
-  },
-  {
-    id: "1DECKS-2-TRAYS-GAS-OVEN",
-    name: "1 DECKS 2 TRAYS GAS OVEN",
-    category: "Banking Equipments",
-    image: b3,
-    tagline: "12-Inch Professional Gravity-Feed Meat Slicer",
-    description: "Precision-engineered commercial deli slicer featuring a premium chrome-plated carbon steel blade and integrated sharpener. Designed for slicing cured meats, cheeses, and vegetables with consistent thickness.",
-    specs: [
-      { label: "Blade Diameter", value: "300 mm (12 inches)" },
-      { label: "Slice Thickness", value: "0 - 15 mm (Adjustable)" },
-      { label: "Motor Power", value: "250W (Heavy Duty)" },
-      { label: "Blade Material", value: "Hardened Chrome-Plated Carbon Steel" },
-      { label: "Max Slice Width", value: "220 mm" },
-      { label: "Sharpener Type", value: "Built-in Dual Stone Sharpener" }
-    ],
-    accessories: ["Removable Blade Sharpener", "Blade Removal Tool", "Lubrication Oil", "Sanitation Cover"]
-  },
-  {
+
+   {
     id: "1DECKS-1-TRAYS-GAS-OVEN",
-    name: "1 DECKS 1 TRAYS GAS OVEN",
+    name: "  M GAS BAKING OVEN 1D1T",
+    category: "Banking Equipments",
+    image: b4new,
+  
+    description: "220V 50Hz 0.075kW E.X. Size:108*68*65 N/G Weight:100/110 Pack. Size/CBM:118*78*72/0.66 Details:Tray size: 400*600mm 1.With flameout protected function. 2.Oven warranty 1 years. 3.Gas heater warranty 1 years. 4.Aluminum main gas pipe. 5.Pure copper branch gas pipe. 6.Alusteel inside baking chamber 7.Chamber size 470*670*185mm 8.Plastic door handle. 9.Uniform baking effect.",
+    specs: [
+      
+       { label: "Model ", value: "DA-EOG-PZA-1D1T" },
+       { label: "Source  ", value: "	Electric" },
+       { label: "Operation Type	 ", value: "Automatic" },
+
+      { label: "VOLTAGE ", value: "220V/50HZ/1PH" },
+      { label: "	MJ/H ", value: "16MJ/±10%" },
+      { label: "	TEMPERATURE RANGE ", value: "AMBIENT TO 400°C" },
+      // { label: "Blade & Shaft Material", value: "304 Stainless Steel" },
+      { label: "Weight", value: "68kg" }
+    ],
+    // accessories: ["500mm Stainless Steel Shaft", "Wall Mount Bracket", "Durable Blade Guard Tool"]
+  },
+ 
+
+   {
+    id: "M-GAS-BAKING-OVEN-1D3T",
+    name: "  M GAS BAKING OVEN 1D3T",
     category: "Banking Equipments",
     image: b4,
-    tagline: "High-Performance Variable Speed Stick Blender",
-    description: "Heavy-duty immersion stick blender designed for blending soups, purees, sauces, and batters directly in large stock pots. Features an ergonomic handle and variable speed control.",
+  
+    description: "220V 50Hz 0.075kW E.X. Size:108*68*65 N/G Weight:100/110 Pack. Size/CBM:118*78*72/0.66 Details:Tray size: 400*600mm 1.With flameout protected function. 2.Oven warranty 1 years. 3.Gas heater warranty 1 years. 4.Aluminum main gas pipe. 5.Pure copper branch gas pipe. 6.Alusteel inside baking chamber 7.Chamber size 470*670*185mm 8.Plastic door handle. 9.Uniform baking effect.",
     specs: [
-      { label: "Shaft Length", value: "500 mm (Detachable)" },
-      { label: "Processing Capacity", value: "Up to 100 Liters" },
-      { label: "Speed Range", value: "4,000 - 16,000 RPM (Variable)" },
-      { label: "Motor Power", value: "500W (Heavy Duty)" },
-      { label: "Blade & Shaft Material", value: "304 Stainless Steel" },
-      { label: "Weight", value: "4.5 kg" }
+      
+       { label: "Model ", value: "DA-EOG-PZA-1D3T" },
+       { label: "Source  ", value: "	Electric" },
+       { label: "Operation Type	 ", value: "Automatic" },
+
+      { label: "VOLTAGE ", value: "220V/50HZ/1PH" },
+      { label: "	MJ/H ", value: "16MJ/±10%" },
+      { label: "	TEMPERATURE RANGE ", value: "AMBIENT TO 400°C" },
+      // { label: "Blade & Shaft Material", value: "304 Stainless Steel" },
+      { label: "Weight", value: "96kg" }
     ],
-    accessories: ["500mm Stainless Steel Shaft", "Wall Mount Bracket", "Durable Blade Guard Tool"]
+    // accessories: ["500mm Stainless Steel Shaft", "Wall Mount Bracket", "Durable Blade Guard Tool"]
   },
+
+ {
+    id: "1DECKS-1-TRAYS-GAS-OVEN",
+    name: "  Eco GAS OVEN 1D1T",
+    category: "Banking Equipments",
+    image: b4,
+  
+    description: "220V 50Hz 0.075kW E.X. Size:108*68*65 N/G Weight:100/110 Pack. Size/CBM:118*78*72/0.66 Details:Tray size: 400*600mm 1.With flameout protected function. 2.Oven warranty 1 years. 3.Gas heater warranty 1 years. 4.Aluminum main gas pipe. 5.Pure copper branch gas pipe. 6.Alusteel inside baking chamber 7.Chamber size 470*670*185mm 8.Plastic door handle. 9.Uniform baking effect.",
+    specs: [
+      
+       { label: "Model ", value: ": DA-EOG-PZA-1D1T" },
+       { label: "Source  ", value: "	Electric" },
+       { label: "Operation Type	 ", value: "Automatic" },
+
+      { label: "VOLTAGE ", value: "220V/50HZ/1PH" },
+      { label: "	MJ/H ", value: "16MJ/±10%" },
+      { label: "	TEMPERATURE RANGE ", value: "AMBIENT TO 400°C" },
+      // { label: "Blade & Shaft Material", value: "304 Stainless Steel" },
+      { label: "Weight", value: "70kg" }
+    ],
+    // accessories: ["500mm Stainless Steel Shaft", "Wall Mount Bracket", "Durable Blade Guard Tool"]
+  },
+
   {
     id: "3DECKS-6-TRAYS-GAS-OVEN",
-    name: "3 DECKS 6 TRAYS GAS OVEN",
+    name: "D GAS BAKING OVEN 3D6T",
     category: "Banking Equipments",
     image: b5,
-    tagline: "Double-Seal Commercial Chamber Sealer",
-    description: "High-vacuum chamber sealer designed to extend the shelf life of food products, prevent freezer burn, and prepare items for sous vide cooking. Ideal for restaurants, catering, and food laboratories.",
-    specs: [
-      { label: "Chamber Dimensions", value: "400 x 400 x 120 mm" },
-      { label: "Seal Bar Length", value: "400 mm (Double Sealing)" },
-      { label: "Vacuum Pump Capacity", value: "20 m³/hr" },
-      { label: "Cycle Time", value: "15 - 30 seconds" },
-      { label: "Material", value: "Full Stainless Steel Cabinet & Acrylic Lid" },
-      { label: "Voltage", value: "220V - 240V / 50Hz" }
+    
+    description: "220V  .0225KW  TRAY SIZE:40X60CM  WITH FLAMOUT PROCTED FUNCTION,ALUMUIUM MAIN GAS PIPE,PURE COPPER BRANCH PIPE,ALUSTEEL INSIDE BAKING CHAMBER,CHAMBER SIZE:87X67X18.5 CM,PLASTIC DOOR HANDLE,UNIFORM BAKING EFFECT.",
+    specs:  [
+      
+       { label: "Model ", value: "DA-D-GBO-3D6T" },
+       { label: "Source  ", value: "	Electric" },
+       { label: "Operation Type	 ", value: " semi Automatic" },
+        { label: "Deck Size	", value: "87X67X18.5CM" },
+      { label: "VOLTAGE ", value: "220V/50HZ/1PH" },
+      { label: "	MJ/H ", value: "16MJ/±10%" },
+      { label: "	TEMPERATURE RANGE ", value: "AMBIENT TO 400°C" },
+      // { label: "Blade & Shaft Material", value: "304 Stainless Steel" },
+      { label: "Weight", value: "300kg" }
     ],
-    accessories: ["High-performance Vacuum Pump Oil", "Spare Heating Elements", "Teflon Tape", "Chamber Filler Plates"]
+    // accessories: ["High-performance Vacuum Pump Oil", "Spare Heating Elements", "Teflon Tape", "Chamber Filler Plates"]
   },
   {
     id: "3DECKS-9-TRAYS-GAS-OVEN",
-    name: "3 DECKS 9 TRAYS GAS OVEN",
+    name: "D GAS BAKING OVEN 3D9T",
     category: "Banking Equipments",
     image: b6,
-    tagline: "Digital Control Glasswasher & Dishwasher Station",
+    // tagline: "Digital Control Glasswasher & Dishwasher Station",
     description: "Heavy-duty undercounter commercial dishwasher designed for rapid cleanup in bars, cafes, and small restaurants. Stainless steel double-skin body with quick wash cycles.",
     specs: [
-      { label: "Rack Size", value: "500 x 500 mm" },
-      { label: "Washing Capacity", value: "Up to 30 Racks/hr" },
-      { label: "Cycle Times", value: "90 / 120 / 180 seconds" },
-      { label: "Material", value: "AISI 304 Stainless Steel" },
-      { label: "Wash Tank Capacity", value: "25 Liters" },
-      { label: "Power Load", value: "3.6 kW (Single/Triple Phase)" }
+         { label: "Model ", value: "DA-D-GBO-3D9T" },
+       { label: "Operation Type ", value: "	Semi-Automatic" },
+         { label: "Source  ", value: "	gas" },
+       { label: "Operation Type	 ", value: " semi Automatic" },
+        { label: "Deck Size	", value: "132X70X18.5CM" }, 	
+      { label: "VOLTAGE ", value: "220V/50HZ/1PH" },
+      { label: "	MJ/H ", value: "16MJ/±10%" },
+      { label: "	Maximum Temperature ", value: "	200-400 DegreeC" }, 
+      // { label: "Blade & Shaft Material", value: "304 Stainless Steel" },
+      { label: "Weight", value: "300kg" }
     ],
     accessories: ["Dish Rack", "Glass Rack", "Cutlery Holder", "Inlet & Drain Hoses"]
   },
-  {
-    id: "3DECKS-9-TRAYS-GAS-OVEN-2",
-    name: "3 DECKS 9 TRAYS GAS OVEN",
+ {
+    id: "PIZZA-OVEN-BERJAYA ",
+    name: "PIZZA OVEN BERJAYA ",
     category: "Banking Equipments",
-    image: b7,
-    tagline: "Digital Control Glasswasher & Dishwasher Station",
+    image: pizza,
+    // tagline: "Digital Control Glasswasher & Dishwasher Station",
     description: "Heavy-duty undercounter commercial dishwasher designed for rapid cleanup in bars, cafes, and small restaurants. Stainless steel double-skin body with quick wash cycles.",
     specs: [
-      { label: "Rack Size", value: "500 x 500 mm" },
-      { label: "Washing Capacity", value: "Up to 30 Racks/hr" },
-      { label: "Cycle Times", value: "90 / 120 / 180 seconds" },
-      { label: "Material", value: "AISI 304 Stainless Steel" },
-      { label: "Wash Tank Capacity", value: "25 Liters" },
-      { label: "Power Load", value: "3.6 kW (Single/Triple Phase)" }
+         { label: "Model ", value: "BJY-E-PO22" },
+       { label: "VOLTAGE ", value: "	220~240 V" },
+         { label: "FREQUENCY  ", value: " 50/60HZ" },
+       { label: "PHASE", value: " 1" },
+        { label: "TEMP RANGE", value: "50~300˚C" }, 	
+      { label: "INPUT POWER ", value: "2.2 KW" },
+      { label: "	MJ/H ", value: "16MJ/±10%" },
+      { label: "	MACHINE DIMENSION", value: "610LX625WX300H(MM)" },
+      { label: "	PACKING DIMENSION	", value: ":705LX705WX370H(MM)" }, 
+      { label: "Weight", value: "30kg" }
     ],
-    accessories: ["Dish Rack", "Glass Rack", "Cutlery Holder", "Inlet & Drain Hoses"]
+    // accessories: ["Dish Rack", "Glass Rack", "Cutlery Holder", "Inlet & Drain Hoses"]
   },
+
+  {
+    id: "PIZZA-OVEN-BERJAYA ",
+    name: "ELECTRIC PIZZA OVEN  ",
+    category: "Banking Equipments",
+    image: pizza1d,
+    // tagline: "Digital Control Glasswasher & Dishwasher Station",
+    description: "Heavy-duty undercounter commercial dishwasher designed for rapid cleanup in bars, cafes, and small restaurants. Stainless steel double-skin body with quick wash cycles.",
+    specs: [
+         { label: "Model ", value: "BJY-E-PO22" },
+         { label: "Power Source  ", value: "	Electric" },
+       { label: "VOLTAGE ", value: "	220V/50HZ " },
+       { label: "Pizza Capacity (per deck)", value: "	2 Pizzas" },
+         { label: "FREQUENCY  ", value: " 50/60HZ" },
+         { label: "Tray Size", value: "	 930*620*360mm" },
+
+        { label: "TEMP RANGE", value: "50~300˚C" }, 	
+      { label: "INPUT POWER ", value: "2.2 KW" },
+      
+      { label: "	MACHINE DIMENSION", value: "610LX625WX300H(MM)" },
+      { label: "	PACKING DIMENSION	", value: ":705LX705WX370H(MM)" }, 
+      { label: "Weight", value: "54kg" }
+    ],
+    // accessories: ["Dish Rack", "Glass Rack", "Cutlery Holder", "Inlet & Drain Hoses"]
+  },
+
+  // {
+  //   id: "3DECKS-9-TRAYS-GAS-OVEN-2",
+  //   name: "3 DECKS 9 TRAYS GAS OVEN",
+  //   category: "Banking Equipments",
+  //   image: b7,
+  //   tagline: "Digital Control Glasswasher & Dishwasher Station",
+  //   description: "Heavy-duty undercounter commercial dishwasher designed for rapid cleanup in bars, cafes, and small restaurants. Stainless steel double-skin body with quick wash cycles.",
+  //   specs: [
+  //     { label: "Rack Size", value: "500 x 500 mm" },
+  //     { label: "Washing Capacity", value: "Up to 30 Racks/hr" },
+  //     { label: "Cycle Times", value: "90 / 120 / 180 seconds" },
+  //     { label: "Material", value: "AISI 304 Stainless Steel" },
+  //     { label: "Wash Tank Capacity", value: "25 Liters" },
+  //     { label: "Power Load", value: "3.6 kW (Single/Triple Phase)" }
+  //   ],
+  //   accessories: ["Dish Rack", "Glass Rack", "Cutlery Holder", "Inlet & Drain Hoses"]
+  // },
   {
     id: "Dacota4BurnerCookingRangeStandardOven",
     name: "DACOTA 4 BURNER 24” COOKING RANGE WITH STANDARD OVEN (GAS COMBINATION OVEN)",

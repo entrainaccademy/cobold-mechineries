@@ -5,7 +5,7 @@ import { SITE_URL } from '../../lib/siteConfig';
 
 export const metadata = {
   title: 'Technical Journals & Machinery Insights | Industrial Engineering Blog',
-  description: 'Expert engineering articles: 5 essential checks for high-speed spindles, PLC data integration with ERP, hydraulic maintenance protocols, and smart factory automation.',
+  description: 'Expert engineerineg articles: 5 essential checks for high-speed spindles, PLC data integration with ERP, hydraulic maintenance protocols, and smart factory automation.',
   alternates: {
     canonical: `${SITE_URL}/blog`,
   },
